@@ -1,0 +1,33 @@
+import { Navbar } from "@/components/Navbar";
+import { Hero } from "@/components/Hero";
+import { Stats } from "@/components/Stats";
+import { Programs } from "@/components/Programs";
+import { Features } from "@/components/Features";
+import { UnsureDegree } from "@/components/UnsureDegree";
+import { UniversityPartners } from "@/components/UniversityPartners";
+import { Benefits } from "@/components/Benefits";
+import { Blogs } from "@/components/Blogs";
+import { TransformCareer } from "@/components/TransformCareer";
+import { HiringPartners } from "@/components/HiringPartners";
+import { Testimonials } from "@/components/Testimonials";
+import { Footer } from "@/components/Footer";
+
+export default function Home() {
+  return (
+    <main className="min-h-screen font-sans bg-white">
+      <Navbar />
+      <Hero />
+      <Stats />
+      <Programs />
+      <Features />
+      <UnsureDegree />
+      <UniversityPartners />
+      <Benefits />
+      <Blogs />
+      <TransformCareer />
+      <HiringPartners />
+      <Testimonials />
+      <Footer />
+    </main>
+  );
+}
