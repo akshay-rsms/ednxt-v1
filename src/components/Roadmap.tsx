@@ -23,21 +23,21 @@ export function Roadmap() {
     ];
 
     return (
-        <section className="py-24 bg-[#050505] relative overflow-hidden font-sans">
+        <section className="py-24 bg-white relative overflow-hidden font-sans">
 
             {/* Background Ambience */}
-            <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-red-900/10 rounded-full blur-[100px] pointer-events-none"></div>
-            <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-red-900/10 rounded-full blur-[100px] pointer-events-none"></div>
+            <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-red-100/40 rounded-full blur-[100px] pointer-events-none"></div>
+            <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-red-100/40 rounded-full blur-[100px] pointer-events-none"></div>
 
             <div className="container mx-auto px-6 relative z-10">
 
                 {/* Header */}
                 <div className="text-center mb-24">
-                    <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
-                        Your Journey to <span className="text-[#F51046]">Success</span>
+                    <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
+                        Why choose <span className="text-[#F51046]">Online</span> Degree?
                     </h2>
-                    <p className="text-gray-400 max-w-2xl mx-auto">
-                        A structured path designed to take you from learning the basics to mastering your field.
+                    <p className="text-gray-600 max-w-2xl mx-auto">
+                        Gain industry-relevant skills, flexible learning, and career growth
                     </p>
                 </div>
 
@@ -59,9 +59,9 @@ export function Roadmap() {
                             />
                             <defs>
                                 <linearGradient id="gradient-line" x1="0%" y1="0%" x2="100%" y2="0%">
-                                    <stop offset="0%" stopColor="#333" />
+                                    <stop offset="0%" stopColor="#E5E7EB" />
                                     <stop offset="50%" stopColor="#F51046" />
-                                    <stop offset="100%" stopColor="#333" />
+                                    <stop offset="100%" stopColor="#E5E7EB" />
                                 </linearGradient>
                             </defs>
                         </svg>
@@ -74,7 +74,7 @@ export function Roadmap() {
 
                                 {/* Level Badge */}
                                 <div className="mb-8 relative">
-                                    <div className="border border-red-900/50 bg-black text-[#F51046] text-xs font-bold tracking-[0.2em] px-4 py-2 rounded uppercase shadow-[0_0_15px_rgba(245,16,70,0.2)] group-hover:bg-[#F51046] group-hover:text-white transition-colors duration-300">
+                                    <div className="border border-red-100 bg-white text-[#F51046] text-xs font-bold tracking-[0.2em] px-4 py-2 rounded uppercase shadow-sm group-hover:bg-[#F51046] group-hover:text-white transition-colors duration-300">
                                         {step.level}
                                     </div>
                                     {/* Vertical Drop Line */}
@@ -90,14 +90,14 @@ export function Roadmap() {
                         `}></div>
 
                                 {/* Card */}
-                                <div className="bg-[#111] border border-gray-800 p-8 rounded-2xl w-full hover:border-[#F51046]/50 transition-all duration-300 relative group-hover:-translate-y-2 group-hover:shadow-[0_10px_30px_-10px_rgba(245,16,70,0.15)]">
+                                <div className="bg-white border border-gray-100 p-8 rounded-2xl w-full hover:border-[#F51046]/30 transition-all duration-300 relative group-hover:-translate-y-2 group-hover:shadow-[0_10px_30px_-10px_rgba(245,16,70,0.15)] shadow-sm">
                                     {/* Diamond Node */}
-                                    <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-6 h-6 bg-[#F51046] rotate-45 border-4 border-[#111] shadow-lg"></div>
+                                    <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-6 h-6 bg-[#F51046] rotate-45 border-4 border-white shadow-lg"></div>
 
                                     <step.icon className="w-10 h-10 text-[#F51046] mb-4 mx-auto opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-transform" />
 
-                                    <h3 className="text-xl font-bold text-white mb-3">{step.title}</h3>
-                                    <p className="text-gray-400 text-sm leading-relaxed mb-6">
+                                    <h3 className="text-xl font-bold text-gray-900 mb-3">{step.title}</h3>
+                                    <p className="text-gray-600 text-sm leading-relaxed mb-6">
                                         {step.description}
                                     </p>
 
