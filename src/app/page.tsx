@@ -5,7 +5,7 @@ import { Programs } from "@/components/Programs";
 import { Features } from "@/components/Features";
 import { UnsureDegree } from "@/components/UnsureDegree";
 import { UniversityPartners } from "@/components/UniversityPartners";
-import { Benefits } from "@/components/Benefits";
+import { Roadmap } from "@/components/Roadmap";
 import { Blogs } from "@/components/Blogs";
 import { TransformCareer } from "@/components/TransformCareer";
 import { HiringPartners } from "@/components/HiringPartners";
@@ -22,7 +22,7 @@ export default function Home() {
       <Features />
       <UnsureDegree />
       <UniversityPartners />
-      <Benefits />
+      <Roadmap />
       <Blogs />
       <TransformCareer />
       <HiringPartners />
