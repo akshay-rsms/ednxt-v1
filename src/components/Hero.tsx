@@ -30,26 +30,7 @@ export function Hero() {
         <section className="bg-black relative pt-8 pb-48 overflow-hidden min-h-[850px] flex flex-col items-center">
             {/* Radial Background Lines */}
             <div className="absolute inset-0 top-[-10%] flex items-center justify-center pointer-events-none">
-                <svg
-                    width="1500"
-                    height="1500"
-                    viewBox="0 0 1000 1000"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="opacity-20"
-                >
-                    <circle cx="500" cy="500" r="150" stroke="white" strokeWidth="0.5" />
-                    <circle cx="500" cy="500" r="250" stroke="white" strokeWidth="0.5" />
-                    <circle cx="500" cy="500" r="350" stroke="white" strokeWidth="0.5" />
-                    <circle cx="500" cy="500" r="450" stroke="white" strokeWidth="0.5" />
-                    <defs>
-                        <radialGradient id="fade" cx="0.5" cy="0.5" r="0.5">
-                            <stop offset="0%" stopColor="black" stopOpacity="0" />
-                            <stop offset="80%" stopColor="black" stopOpacity="1" />
-                        </radialGradient>
-                    </defs>
-                    <rect x="0" y="0" width="1000" height="1000" fill="url(#fade)" />
-                </svg>
+                <img src="/hero-circle.svg" alt="" className="w-[1000px] h-[1000px] opacity-20" />
             </div>
 
             {/* Main Content */}
@@ -80,7 +61,7 @@ export function Hero() {
             <div className="w-full relative h-[450px] flex justify-center items-center mt-2 px-4">
 
                 {/* Far Left (-2) */}
-                <div className="absolute left-[2%] md:left-[5%] w-[160px] md:w-[260px] h-[220px] md:h-[320px] rounded-[1.5rem] overflow-hidden border border-gray-700 bg-gray-900 z-10 shadow-2xl">
+                <div className="absolute left-[0%] md:left-[2%] w-[160px] md:w-[260px] h-[220px] md:h-[320px] rounded-[1.5rem] overflow-hidden bg-gray-900 z-10 shadow-2xl">
                     <AnimatePresence mode="popLayout">
                         <motion.img
                             key={getImage(-2)}
@@ -96,7 +77,7 @@ export function Hero() {
                 </div>
 
                 {/* Mid Left (-1) */}
-                <div className="absolute left-[15%] md:left-[20%] w-[200px] md:w-[320px] h-[280px] md:h-[400px] rounded-[2rem] overflow-hidden border border-gray-600 bg-gray-800 z-20 shadow-2xl">
+                <div className="absolute left-[12%] md:left-[18%] w-[200px] md:w-[320px] h-[280px] md:h-[400px] rounded-[2rem] overflow-hidden bg-gray-800 z-20 shadow-2xl">
                     <AnimatePresence mode="popLayout">
                         <motion.img
                             key={getImage(-1)}
@@ -112,7 +93,7 @@ export function Hero() {
                 </div>
 
                 {/* Center (0) */}
-                <div className="absolute z-30 w-[280px] md:w-[500px] h-[350px] md:h-[480px] rounded-[2.5rem] overflow-hidden border-2 border-white/20 bg-gray-700 shadow-2xl shadow-black/50">
+                <div className="absolute z-30 w-[280px] md:w-[500px] h-[350px] md:h-[480px] rounded-[2.5rem] overflow-hidden bg-gray-700 shadow-2xl shadow-black/50">
                     {/* Gradient at bottom for text readability if needed, but keeping image clean as requested */}
                     <AnimatePresence mode="popLayout">
                         <motion.img
@@ -129,7 +110,7 @@ export function Hero() {
                 </div>
 
                 {/* Mid Right (1) */}
-                <div className="absolute right-[15%] md:right-[20%] w-[200px] md:w-[320px] h-[280px] md:h-[400px] rounded-[2rem] overflow-hidden border border-gray-600 bg-gray-800 z-20 shadow-2xl">
+                <div className="absolute right-[12%] md:right-[18%] w-[200px] md:w-[320px] h-[280px] md:h-[400px] rounded-[2rem] overflow-hidden bg-gray-800 z-20 shadow-2xl">
                     <AnimatePresence mode="popLayout">
                         <motion.img
                             key={getImage(1)}
@@ -145,7 +126,7 @@ export function Hero() {
                 </div>
 
                 {/* Far Right (2) */}
-                <div className="absolute right-[2%] md:right-[5%] w-[160px] md:w-[260px] h-[220px] md:h-[320px] rounded-[1.5rem] overflow-hidden border border-gray-700 bg-gray-900 z-10 shadow-2xl">
+                <div className="absolute right-[0%] md:right-[2%] w-[160px] md:w-[260px] h-[220px] md:h-[320px] rounded-[1.5rem] overflow-hidden bg-gray-900 z-10 shadow-2xl">
                     <AnimatePresence mode="popLayout">
                         <motion.img
                             key={getImage(2)}
