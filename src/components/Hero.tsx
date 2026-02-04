@@ -56,24 +56,7 @@ export function Hero() {
             <div className="relative z-10 flex flex-col items-center text-center max-w-5xl mx-auto px-4 mt-8">
                 {/* Trust Badge */}
                 <div className="flex flex-col items-center mb-4">
-                    <div className="relative w-14 h-10 flex items-center justify-center">
-                        <svg
-                            viewBox="0 0 100 80"
-                            className="w-full h-full fill-none stroke-gray-400 stroke-[2] opacity-80"
-                        >
-                            <path d="M10,70 Q5,40 30,20" />
-                            <path d="M90,70 Q95,40 70,20" />
-                        </svg>
-                        <div className="absolute inset-0 flex flex-col items-center justify-center text-[5px] leading-[7px] font-bold text-[#F51046] text-center pt-1.5">
-                            INDIA'S
-                            <br />
-                            MOST
-                            <br />
-                            TRUSTED
-                            <br />
-                            <span className="text-[3px] text-gray-500">CONSULTANCY</span>
-                        </div>
-                    </div>
+                    <img src="/india's-most.svg" alt="India's Most Trusted" className="h-16 w-auto" />
                 </div>
 
                 {/* Heading */}

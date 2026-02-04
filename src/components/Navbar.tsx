@@ -6,13 +6,13 @@ export function Navbar() {
     return (
         <nav className="w-full bg-white z-50 flex flex-col font-sans">
             {/* Top Main Bar */}
-            <div className="container mx-auto px-6 h-20 flex items-center justify-between relative">
+            <div className="w-full px-8 md:px-12 h-20 flex items-center justify-between relative">
 
                 {/* Left Side: Logo & Links */}
-                <div className="flex items-center gap-5">
+                <div className="flex items-center gap-12">
                     {/* Logo */}
                     <Link href="/" className="flex items-center">
-                        <img src="/logo.svg" alt="EdNxt.ai Logo" className="h-8 md:h-10 w-auto" />
+                        <img src="/logo.svg" alt="EdNxt.ai Logo" className="h-6 md:h-8 w-auto" />
                     </Link>
 
                     {/* Main Links */}
@@ -47,7 +47,7 @@ export function Navbar() {
 
             {/* Bottom Sub-Bar */}
             <div className="w-full bg-[#FFF5F7] h-10 border-t border-red-50">
-                <div className="container mx-auto px-6 h-full flex items-center justify-center gap-8 text-[13px] font-bold text-[#F51046]">
+                <div className="w-full px-8 md:px-12 h-full flex items-center justify-center gap-8 text-[13px] font-bold text-[#F51046]">
                     <span className="font-extrabold text-[#F51046]">Explore</span>
 
                     <Link href="#" className="flex items-center gap-1 hover:underline">
