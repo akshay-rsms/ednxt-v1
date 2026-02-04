@@ -10,9 +10,8 @@ export function Footer() {
 
                     {/* Brand Column */}
                     <div className="md:w-1/3">
-                        <a href="#" className="flex items-center gap-0.5 mb-6">
-                            <span className="text-4xl font-bold text-[#F51046]">ednxt</span>
-                            <span className="text-4xl font-bold text-[#F51046] opacity-70">.ai</span>
+                        <a href="#" className="flex items-center mb-6">
+                            <img src="/logo.svg" alt="EdNxt.ai Logo" className="h-12 w-auto" />
                         </a>
 
                         {/* Social Placeholders (Gray Circles) */}

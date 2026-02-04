@@ -6,23 +6,26 @@ export function Navbar() {
     return (
         <nav className="w-full bg-white z-50 flex flex-col font-sans">
             {/* Top Main Bar */}
-            <div className="container mx-auto px-6 h-20 flex items-center justify-between">
+            <div className="container mx-auto px-6 h-20 flex items-center justify-between relative">
 
-                {/* Logo */}
-                <Link href="/" className="text-3xl font-bold flex items-center gap-0.5 text-[#F51046]">
-                    ednxt.ai
-                </Link>
+                {/* Left Side: Logo & Links */}
+                <div className="flex items-center gap-5">
+                    {/* Logo */}
+                    <Link href="/" className="flex items-center">
+                        <img src="/logo.svg" alt="EdNxt.ai Logo" className="h-8 md:h-10 w-auto" />
+                    </Link>
 
-                {/* Main Links */}
-                <div className="hidden lg:flex items-center gap-8 text-[15px] font-medium text-gray-800">
-                    <Link href="#" className="hover:text-[#F51046] transition-colors">Programs</Link>
-                    <Link href="#" className="hover:text-[#F51046] transition-colors">Universities</Link>
-                    <Link href="#" className="hover:text-[#F51046] transition-colors">About Us</Link>
-                    <Link href="#" className="hover:text-[#F51046] transition-colors">Reviews</Link>
+                    {/* Main Links */}
+                    <div className="hidden lg:flex items-center gap-8 text-[15px] font-medium text-gray-800">
+                        <Link href="#" className="hover:text-[#F51046] transition-colors">Programs</Link>
+                        <Link href="#" className="hover:text-[#F51046] transition-colors">Universities</Link>
+                        <Link href="#" className="hover:text-[#F51046] transition-colors">About Us</Link>
+                        <Link href="#" className="hover:text-[#F51046] transition-colors">Reviews</Link>
+                    </div>
                 </div>
 
-                {/* Search Bar */}
-                <div className="hidden lg:flex items-center relative w-1/3 max-w-sm">
+                {/* Center: Search Bar (Absolute Position) */}
+                <div className="hidden lg:flex items-center absolute left-1/2 -translate-x-1/2 w-1/3 max-w-sm">
                     <input
                         type="text"
                         placeholder="What do you want to learn?"
@@ -31,7 +34,7 @@ export function Navbar() {
                     <SearchIcon className="w-4 h-4 absolute right-4 top-1/2 -translate-y-1/2 text-gray-400" />
                 </div>
 
-                {/* Action Buttons */}
+                {/* Right Side: Action Buttons */}
                 <div className="hidden lg:flex items-center gap-4">
                     <button className="px-5 py-2 rounded-full border border-[#F51046] text-[#F51046] text-sm font-bold hover:bg-red-50 transition-colors">
                         Talk to Counsellor
