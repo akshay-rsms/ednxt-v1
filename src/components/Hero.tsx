@@ -4,11 +4,11 @@ import { motion, AnimatePresence } from "framer-motion";
 
 export function Hero() {
     const images = [
-        "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&q=80",
-        "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&q=80",
-        "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=600&q=80",
-        "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=600&q=80",
-        "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80",
+        "/hero1.svg",
+        "/hero2.svg",
+        "/hero3.svg",
+        "/hero4.svg",
+        "/hero5.svg",
     ];
 
     const [centerIndex, setCenterIndex] = useState(0);
