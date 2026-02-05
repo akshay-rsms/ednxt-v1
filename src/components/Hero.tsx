@@ -69,7 +69,7 @@ export function Hero() {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
-                            transition={{ duration: 0.8 }}
+                            transition={{ duration: 0.4 }}
                             alt="Gallery"
                             className="w-full h-full object-cover"
                         />
@@ -85,7 +85,7 @@ export function Hero() {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
-                            transition={{ duration: 0.8 }}
+                            transition={{ duration: 0.4 }}
                             alt="Gallery"
                             className="w-full h-full object-cover"
                         />
@@ -102,7 +102,7 @@ export function Hero() {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
-                            transition={{ duration: 0.8 }}
+                            transition={{ duration: 0.4 }}
                             alt="Hero Gallery"
                             className="w-full h-full object-cover"
                         />
@@ -118,7 +118,7 @@ export function Hero() {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
-                            transition={{ duration: 0.8 }}
+                            transition={{ duration: 0.4 }}
                             alt="Gallery"
                             className="w-full h-full object-cover"
                         />
@@ -134,7 +134,7 @@ export function Hero() {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
-                            transition={{ duration: 0.8 }}
+                            transition={{ duration: 0.4 }}
                             alt="Gallery"
                             className="w-full h-full object-cover"
                         />
