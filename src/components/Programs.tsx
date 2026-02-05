@@ -2,50 +2,65 @@
 import { useState } from "react";
 import { ArrowRight, GraduationCap, Clock, TrendingUp } from "lucide-react";
 
+interface Program {
+    title: string;
+    fullTitle: string;
+    image: string;
+    badges: { text: string; color: string; textColor: string }[];
+    category: string;
+}
+
 export function Programs() {
     const [activeTab, setActiveTab] = useState("UNDER GRADUATE");
 
-    const programs = [
+    const programs: Program[] = [
+        // Undergraduate
         {
-            title: "BCA",
-            fullTitle: "Bachelor of Computer Applications",
-            image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=600&q=80",
+            title: "BBA",
+            fullTitle: "Bachelor of Business Administration",
+            image: "/bba.svg",
             badges: [],
+            category: "UNDER GRADUATE"
         },
         {
             title: "B. Com",
-            fullTitle: "Bachelor of Commerce Applications",
-            image: "https://images.unsplash.com/photo-1606761568499-6d2451b23c66?w=600&q=80",
-            badges: [{ text: "Top Ranked", color: "bg-[#F51046]", textColor: "text-white" }],
-        },
-        {
-            title: "B.A.",
-            fullTitle: "Bachelor of Arts",
-            image: "https://images.unsplash.com/photo-1627556592933-ffe99c1cd9eb?w=600&q=80",
+            fullTitle: "Bachelor of Commerce",
+            image: "/bcom.svg",
             badges: [],
-        },
-        {
-            title: "B. Tech",
-            fullTitle: "Bachelor of Computer Applications",
-            image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&q=80",
-            badges: [
-                { text: "Top Ranked", color: "bg-[#F51046]", textColor: "text-white" },
-                { text: "Dynamic Text", color: "bg-[#FFD700]", textColor: "text-black" }
-            ],
-        },
-        {
-            title: "BBA",
-            fullTitle: "Bachelor of Computer Applications",
-            image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=600&q=80",
-            badges: [],
+            category: "UNDER GRADUATE"
         },
         {
             title: "BCA",
             fullTitle: "Bachelor of Computer Applications",
-            image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&q=80",
-            badges: [{ text: "For Working Professionals", color: "bg-[#FFD700]", textColor: "text-black" }],
+            image: "/bca.svg",
+            badges: [],
+            category: "UNDER GRADUATE"
         },
+        // Postgraduate
+        {
+            title: "MBA",
+            fullTitle: "Master of Business Administration",
+            image: "/mba.svg",
+            badges: [],
+            category: "POST GRADUATE"
+        },
+        {
+            title: "MCA",
+            fullTitle: "Master of Computer Applications",
+            image: "/mca.svg",
+            badges: [],
+            category: "POST GRADUATE"
+        },
+        {
+            title: "M.Com",
+            fullTitle: "Master of Commerce",
+            image: "/mcom.svg",
+            badges: [],
+            category: "POST GRADUATE"
+        }
     ];
+
+    const filteredPrograms = programs.filter(program => program.category === activeTab);
 
     return (
         <section className="py-20 bg-gray-50/50">
@@ -64,7 +79,7 @@ export function Programs() {
 
                 {/* Tabs */}
                 <div className="flex items-center gap-8 border-b-2 border-gray-200 mb-12 overflow-x-auto">
-                    {["UNDER GRADUATE", "POST GRADUDATE", "CERTIFICATION"].map((tab) => (
+                    {["UNDER GRADUATE", "POST GRADUATE", "CERTIFICATION"].map((tab) => (
                         <button
                             key={tab}
                             onClick={() => setActiveTab(tab)}
@@ -81,14 +96,11 @@ export function Programs() {
 
                 {/* Cards Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {programs.map((prog, idx) => (
+                    {filteredPrograms.map((prog, idx) => (
                         <div key={idx} className="bg-white border border-red-100 rounded-[2rem] overflow-hidden hover:shadow-xl transition-all duration-300 group relative">
 
                             {/* Badges Container */}
                             <div className="absolute top-0 left-0 w-full flex justify-center gap-2 z-20 pointer-events-none pt-0">
-                                {/* We need to position badges correctly on top of the image or card */}
-                                {/* The design shows badges overlapping the top edge or just simply at the top */}
-                                {/* Let's try absolute positioning relative to card */}
                                 <div className="flex gap-2 -mt-3">
                                     {prog.badges.map((badge, bIdx) => (
                                         <div key={bIdx} className={`${badge.color} ${badge.textColor} text-[10px] font-bold px-3 py-1 rounded-b-lg shadow-md uppercase`}>
@@ -100,11 +112,10 @@ export function Programs() {
 
                             {/* Image */}
                             <div className="h-48 overflow-hidden relative">
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent z-10" />
                                 <img
                                     src={prog.image}
                                     alt={prog.title}
-                                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                    className="w-full h-full object-cover"
                                 />
                             </div>
 
@@ -139,6 +150,11 @@ export function Programs() {
                             </div>
                         </div>
                     ))}
+                    {filteredPrograms.length === 0 && (
+                        <div className="col-span-full py-20 text-center text-gray-400 font-bold tracking-widest uppercase text-sm">
+                            Coming Soon...
+                        </div>
+                    )}
                 </div>
 
             </div>
