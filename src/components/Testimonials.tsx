@@ -5,7 +5,7 @@ export function Testimonials() {
     const testimonials = [
         {
             type: "image-top",
-            image: "/testimonial1.svg",
+            image: "/testimonial1.png",
             content: "Balancing work and study was tough, but the support team here made it possible.",
             name: "Meera Patel",
             role: "MBA Graduate, Founder of StartupX",
@@ -20,14 +20,6 @@ export function Testimonials() {
             rating: 5,
         },
         {
-            type: "image-top",
-            image: "/testimonial1.svg",
-            content: "Choosing to pursue my MBA in Online Manipal at MUJ was an easy choice for me because I had also completed my BBA from here.",
-            name: "Meera Patel",
-            role: "MBA Batch - JAIN Online",
-            rating: 5,
-        },
-        {
             type: "text-only",
             image: "/testimonial2.svg",
             content: "The recorded lectures were legitimate life-savers! I recall an incident 4 years ago when I started BBA, I was really nervous.",
@@ -35,6 +27,15 @@ export function Testimonials() {
             role: "MBA Graduate, Founder of StartupX",
             rating: 5,
         },
+        {
+            type: "image-top",
+            image: "/testimonial1.png",
+            content: "Choosing to pursue my MBA in Online Manipal at MUJ was an easy choice for me because I had also completed my BBA from here.",
+            name: "Meera Patel",
+            role: "MBA Batch - JAIN Online",
+            rating: 5,
+        },
+
         {
             type: "image-full",
             image: "/testimonial2.svg",
