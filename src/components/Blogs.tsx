@@ -1,88 +1,123 @@
+"use client";
 import { ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
+import { useRef, useState, useEffect } from "react";
+
+const blogs = [
+    {
+        id: 1,
+        title: "Why an Online MBA is the Future of Business Leadership",
+        image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&q=80",
+        description: "Discover how an online MBA can fast-track your career and build essential leadership skills in today's digital economy."
+    },
+    {
+        id: 2,
+        title: "Mastering AI & Data Science with an Online MCA",
+        image: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=800&q=80",
+        description: "Explore the curriculum and career opportunities available for MCA graduates in the age of Artificial Intelligence."
+    },
+    {
+        id: 3,
+        title: "Modernizing Finance: The Scope of Online B.Com",
+        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
+        description: "See how a B.Com degree adapts to the fintech revolution and the changing landscape of global finance."
+    },
+    {
+        id: 4,
+        title: "Top Career Paths After Completing Your Online BBA",
+        image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&q=80",
+        description: "From marketing to HR, find out where your BBA degree can take you and how to start your management journey."
+    },
+    {
+        id: 5,
+        title: "How to Choose the Best University for Online Learning",
+        image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&q=80",
+        description: "A comprehensive guide to selecting the right institution/university for your ed-tech journey and career goals."
+    },
+    {
+        id: 6,
+        title: "Salary Trends for Online Degree Graduates in 2026",
+        image: "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=800&q=80",
+        description: "Analyze the ROI and salary expectations for various online degree programs in the current job market."
+    }
+];
 
 export function Blogs() {
-    const blogs = [
-        {
-            category: "TOP 10 UNIVERSITIES IN INDIA",
-            title: "How to choose the BEST university in 2026",
-            readTime: "3 minute read",
-            comments: "35 comments",
-            image: "https://images.unsplash.com/photo-1562774053-701939374585?w=600&q=80",
-        },
-        {
-            category: "TOP 10 UNIVERSITIES IN INDIA",
-            title: "How to choose the BEST university in 2026",
-            readTime: "3 minute read",
-            comments: "35 comments",
-            image: "https://images.unsplash.com/photo-1562774053-701939374585?w=600&q=80",
-        },
-        {
-            category: "TOP 10 UNIVERSITIES IN INDIA",
-            title: "How to choose the BEST university in 2026",
-            readTime: "3 minute read",
-            comments: "35 comments",
-            image: "https://images.unsplash.com/photo-1562774053-701939374585?w=600&q=80",
-        },
-        {
-            category: "TOP 10 UNIVERSITIES IN INDIA",
-            title: "How to choose the BEST university in 2026",
-            readTime: "3 minute read",
-            comments: "35 comments",
-            image: "https://images.unsplash.com/photo-1562774053-701939374585?w=600&q=80",
-        },
-    ];
+    const [width, setWidth] = useState(0);
+    const carouselRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        if (carouselRef.current) {
+            setWidth(carouselRef.current.scrollWidth - carouselRef.current.offsetWidth);
+        }
+    }, []);
 
     return (
-        <section className="py-20 bg-white">
+        <section className="py-24 bg-white overflow-hidden">
             <div className="container mx-auto px-6 font-sans">
 
                 {/* Header */}
-                <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-12">
-                    <h2 className="text-4xl md:text-5xl font-extrabold text-[#333] uppercase leading-tight">
-                        READ OUR <br />
-                        <span className="text-[#F51046]">LATEST BLOGS</span>
-                    </h2>
-                    <button className="bg-[#F51046] text-white px-8 py-3 rounded-lg font-bold text-sm tracking-wide flex items-center gap-2 hover:bg-red-600 transition-colors shadow-lg shadow-red-100">
+                <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+                    <div>
+                        <h2 className="text-4xl md:text-5xl font-extrabold text-[#333] uppercase leading-tight">
+                            READ OUR <br />
+                            <span className="text-[#F51046]">LATEST BLOGS</span>
+                        </h2>
+                    </div>
+                    <button className="bg-[#F51046] text-white px-8 py-3 rounded-full font-bold text-sm tracking-wide flex items-center gap-2 hover:bg-red-600 transition-colors shadow-lg shadow-red-100">
                         VIEW ALL <ArrowRight className="w-4 h-4" />
                     </button>
                 </div>
 
-                {/* Blog Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                    {blogs.map((blog, idx) => (
-                        <div key={idx} className="bg-white rounded-[1.5rem] border border-gray-100 overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 group cursor-pointer">
-
-                            {/* Image Container */}
-                            <div className="relative h-64 overflow-hidden">
-                                <div className="absolute inset-0 bg-blue-500/10 z-10 mix-blend-multiply group-hover:bg-transparent transition-colors"></div>
-                                <img
-                                    src={blog.image}
-                                    alt={blog.title}
-                                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                                />
-                                {/* Overlay Text */}
-                                <div className="absolute top-8 left-0 w-full text-center z-20 px-4">
-                                    <span className="text-white text-[10px] font-bold tracking-widest uppercase bg-black/20 backdrop-blur-sm px-2 py-1 rounded">
-                                        {blog.category.split("IN INDIA")[0]} <br /> IN INDIA
-                                    </span>
+                {/* Carousel Container */}
+                <motion.div
+                    ref={carouselRef}
+                    className="cursor-grab active:cursor-grabbing overflow-visible py-12" // Added vertical padding for stagger space
+                    whileTap={{ cursor: "grabbing" }}
+                >
+                    <motion.div
+                        drag="x"
+                        dragConstraints={{ right: 0, left: -width }}
+                        className="flex gap-8"
+                    >
+                        {blogs.map((blog, idx) => (
+                            <motion.div
+                                key={blog.id}
+                                className={`min-w-[320px] md:min-w-[380px] bg-white rounded-[2rem] overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 h-[500px] flex flex-col ${idx % 2 !== 0 ? "mt-12" : ""
+                                    }`}
+                            >
+                                {/* Top Image Section */}
+                                <div className="h-[55%] relative overflow-hidden">
+                                    <img
+                                        src={blog.image}
+                                        alt={blog.title}
+                                        className="w-full h-full object-cover"
+                                    />
                                 </div>
-                            </div>
 
-                            {/* Content */}
-                            <div className="p-6">
-                                <h3 className="text-xl font-bold text-gray-900 leading-tight mb-4 group-hover:text-[#F51046] transition-colors">
-                                    {blog.title}
-                                </h3>
-                                <div className="flex items-center gap-2 text-xs font-medium text-gray-400">
-                                    <span>{blog.readTime}</span>
-                                    <span>•</span>
-                                    <span>{blog.comments}</span>
+                                {/* Bottom Content Section */}
+                                <div className="h-[45%] p-8 flex flex-col justify-between bg-white">
+                                    <div>
+                                        <h3 className="text-xl font-bold text-gray-900 leading-tight mb-3 line-clamp-2">
+                                            {blog.title}
+                                        </h3>
+                                        <p className="text-gray-500 text-sm line-clamp-3 leading-relaxed">
+                                            {blog.description}
+                                        </p>
+                                    </div>
+
+                                    {/* Static CTA Button */}
+                                    <div className="mt-4">
+                                        <button className="text-[#F51046] font-bold text-sm uppercase tracking-wider flex items-center gap-2 hover:gap-3 transition-all">
+                                            Read More <ArrowRight className="w-4 h-4" />
+                                        </button>
+                                    </div>
                                 </div>
-                            </div>
 
-                        </div>
-                    ))}
-                </div>
+                            </motion.div>
+                        ))}
+                    </motion.div>
+                </motion.div>
 
             </div>
         </section>
