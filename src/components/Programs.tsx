@@ -11,7 +11,7 @@ interface Program {
 }
 
 export function Programs() {
-    const [activeTab, setActiveTab] = useState("UNDER GRADUATE");
+    const [activeTab, setActiveTab] = useState("POST GRADUATE");
 
     const programs: Program[] = [
         // Undergraduate
@@ -79,7 +79,7 @@ export function Programs() {
 
                 {/* Tabs */}
                 <div className="flex items-center gap-8 border-b-2 border-gray-200 mb-12 overflow-x-auto">
-                    {["UNDER GRADUATE", "POST GRADUATE", "CERTIFICATION"].map((tab) => (
+                    {["POST GRADUATE", "UNDER GRADUATE", "CERTIFICATION"].map((tab) => (
                         <button
                             key={tab}
                             onClick={() => setActiveTab(tab)}
