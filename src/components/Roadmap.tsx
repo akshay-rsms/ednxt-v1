@@ -34,7 +34,7 @@ export function Roadmap() {
                 {/* Header */}
                 <div className="text-center mb-24">
                     <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
-                        Why choose <span className="text-[#F51046]">Online</span> Degree?
+                        Why choose <span className="text-[#FF0031]">Online</span> Degree?
                     </h2>
                     <p className="text-gray-600 max-w-2xl mx-auto">
                         Gain industry-relevant skills, flexible learning, and career growth
@@ -60,7 +60,7 @@ export function Roadmap() {
                             <defs>
                                 <linearGradient id="gradient-line" x1="0%" y1="0%" x2="100%" y2="0%">
                                     <stop offset="0%" stopColor="#E5E7EB" />
-                                    <stop offset="50%" stopColor="#F51046" />
+                                    <stop offset="50%" stopColor="#FF0031" />
                                     <stop offset="100%" stopColor="#E5E7EB" />
                                 </linearGradient>
                             </defs>
@@ -74,12 +74,12 @@ export function Roadmap() {
 
                                 {/* Level Badge */}
                                 <div className="mb-8 relative">
-                                    <div className="border border-red-100 bg-white text-[#F51046] text-xs font-bold tracking-[0.2em] px-4 py-2 rounded uppercase shadow-sm group-hover:bg-[#F51046] group-hover:text-white transition-colors duration-300">
+                                    <div className="border border-red-100 bg-white text-[#FF0031] text-xs font-bold tracking-[0.2em] px-4 py-2 rounded uppercase shadow-sm group-hover:bg-[#FF0031] group-hover:text-white transition-colors duration-300">
                                         {step.level}
                                     </div>
                                     {/* Vertical Drop Line */}
-                                    <div className="absolute top-full left-1/2 -translate-x-1/2 h-12 w-[1px] bg-gradient-to-b from-[#F51046] to-transparent block md:hidden"></div>
-                                    <div className={`absolute top-full left-1/2 -translate-x-1/2 w-[1px] bg-gradient-to-b from-[#F51046] to-transparent transition-all duration-500 hidden md:block
+                                    <div className="absolute top-full left-1/2 -translate-x-1/2 h-12 w-[1px] bg-gradient-to-b from-[#FF0031] to-transparent block md:hidden"></div>
+                                    <div className={`absolute top-full left-1/2 -translate-x-1/2 w-[1px] bg-gradient-to-b from-[#FF0031] to-transparent transition-all duration-500 hidden md:block
                                  ${idx === 1 ? 'h-24' : 'h-12'}
                              `}></div>
                                 </div>
@@ -90,18 +90,18 @@ export function Roadmap() {
                         `}></div>
 
                                 {/* Card */}
-                                <div className="bg-white border border-gray-100 p-8 rounded-2xl w-full hover:border-[#F51046]/30 transition-all duration-300 relative group-hover:-translate-y-2 group-hover:shadow-[0_10px_30px_-10px_rgba(245,16,70,0.15)] shadow-sm">
+                                <div className="bg-white border border-gray-100 p-8 rounded-2xl w-full hover:border-[#FF0031]/30 transition-all duration-300 relative group-hover:-translate-y-2 group-hover:shadow-[0_10px_30px_-10px_rgba(245,16,70,0.15)] shadow-sm">
                                     {/* Diamond Node */}
-                                    <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-6 h-6 bg-[#F51046] rotate-45 border-4 border-white shadow-lg"></div>
+                                    <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-6 h-6 bg-[#FF0031] rotate-45 border-4 border-white shadow-lg"></div>
 
-                                    <step.icon className="w-10 h-10 text-[#F51046] mb-4 mx-auto opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-transform" />
+                                    <step.icon className="w-10 h-10 text-[#FF0031] mb-4 mx-auto opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-transform" />
 
                                     <h3 className="text-xl font-bold text-gray-900 mb-3">{step.title}</h3>
                                     <p className="text-gray-600 text-sm leading-relaxed mb-6">
                                         {step.description}
                                     </p>
 
-                                    <a href="#" className="text-[#F51046] text-xs font-bold flex items-center justify-center gap-1 hover:gap-2 transition-all">
+                                    <a href="#" className="text-[#FF0031] text-xs font-bold flex items-center justify-center gap-1 hover:gap-2 transition-all">
                                         Learn more <ChevronDown className="w-3 h-3 -rotate-90" />
                                     </a>
                                 </div>

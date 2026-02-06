@@ -7,24 +7,24 @@ export function UniversityPartners() {
 
                 {/* Header */}
                 <div className="mb-12">
-                    <h4 className="text-[#F51046] font-bold text-sm tracking-widest uppercase mb-3">UNIVERSITY PARTNERS</h4>
+                    <h4 className="text-[#FF0031] font-bold text-sm tracking-widest uppercase mb-3">UNIVERSITY PARTNERS</h4>
                     <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
                         Learn from <span className="relative inline-block">
                             Top-Ranked
                             <svg className="absolute w-full h-3 -bottom-1 left-0" viewBox="0 0 100 10" preserveAspectRatio="none">
-                                <path d="M0 5 Q 50 10 100 5" stroke="#F51046" strokeWidth="3" fill="none" />
+                                <path d="M0 5 Q 50 10 100 5" stroke="#FF0031" strokeWidth="3" fill="none" />
                             </svg>
                         </span> Institutions
                     </h2>
 
                     <div className="flex flex-col md:flex-row md:items-center gap-6 text-sm">
-                        <button className="bg-[#F51046] text-white px-6 py-3 rounded-full font-bold flex items-center gap-2 hover:bg-red-600 transition-colors shadow-lg shadow-red-100">
+                        <button className="bg-[#FF0031] text-white px-6 py-3 rounded-full font-bold flex items-center gap-2 hover:bg-[#D9002A] transition-colors shadow-lg shadow-red-100">
                             Explore All <ArrowRight className="w-4 h-4" />
                         </button>
                         <div className="flex items-center gap-1 font-medium text-gray-700">
                             <span className="font-bold text-black">100+ Universities available</span>
                             <span className="text-gray-500">throughout the country!</span>
-                            <a href="#" className="flex items-center gap-1 text-gray-400 hover:text-[#F51046] ml-1 transition-colors">
+                            <a href="#" className="flex items-center gap-1 text-gray-400 hover:text-[#FF0031] ml-1 transition-colors">
                                 Explore Now <ArrowRight className="w-3 h-3" />
                             </a>
                         </div>

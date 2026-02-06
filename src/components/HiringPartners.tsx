@@ -38,7 +38,7 @@ export function HiringPartners() {
         <section className="py-20 bg-white overflow-hidden">
             <div className="container mx-auto px-6 font-sans mb-12 text-center">
                 <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
-                    Get Placed at <span className="text-[#F51046]">Leading Companies</span>
+                    Get Placed at <span className="text-[#FF0031]">Leading Companies</span>
                 </h2>
             </div>
 

@@ -61,10 +61,10 @@ export function Blogs() {
                     <div>
                         <h2 className="text-4xl md:text-5xl font-extrabold text-[#333] uppercase leading-tight">
                             READ OUR <br />
-                            <span className="text-[#F51046]">LATEST BLOGS</span>
+                            <span className="text-[#FF0031]">LATEST BLOGS</span>
                         </h2>
                     </div>
-                    <button className="bg-[#F51046] text-white px-8 py-3 rounded-full font-bold text-sm tracking-wide flex items-center gap-2 hover:bg-red-600 transition-colors shadow-lg shadow-red-100">
+                    <button className="bg-[#FF0031] text-white px-8 py-3 rounded-full font-bold text-sm tracking-wide flex items-center gap-2 hover:bg-[#D9002A] transition-colors shadow-lg shadow-red-100">
                         VIEW ALL <ArrowRight className="w-4 h-4" />
                     </button>
                 </div>
@@ -108,7 +108,7 @@ export function Blogs() {
 
                                     {/* Static CTA Button */}
                                     <div className="mt-4">
-                                        <button className="text-[#F51046] font-bold text-sm uppercase tracking-wider flex items-center gap-2 hover:gap-3 transition-all">
+                                        <button className="text-[#FF0031] font-bold text-sm uppercase tracking-wider flex items-center gap-2 hover:gap-3 transition-all">
                                             Read More <ArrowRight className="w-4 h-4" />
                                         </button>
                                     </div>

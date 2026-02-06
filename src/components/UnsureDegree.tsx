@@ -13,20 +13,20 @@ export function UnsureDegree() {
                             <span className="relative inline-block">
                                 degree
                                 <svg className="absolute w-full h-3 -bottom-1 left-0" viewBox="0 0 100 10" preserveAspectRatio="none">
-                                    <path d="M0 5 Q 50 10 100 5" stroke="#F51046" strokeWidth="3" fill="none" />
+                                    <path d="M0 5 Q 50 10 100 5" stroke="#FF0031" strokeWidth="3" fill="none" />
                                 </svg>
                             </span> <br />
                             <span className="relative inline-block">
                                 is right
                                 <svg className="absolute w-full h-3 -bottom-1 left-0" viewBox="0 0 100 10" preserveAspectRatio="none">
-                                    <path d="M0 5 Q 50 10 100 5" stroke="#F51046" strokeWidth="3" fill="none" />
+                                    <path d="M0 5 Q 50 10 100 5" stroke="#FF0031" strokeWidth="3" fill="none" />
                                 </svg>
                             </span> for you?
                         </h2>
                         <p className="text-gray-300 text-lg mb-10 max-w-md">
                             Talk to our admissions counselor and join the best degree that you deserve
                         </p>
-                        <button className="bg-white text-[#F51046] px-8 py-3 rounded-full font-bold flex items-center gap-2 w-fit hover:bg-gray-100 transition-colors shadow-lg">
+                        <button className="bg-white text-[#FF0031] px-8 py-3 rounded-full font-bold flex items-center gap-2 w-fit hover:bg-gray-100 transition-colors shadow-lg">
                             Explore <ArrowRight className="w-4 h-4" />
                         </button>
                     </div>

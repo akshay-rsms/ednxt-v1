@@ -48,11 +48,11 @@ export function Features() {
 
                 {/* Header */}
                 <div className="mb-16">
-                    <h4 className="text-[#F51046] font-bold text-sm tracking-widest uppercase mb-3">WHY CHOOSE US</h4>
+                    <h4 className="text-[#FF0031] font-bold text-sm tracking-widest uppercase mb-3">WHY CHOOSE US</h4>
                     <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                         Everything You Need to <span className="relative inline-block">
                             Succeed
-                            <div className="absolute left-0 bottom-1 w-full h-1 bg-[#F51046]"></div>
+                            <div className="absolute left-0 bottom-1 w-full h-1 bg-[#FF0031]"></div>
                         </span>
                     </h2>
                     <p className="text-gray-500 max-w-2xl text-lg">

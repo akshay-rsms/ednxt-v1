@@ -48,7 +48,7 @@ export function Hero() {
 
                 {/* Buttons */}
                 <div className="flex items-center gap-4 mb-6">
-                    <button className="px-8 py-3 rounded-full bg-[#F51046] text-white font-bold hover:bg-red-600 transition-colors shadow-lg shadow-red-900/30 tracking-wide text-sm">
+                    <button className="px-8 py-3 rounded-full bg-[#FF0031] text-white font-bold hover:bg-[#D9002A] transition-colors shadow-lg shadow-red-900/30 tracking-wide text-sm">
                         Enroll Now
                     </button>
                     <button className="px-8 py-3 rounded-full border border-gray-600 text-white font-bold hover:border-white hover:bg-white/5 transition-colors tracking-wide text-sm">

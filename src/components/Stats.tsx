@@ -7,7 +7,7 @@ export function Stats() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 
                     {/* Card 1: Active Learners - Red Border */}
-                    <div className="bg-white rounded-[2rem] p-6 border border-[#F51046] shadow-sm flex items-center justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+                    <div className="bg-white rounded-[2rem] p-6 border border-[#FF0031] shadow-sm flex items-center justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
                         <div className="relative z-10">
                             <h3 className="text-4xl font-bold text-gray-900 mb-1">50K+</h3>
                             <p className="text-gray-500 text-sm font-medium">Active Learners</p>
@@ -15,7 +15,7 @@ export function Stats() {
                         {/* Icon Design */}
                         <div className="w-14 h-14 rounded-full bg-red-50 flex items-center justify-center relative translate-x-2">
                             <div className="absolute inset-0 bg-red-100 blur-xl opacity-50 rounded-full"></div>
-                            <GraduationCap className="w-8 h-8 text-[#F51046] fill-[#F51046]" />
+                            <GraduationCap className="w-8 h-8 text-[#FF0031] fill-[#FF0031]" />
                         </div>
                     </div>
 
@@ -27,7 +27,7 @@ export function Stats() {
                         </div>
                         <div className="w-14 h-14 rounded-full bg-red-50 flex items-center justify-center relative translate-x-2">
                             <div className="absolute inset-0 bg-red-100 blur-xl opacity-50 rounded-full"></div>
-                            <Book className="w-7 h-7 text-[#F51046] fill-[#F51046]" />
+                            <Book className="w-7 h-7 text-[#FF0031] fill-[#FF0031]" />
                         </div>
                     </div>
 
@@ -43,7 +43,7 @@ export function Stats() {
                                 <path d="M0,100 L20,80 L40,90 L70,50 L100,20 V100 Z" fill="url(#gradient-graph)" />
                                 <defs>
                                     <linearGradient id="gradient-graph" x1="0" y1="0" x2="0" y2="1">
-                                        <stop offset="0%" stopColor="#F51046" stopOpacity="0.2" />
+                                        <stop offset="0%" stopColor="#FF0031" stopOpacity="0.2" />
                                         <stop offset="100%" stopColor="#FFF" stopOpacity="0" />
                                     </linearGradient>
                                 </defs>

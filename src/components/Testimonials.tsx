@@ -64,11 +64,11 @@ export function Testimonials() {
                         Hear from our <span className="relative inline-block">
                             learners
                             <svg className="absolute w-full h-3 -bottom-1 left-0" viewBox="0 0 100 10" preserveAspectRatio="none">
-                                <path d="M0 5 Q 50 10 100 5" stroke="#F51046" strokeWidth="4" fill="none" />
+                                <path d="M0 5 Q 50 10 100 5" stroke="#FF0031" strokeWidth="4" fill="none" />
                             </svg>
                         </span>
                     </h2>
-                    <button className="bg-[#F51046] text-white px-8 py-4 rounded-full font-bold tracking-wide flex items-center gap-2 hover:bg-red-600 transition-colors shadow-lg shadow-red-200 uppercase text-sm">
+                    <button className="bg-[#FF0031] text-white px-8 py-4 rounded-full font-bold tracking-wide flex items-center gap-2 hover:bg-[#D9002A] transition-colors shadow-lg shadow-red-200 uppercase text-sm">
                         All Success Stories <ArrowRight className="w-4 h-4" />
                     </button>
                 </div>

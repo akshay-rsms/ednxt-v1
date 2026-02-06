@@ -29,7 +29,7 @@ export function Benefits() {
                             {/* Icon Container with Glow */}
                             <div className="relative mb-6">
                                 <div className="absolute inset-0 bg-red-400 blur-xl opacity-40 rounded-full scale-150"></div>
-                                <div className="w-12 h-12 bg-[#F51046] rounded-full flex items-center justify-center relative z-10 shadow-lg shadow-red-200">
+                                <div className="w-12 h-12 bg-[#FF0031] rounded-full flex items-center justify-center relative z-10 shadow-lg shadow-red-200">
                                     <Check className="w-6 h-6 text-white" strokeWidth={3} />
                                 </div>
                             </div>

@@ -63,15 +63,15 @@ export function Programs() {
     const filteredPrograms = programs.filter(program => program.category === activeTab);
 
     return (
-        <section className="py-20 bg-gray-50/50">
+        <section className="py-20 bg-[#ffffff]">
             <div className="container mx-auto px-6 font-sans">
 
                 {/* Header */}
                 <div className="mb-10">
-                    <h4 className="text-[#F51046] font-bold text-sm tracking-widest uppercase mb-2">EXPLORE PROGRAMS</h4>
+                    <h4 className="text-[#FF0031] font-bold text-sm tracking-widest uppercase mb-2">EXPLORE PROGRAMS</h4>
                     <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
                         <h2 className="text-4xl md:text-5xl font-bold text-gray-900">All Programs</h2>
-                        <button className="bg-[#F51046] hover:bg-red-600 text-white px-6 py-3 rounded-md font-bold text-sm flex items-center gap-2 transition-colors">
+                        <button className="bg-[#FF0031] hover:bg-[#D9002A] text-white px-6 py-3 rounded-md font-bold text-sm flex items-center gap-2 transition-colors">
                             VIEW ALL <ArrowRight className="w-4 h-4" />
                         </button>
                     </div>
@@ -83,12 +83,12 @@ export function Programs() {
                         <button
                             key={tab}
                             onClick={() => setActiveTab(tab)}
-                            className={`pb-4 text-sm font-bold tracking-wide uppercase transition-all relative ${activeTab === tab ? "text-[#F51046]" : "text-gray-500 hover:text-gray-800"
+                            className={`pb-4 text-sm font-bold tracking-wide uppercase transition-all relative ${activeTab === tab ? "text-[#FF0031]" : "text-gray-500 hover:text-gray-800"
                                 }`}
                         >
                             {tab}
                             {activeTab === tab && (
-                                <div className="absolute bottom-[-2px] left-0 w-full h-[2px] bg-[#F51046]" />
+                                <div className="absolute bottom-[-2px] left-0 w-full h-[2px] bg-[#FF0031]" />
                             )}
                         </button>
                     ))}
@@ -126,15 +126,15 @@ export function Programs() {
 
                                 <div className="space-y-3 mb-8">
                                     <div className="flex items-center gap-3 text-sm text-gray-600">
-                                        <GraduationCap className="w-5 h-5 text-[#F51046]" />
+                                        <GraduationCap className="w-5 h-5 text-[#FF0031]" />
                                         <span>454,343 Students</span>
                                     </div>
                                     <div className="flex items-center gap-3 text-sm text-gray-600">
-                                        <Clock className="w-5 h-5 text-[#F51046]" />
+                                        <Clock className="w-5 h-5 text-[#FF0031]" />
                                         <span>2-3 Years</span>
                                     </div>
                                     <div className="flex items-center gap-3 text-sm text-gray-600">
-                                        <TrendingUp className="w-5 h-5 text-[#F51046]" />
+                                        <TrendingUp className="w-5 h-5 text-[#FF0031]" />
                                         <span>Trending amongst people</span>
                                     </div>
                                 </div>
@@ -143,7 +143,7 @@ export function Programs() {
                                     <button className="flex-1 py-2.5 rounded-full border border-gray-900 text-sm font-bold text-gray-900 hover:bg-gray-50 transition-colors">
                                         Get Callback
                                     </button>
-                                    <button className="flex-1 py-2.5 rounded-full bg-[#F51046] text-white text-sm font-bold hover:bg-red-600 transition-colors flex items-center justify-center gap-1 shadow-lg shadow-red-100">
+                                    <button className="flex-1 py-2.5 rounded-full bg-[#FF0031] text-white text-sm font-bold hover:bg-[#D9002A] transition-colors flex items-center justify-center gap-1 shadow-lg shadow-red-100">
                                         Apply Now <ArrowRight className="w-4 h-4" />
                                     </button>
                                 </div>

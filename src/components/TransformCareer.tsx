@@ -13,11 +13,11 @@ export function TransformCareer() {
                             <span className="relative inline-block">
                                 Transform
                                 <svg className="absolute w-full h-4 -bottom-2 left-0" viewBox="0 0 100 10" preserveAspectRatio="none">
-                                    <path d="M0 5 Q 50 10 100 5" stroke="#F51046" strokeWidth="4" fill="none" />
+                                    <path d="M0 5 Q 50 10 100 5" stroke="#FF0031" strokeWidth="4" fill="none" />
                                 </svg>
                             </span> <br />
                             Your Career?
-                            <Sparkles className="inline-block w-8 h-8 text-[#F51046] ml-4 mb-4" />
+                            <Sparkles className="inline-block w-8 h-8 text-[#FF0031] ml-4 mb-4" />
                         </h2>
 
                         <p className="text-gray-400 text-lg mb-10 max-w-lg leading-relaxed">
@@ -26,7 +26,7 @@ export function TransformCareer() {
                         </p>
 
                         <div className="flex items-center gap-4">
-                            <button className="bg-[#F51046] text-white px-8 py-3.5 rounded-full font-bold text-sm tracking-wide hover:bg-red-600 transition-colors shadow-lg shadow-red-900/20">
+                            <button className="bg-[#FF0031] text-white px-8 py-3.5 rounded-full font-bold text-sm tracking-wide hover:bg-[#D9002A] transition-colors shadow-lg shadow-red-900/20">
                                 View All Programs
                             </button>
                             <button className="bg-transparent border border-gray-600 text-white px-8 py-3.5 rounded-full font-bold text-sm tracking-wide hover:bg-white hover:text-black transition-all">
