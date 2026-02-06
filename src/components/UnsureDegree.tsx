@@ -4,11 +4,11 @@ export function UnsureDegree() {
     return (
         <section className="py-20 bg-white">
             <div className="container mx-auto px-6 font-sans">
-                <div className="bg-[#2A1C15] rounded-[2.5rem] overflow-hidden flex flex-col md:flex-row relative min-h-[500px]">
+                <div className="bg-[#2B1D10] rounded-[2.5rem] overflow-hidden flex flex-col md:flex-row relative min-h-[500px]">
 
                     {/* Left Content */}
-                    <div className="w-full md:w-1/2 p-12 md:p-20 flex flex-col justify-center relative z-10">
-                        <h2 className="text-5xl md:text-6xl font-bold text-white leading-tight mb-6">
+                    <div className="w-full md:w-1/2 p-12 md:p-16 flex flex-col justify-center items-start text-left relative z-10">
+                        <h2 className="text-white font-bold mb-6 leading-[1.14] tracking-[-0.05em]" style={{ fontSize: '49.97px', fontFamily: 'Inter, sans-serif' }}>
                             Unsure which <br />
                             <span className="relative inline-block">
                                 degree
@@ -32,30 +32,12 @@ export function UnsureDegree() {
                     </div>
 
                     {/* Right Image Section */}
-                    <div className="w-full md:w-1/2 relative min-h-[400px] md:min-h-full">
-                        <div className="absolute inset-0">
-                            <img
-                                src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&q=80"
-                                alt="Confused Student"
-                                className="w-full h-full object-cover"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-r from-[#2A1C15] via-transparent to-transparent"></div>
-                        </div>
-
-                        {/* Floating Bubbles */}
-                        <div className="absolute top-10 left-10 bg-white px-4 py-2 rounded-full shadow-lg transform -rotate-6">
-                            <span className="text-[#F51046] font-bold italic font-serif">how to choose?</span>
-                        </div>
-                        <div className="absolute top-20 right-20 bg-white px-4 py-2 rounded-full shadow-lg transform rotate-3">
-                            <span className="text-[#F51046] font-bold italic font-serif">which course?</span>
-                        </div>
-                        <div className="absolute bottom-32 right-32 bg-white px-4 py-2 rounded-full shadow-lg transform -rotate-3">
-                            <span className="text-[#F51046] font-bold italic font-serif">what budget?</span>
-                        </div>
-                        <div className="absolute bottom-10 left-20 bg-white px-4 py-2 rounded-full shadow-lg transform rotate-6">
-                            <span className="text-[#F51046] font-bold italic font-serif">when to start?</span>
-                        </div>
-
+                    <div className="w-full md:w-1/2 relative flex items-center justify-center overflow-hidden">
+                        <img
+                            src="/whichprograms.svg"
+                            alt="Unsure which degree is right for you"
+                            className="w-full h-full object-cover"
+                        />
                     </div>
 
                 </div>
