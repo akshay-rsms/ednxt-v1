@@ -35,24 +35,26 @@ export function UniversityPartners() {
                 <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
 
                     {/* Large Card (Left) - Spans 3 columns */}
-                    <div className="lg:col-span-3 bg-[#FFFDE7] rounded-[2.5rem] relative overflow-hidden min-h-[400px] group cursor-pointer">
+                    <div className="lg:col-span-3 bg-[#FFFCDA] rounded-[2.5rem] relative overflow-hidden min-h-[400px] group cursor-pointer">
+                        {/* Background Image */}
+                        <div className="absolute inset-0 w-full h-full">
+                            <img
+                                src="/iit_madras_campus.png"
+                                alt="IIT Madras Campus"
+                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                            />
+                            {/* Gradient Overlay for Text Visibility */}
+                            <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-transparent opacity-80"></div>
+                        </div>
+
                         <div className="p-10 relative z-10">
-                            <span className="text-[#F51046] text-xs font-bold tracking-widest uppercase mb-2 block">EXPLORE</span>
-                            <h3 className="text-4xl font-bold text-gray-900 mb-4 flex items-center gap-2 group-hover:gap-4 transition-all">
-                                Jain Online <ArrowRight className="w-8 h-8" />
+                            <span className="text-white/90 text-xs font-bold tracking-widest uppercase mb-2 block">EXPLORE</span>
+                            <h3 className="text-4xl font-bold text-white mb-4 flex items-center gap-2 group-hover:gap-4 transition-all drop-shadow-lg">
+                                IIT Madras <ArrowRight className="w-8 h-8" />
                             </h3>
-                            <div className="bg-[#4A4A35] text-white text-[10px] font-bold px-3 py-1.5 rounded-full inline-flex items-center gap-1 uppercase tracking-wider">
+                            <div className="bg-[#4A4A35] text-white text-[10px] font-bold px-3 py-1.5 rounded-full inline-flex items-center gap-1 uppercase tracking-wider backdrop-blur-sm">
                                 TRENDING <TrendingUp className="w-3 h-3" />
                             </div>
-                        </div>
-                        {/* Image positioned at bottom */}
-                        <div className="absolute bottom-0 right-0 w-full h-[60%] lg:h-[70%]">
-                            <img
-                                src="https://images.unsplash.com/photo-1562774053-701939374585?w=800&q=80"
-                                alt="Jain University Campus"
-                                className="w-full h-full object-cover object-top mask-gradient-top"
-                            />
-                            {/* Gradient fade for smooth blend if needed, though design looks sharp cut or naturally integrated */}
                         </div>
                     </div>
 
@@ -60,36 +62,44 @@ export function UniversityPartners() {
                     <div className="lg:col-span-2 flex flex-col gap-6">
 
                         {/* Top Card */}
-                        <div className="flex-1 bg-[#E0F7FA] rounded-[2.5rem] relative overflow-hidden p-8 flex flex-row items-center justify-between group cursor-pointer min-h-[200px]">
-                            <div className="relative z-10 max-w-[50%]">
-                                <span className="text-[#F51046] text-xs font-bold tracking-widest uppercase mb-2 block">EXPLORE</span>
-                                <h3 className="text-2xl font-bold text-gray-900 leading-tight flex flex-col gap-1 group-hover:translate-x-1 transition-transform">
-                                    University <br /> Name <ArrowRight className="w-6 h-6 inline-block" />
-                                </h3>
-                            </div>
-                            <div className="absolute right-0 bottom-0 w-[45%] h-full">
+                        <div className="flex-1 bg-[#D3FFFF] rounded-[2.5rem] relative overflow-hidden p-8 flex flex-col justify-between group cursor-pointer min-h-[300px]">
+                            {/* Background Image */}
+                            <div className="absolute inset-0 w-full h-full">
                                 <img
-                                    src="https://images.unsplash.com/photo-1592280771190-3e2e4d571952?w=400&q=80"
-                                    alt="University Building"
-                                    className="w-full h-full object-cover"
+                                    src="/nit_trichy_campus.png"
+                                    alt="NIT Trichy"
+                                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                                 />
+                                {/* Gradient Overlay */}
+                                <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-transparent opacity-80"></div>
+                            </div>
+
+                            <div className="relative z-10">
+                                <span className="text-white/90 text-xs font-bold tracking-widest uppercase mb-2 block">EXPLORE</span>
+                                <h3 className="text-2xl font-bold text-white leading-tight flex items-center gap-2 group-hover:gap-3 transition-all drop-shadow-lg">
+                                    NIT Trichy <ArrowRight className="w-6 h-6" />
+                                </h3>
                             </div>
                         </div>
 
                         {/* Bottom Card */}
-                        <div className="flex-1 bg-[#E8F5E9] rounded-[2.5rem] relative overflow-hidden p-8 flex flex-row items-center justify-between group cursor-pointer min-h-[200px]">
-                            <div className="relative z-10 max-w-[50%]">
-                                <span className="text-[#F51046] text-xs font-bold tracking-widest uppercase mb-2 block">EXPLORE</span>
-                                <h3 className="text-2xl font-bold text-gray-900 leading-tight flex flex-col gap-1 group-hover:translate-x-1 transition-transform">
-                                    University <br /> Name <ArrowRight className="w-6 h-6 inline-block" />
-                                </h3>
-                            </div>
-                            <div className="absolute right-0 bottom-0 w-[45%] h-full">
+                        <div className="flex-1 bg-[#DEFFEC] rounded-[2.5rem] relative overflow-hidden p-8 flex flex-col justify-between group cursor-pointer min-h-[300px]">
+                            {/* Background Image */}
+                            <div className="absolute inset-0 w-full h-full">
                                 <img
-                                    src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=400&q=80"
-                                    alt="University Building"
-                                    className="w-full h-full object-cover"
+                                    src="/iit_bombay_campus.png"
+                                    alt="IIT Bombay"
+                                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                                 />
+                                {/* Gradient Overlay */}
+                                <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-transparent opacity-80"></div>
+                            </div>
+
+                            <div className="relative z-10">
+                                <span className="text-white/90 text-xs font-bold tracking-widest uppercase mb-2 block">EXPLORE</span>
+                                <h3 className="text-2xl font-bold text-white leading-tight flex items-center gap-2 group-hover:gap-3 transition-all drop-shadow-lg">
+                                    IIT Bombay <ArrowRight className="w-6 h-6" />
+                                </h3>
                             </div>
                         </div>
 
