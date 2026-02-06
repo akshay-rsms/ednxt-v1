@@ -7,7 +7,7 @@ export function UnsureDegree() {
                 <div className="bg-[#2B1D10] rounded-[2.5rem] overflow-hidden flex flex-col md:flex-row relative min-h-[500px]">
 
                     {/* Left Content */}
-                    <div className="w-full md:w-1/2 p-12 md:p-16 flex flex-col justify-center items-start text-left relative z-10">
+                    <div className="w-full md:w-1/2 p-20 md:px-36 flex flex-col justify-center items-start text-left relative z-10">
                         <h2 className="text-white font-bold mb-6 leading-[1.14] tracking-[-0.05em]" style={{ fontSize: '49.97px', fontFamily: 'Inter, sans-serif' }}>
                             Unsure which <br />
                             <span className="relative inline-block">
@@ -32,12 +32,36 @@ export function UnsureDegree() {
                     </div>
 
                     {/* Right Image Section */}
-                    <div className="w-full md:w-1/2 relative flex items-center justify-center overflow-hidden">
-                        <img
-                            src="/whichprograms.svg"
-                            alt="Unsure which degree is right for you"
-                            className="w-full h-full object-cover"
-                        />
+                    <div className="w-full md:w-1/2 relative flex items-center justify-center overflow-visible">
+                        <div className="relative w-full h-full">
+                            <img
+                                src="/whichprograms.svg"
+                                alt="Unsure which degree is right for you"
+                                className="w-full h-full object-cover"
+                            />
+
+                            {/* Floating Text Bubbles */}
+                            <img
+                                src="/howtochoose.svg"
+                                alt="How to choose?"
+                                className="absolute top-[25%] left-[15%] w-[28%] md:w-[25%] animate-bounce [animation-duration:3s]"
+                            />
+                            <img
+                                src="/whichcourse.svg"
+                                alt="Which course?"
+                                className="absolute top-[20%] right-[10%] w-[28%] md:w-[25%] animate-bounce [animation-duration:4s]"
+                            />
+                            <img
+                                src="/whatbudget.svg"
+                                alt="What budget?"
+                                className="absolute top-[45%] right-[5%] w-[28%] md:w-[25%] animate-bounce [animation-duration:3.5s]"
+                            />
+                            <img
+                                src="/whentostart.svg"
+                                alt="When to start?"
+                                className="absolute bottom-[20%] left-[10%] w-[28%] md:w-[25%] animate-bounce [animation-duration:4.5s]"
+                            />
+                        </div>
                     </div>
 
                 </div>
