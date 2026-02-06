@@ -5,7 +5,7 @@ export function Testimonials() {
     const testimonials = [
         {
             type: "image-top",
-            image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=600&q=80",
+            image: "/testimonial1.svg",
             content: "Balancing work and study was tough, but the support team here made it possible.",
             name: "Meera Patel",
             role: "MBA Graduate, Founder of StartupX",
@@ -13,15 +13,15 @@ export function Testimonials() {
         },
         {
             type: "image-full",
-            image: "https://images.unsplash.com/photo-1627556592933-ffe99c1cd9eb?w=600&q=80",
+            image: "/testimonial2.svg",
             content: "",
             name: "Meera Patel",
             role: "MBA Graduate, Founder of StartupX",
             rating: 5,
         },
         {
-            type: "image-top-text",
-            image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&q=80",
+            type: "image-top",
+            image: "/testimonial1.svg",
             content: "Choosing to pursue my MBA in Online Manipal at MUJ was an easy choice for me because I had also completed my BBA from here.",
             name: "Meera Patel",
             role: "MBA Batch - JAIN Online",
@@ -29,7 +29,7 @@ export function Testimonials() {
         },
         {
             type: "text-only",
-            image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&q=80",
+            image: "/testimonial2.svg",
             content: "The recorded lectures were legitimate life-savers! I recall an incident 4 years ago when I started BBA, I was really nervous.",
             name: "Meera Patel",
             role: "MBA Graduate, Founder of StartupX",
@@ -37,8 +37,8 @@ export function Testimonials() {
         },
         {
             type: "image-full",
-            image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&q=80",
-            content: "",
+            image: "/testimonial2.svg",
+
             name: "Meera Patel",
             role: "MBA Graduate, Founder of StartupX",
             rating: 5,
@@ -79,24 +79,50 @@ export function Testimonials() {
 
                             {/* Render based on type */}
                             {card.type === 'image-top' && (
-                                <>
-                                    <div className="h-48 overflow-hidden">
-                                        <img src={card.image} alt={card.name} className="w-full h-full object-cover" />
+                                <div className="flex flex-col h-full">
+
+                                    {/* Image */}
+                                    <div className="w-full aspect-[16/9] overflow-hidden rounded-t-2xl">
+                                        <img
+                                            src={card.image}
+                                            alt={card.name}
+                                            className="w-full h-full object-fill"
+                                        />
                                     </div>
-                                    <div className="p-8 flex flex-col flex-1 justify-between">
-                                        <p className="text-gray-600 mb-6 leading-relaxed">"{card.content}"</p>
+
+                                    {/* Content */}
+                                    <div className="flex flex-col justify-between flex-1 p-6 md:p-8">
+
+                                        {/* Testimonial Text */}
+                                        <p className="text-gray-600 leading-relaxed mb-6 text-base md:text-lg">
+                                            "{card.content}"
+                                        </p>
+
+                                        {/* User Info */}
                                         <div>
-                                            <h4 className="font-bold text-lg text-gray-900">{card.name}</h4>
-                                            <p className="text-xs text-gray-500 mb-2">{card.role}</p>
+                                            <h4 className="font-semibold text-lg text-gray-900">
+                                                {card.name}
+                                            </h4>
+
+                                            <p className="text-sm text-gray-500 mb-3">
+                                                {card.role}
+                                            </p>
+
+                                            {/* Rating */}
                                             <div className="flex gap-1">
                                                 {[...Array(card.rating)].map((_, i) => (
-                                                    <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                                                    <Star
+                                                        key={i}
+                                                        className="w-4 h-4 fill-yellow-400 text-yellow-400"
+                                                    />
                                                 ))}
                                             </div>
                                         </div>
+
                                     </div>
-                                </>
+                                </div>
                             )}
+
 
                             {card.type === 'image-full' && (
                                 <>
@@ -115,20 +141,6 @@ export function Testimonials() {
                                 </>
                             )}
 
-                            {card.type === 'image-top-text' && (
-                                <>
-                                    <div className="h-48 overflow-hidden">
-                                        <img src={card.image} alt={card.name} className="w-full h-full object-cover" />
-                                    </div>
-                                    <div className="p-8 flex flex-col flex-1">
-                                        <p className="text-gray-600 text-sm mb-6 leading-relaxed flex-1">{card.content}</p>
-                                        <div className="border-t border-gray-100 pt-4">
-                                            <h4 className="font-bold text-lg text-gray-900">{card.name}</h4>
-                                            <p className="text-xs text-gray-500 mb-2">{card.role}</p>
-                                        </div>
-                                    </div>
-                                </>
-                            )}
 
                             {card.type === 'text-only' && (
                                 <div className="p-8 flex flex-col h-full justify-between">
