@@ -66,7 +66,7 @@ export function Hero() {
             </div>
 
             {/* Main Content */}
-            <div className="relative z-10 flex flex-col items-center text-center max-w-5xl mx-auto px-4 mt-8 mb-12">
+            <div className="relative z-10 flex flex-col items-center text-center max-w-5xl mx-auto px-4 -mt-4 mb-12">
                 {/* Trust Badge */}
                 <div className="flex flex-col items-center mb-4">
                     <img src="/india's-most.svg" alt="India's Most Trusted" className="h-16 w-auto" />
