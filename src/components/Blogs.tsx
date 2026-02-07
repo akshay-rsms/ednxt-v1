@@ -1,7 +1,5 @@
 "use client";
 import { ArrowRight } from "lucide-react";
-import { motion } from "framer-motion";
-import { useRef, useState, useEffect } from "react";
 
 const blogs = [
     {
@@ -43,15 +41,6 @@ const blogs = [
 ];
 
 export function Blogs() {
-    const [width, setWidth] = useState(0);
-    const carouselRef = useRef<HTMLDivElement>(null);
-
-    useEffect(() => {
-        if (carouselRef.current) {
-            setWidth(carouselRef.current.scrollWidth - carouselRef.current.offsetWidth);
-        }
-    }, []);
-
     return (
         <section className="py-24 bg-white overflow-hidden">
             <div className="container mx-auto px-6 font-sans">
@@ -70,56 +59,54 @@ export function Blogs() {
                 </div>
 
                 {/* Carousel Container */}
-                <motion.div
-                    ref={carouselRef}
-                    className="cursor-grab active:cursor-grabbing overflow-visible py-12" // Added vertical padding for stagger space
-                    whileTap={{ cursor: "grabbing" }}
-                >
-                    <motion.div
-                        drag="x"
-                        dragConstraints={{ right: 0, left: -width }}
-                        className="flex gap-8"
-                    >
-                        {blogs.map((blog, idx) => (
-                            <motion.div
-                                key={blog.id}
-                                className={`min-w-[320px] md:min-w-[380px] bg-white rounded-[2rem] overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 h-[500px] flex flex-col ${idx % 2 !== 0 ? "mt-12" : ""
-                                    }`}
-                            >
-                                {/* Top Image Section */}
-                                <div className="h-[55%] relative overflow-hidden">
-                                    <img
-                                        src={blog.image}
-                                        alt={blog.title}
-                                        className="w-full h-full object-cover"
-                                    />
+                <div className="flex gap-8 overflow-x-auto pb-12 hide-scrollbar snap-x">
+                    {blogs.map((blog, idx) => (
+                        <div
+                            key={blog.id}
+                            className={`min-w-[320px] md:min-w-[380px] bg-white rounded-[2rem] overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 h-[500px] flex flex-col snap-center ${idx % 2 !== 0 ? "mt-0" : ""}`}
+                        >
+                            {/* Top Image Section */}
+                            <div className="h-[55%] relative overflow-hidden">
+                                <img
+                                    src={blog.image}
+                                    alt={blog.title}
+                                    className="w-full h-full object-cover"
+                                />
+                            </div>
+
+                            {/* Bottom Content Section */}
+                            <div className="h-[45%] p-8 flex flex-col justify-between bg-white">
+                                <div>
+                                    <h3 className="text-xl font-bold text-gray-900 leading-tight mb-3 line-clamp-2">
+                                        {blog.title}
+                                    </h3>
+                                    <p className="text-gray-500 text-sm line-clamp-3 leading-relaxed">
+                                        {blog.description}
+                                    </p>
                                 </div>
 
-                                {/* Bottom Content Section */}
-                                <div className="h-[45%] p-8 flex flex-col justify-between bg-white">
-                                    <div>
-                                        <h3 className="text-xl font-bold text-gray-900 leading-tight mb-3 line-clamp-2">
-                                            {blog.title}
-                                        </h3>
-                                        <p className="text-gray-500 text-sm line-clamp-3 leading-relaxed">
-                                            {blog.description}
-                                        </p>
-                                    </div>
-
-                                    {/* Static CTA Button */}
-                                    <div className="mt-4">
-                                        <button className="text-[#FF0031] font-bold text-sm uppercase tracking-wider flex items-center gap-2 hover:gap-3 transition-all">
-                                            Read More <ArrowRight className="w-4 h-4" />
-                                        </button>
-                                    </div>
+                                {/* Static CTA Button */}
+                                <div className="mt-4">
+                                    <button className="text-[#FF0031] font-bold text-sm uppercase tracking-wider flex items-center gap-2 hover:gap-3 transition-all">
+                                        Read More <ArrowRight className="w-4 h-4" />
+                                    </button>
                                 </div>
+                            </div>
 
-                            </motion.div>
-                        ))}
-                    </motion.div>
-                </motion.div>
+                        </div>
+                    ))}
+                </div>
 
             </div>
+            <style jsx global>{`
+        .hide-scrollbar::-webkit-scrollbar {
+          display: none;
+        }
+        .hide-scrollbar {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+      `}</style>
         </section>
     );
 }

@@ -61,15 +61,20 @@ export function TransformCareer() {
             </div>
 
             {/* Right Image - Desktop Precise Positioning */}
-            <div
-                className="hidden lg:block absolute top-0 right-80  w-[556px] h-[578px] z-20"
-                style={{ clipPath: "polygon(20% 0, 100% 0, 100% 100%, 0% 100%)" }}
-            >
-                <img
-                    src="/readytotransform.svg"
-                    alt="Professional Woman Working"
-                    className="w-full h-full object-fill"
-                />
+            {/* Right Image - Desktop Precise Positioning within Container */}
+            <div className="hidden lg:block absolute inset-0 pointer-events-none">
+                <div className="container mx-auto px-6 h-full relative">
+                    <div
+                        className="absolute top-0 right-6 w-[556px] h-[578px] z-20 pointer-events-auto"
+                        style={{ clipPath: "polygon(20% 0, 100% 0, 100% 100%, 0% 100%)" }}
+                    >
+                        <img
+                            src="/readytotransform.svg"
+                            alt="Professional Woman Working"
+                            className="w-full h-full object-fill"
+                        />
+                    </div>
+                </div>
             </div>
         </section>
     );
