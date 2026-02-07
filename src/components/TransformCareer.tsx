@@ -3,7 +3,7 @@ import { ArrowRight, Sparkles } from "lucide-react";
 export function TransformCareer() {
     return (
         <section className="bg-black relative overflow-hidden">
-            <div className="container mx-auto px-6 font-sans relative z-10">
+            <div className="container mx-auto px-6 py-12 font-sans relative z-10">
                 <div className="flex flex-col lg:flex-row items-center font-sans min-h-[500px]">
 
                     {/* Left Content */}
@@ -44,7 +44,7 @@ export function TransformCareer() {
              */}
                         <div className="w-full h-full relative" style={{ clipPath: "polygon(20% 0, 100% 0, 100% 100%, 0% 100%)" }}>
                             <img
-                                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80"
+                                src="/readytotransform.svg"
                                 alt="Professional Woman Working"
                                 className="w-full h-full object-cover"
                             />
