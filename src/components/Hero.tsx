@@ -36,7 +36,7 @@ export function Hero() {
         const angle = (index * (2 * Math.PI) / totalImages) + rotation;
 
         // Calculate 3D position
-        const xOffset = Math.sin(angle) * 700; // Increased radius to create gaps between items
+        const xOffset = Math.sin(angle) * 750; // Increased radius to create gaps between items
         const z = Math.cos(angle); // Depth factor (-1 to 1)
 
         // Use a power curve for scaling to make the center prominent and sides drop off faster
@@ -96,7 +96,7 @@ export function Hero() {
                     return (
                         <motion.div
                             key={i}
-                            className="absolute top-[40%] left-1/2 w-[300px] md:w-[450px] h-[280px] md:h-[400px] rounded-[2.5rem] overflow-hidden bg-gray-800 shadow-2xl origin-center"
+                            className="absolute top-[40%] left-1/2 w-[300px] md:w-[450px] h-[320px] md:h-[480px] rounded-[2.5rem] overflow-hidden bg-gray-800 shadow-2xl origin-center"
                             style={{
                                 y: "-50%",
                                 ...style // Apply calculated 3D transforms
