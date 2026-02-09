@@ -73,7 +73,7 @@ export function Navbar() {
                             </button>
 
                             {/* Dropdown Menu */}
-                            <div className="absolute top-full left-0 w-[800px] bg-white rounded-xl shadow-2xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50 overflow-hidden flex h-[450px]">
+                            <div className="absolute top-full left-0 w-[800px] bg-white rounded-xl shadow-2xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50 overflow-hidden flex h-[320px]">
                                 {/* Left Sidebar: Institutions */}
                                 <div className="w-1/3 bg-gray-50 p-4 border-r border-gray-100 overflow-y-auto">
                                     <div className="space-y-2">
@@ -82,8 +82,8 @@ export function Navbar() {
                                                 key={inst.id}
                                                 onMouseEnter={() => setActiveProgramTab(inst.name)}
                                                 className={`px-4 py-3 rounded-lg cursor-pointer text-sm font-bold transition-all flex items-center justify-between ${activeProgramTab === inst.name
-                                                    ? "bg-gray-200 text-gray-900 shadow-sm"
-                                                    : "text-gray-500 hover:bg-gray-100 hover:text-gray-900"
+                                                    ? "bg-red-50 text-[#FF0031] shadow-sm"
+                                                    : "text-gray-500 hover:bg-red-50 hover:text-[#FF0031]"
                                                     }`}
                                             >
                                                 {inst.name}
@@ -97,7 +97,7 @@ export function Navbar() {
 
                                 {/* Right Content: Programs */}
                                 <div className="w-2/3 p-8 bg-white overflow-y-auto">
-                                    <div className="grid grid-cols-1 gap-6">
+                                    <div className="grid grid-cols-2 gap-6">
                                         {activePrograms.map((prog, idx) => (
                                             <Link href="#" key={idx} className="group/prog flex gap-4 p-4 rounded-xl border border-gray-100 hover:border-[#FF0031]/30 hover:shadow-lg hover:shadow-red-50 transition-all">
                                                 <div className="w-12 h-12 rounded-full bg-gray-50 flex items-center justify-center group-hover/prog:bg-red-50 transition-colors shrink-0">
