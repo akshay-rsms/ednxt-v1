@@ -5,7 +5,21 @@ import { ArrowRight, ChevronDown, BookOpen, Flag, GraduationCap, Cpu, BrainCircu
 import { blogs } from "@/lib/data/blogs";
 import { useState } from "react";
 
-const institutions = [
+
+interface Program {
+    title: string;
+    icon: any;
+    type: string;
+    link?: string;
+}
+
+interface Institution {
+    id: string;
+    name: string;
+    programs: Program[];
+}
+
+const institutions: Institution[] = [
     {
         id: "iit-patna",
         name: "IIT Patna",
@@ -13,7 +27,8 @@ const institutions = [
             {
                 title: "Certificate Program in Generative AI & Agentic AI for Developers",
                 icon: BrainCircuit,
-                type: "Certificate Program"
+                type: "Certificate Program",
+                link: "/iit-patna"
             }
         ]
     },
@@ -99,7 +114,7 @@ export function Navbar() {
                                 <div className="w-2/3 p-8 bg-white overflow-y-auto">
                                     <div className="grid grid-cols-2 gap-6">
                                         {activePrograms.map((prog, idx) => (
-                                            <Link href="#" key={idx} className="group/prog flex gap-4 p-4 rounded-xl border border-gray-100 hover:border-[#FF0031]/30 hover:shadow-lg hover:shadow-red-50 transition-all">
+                                            <Link href={prog.link || "#"} key={idx} className="group/prog flex gap-4 p-4 rounded-xl border border-gray-100 hover:border-[#FF0031]/30 hover:shadow-lg hover:shadow-red-50 transition-all">
                                                 <div className="w-12 h-12 rounded-full bg-gray-50 flex items-center justify-center group-hover/prog:bg-red-50 transition-colors shrink-0">
                                                     <prog.icon className="w-6 h-6 text-gray-400 group-hover/prog:text-[#FF0031] transition-colors" />
                                                 </div>
