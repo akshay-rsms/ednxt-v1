@@ -3,11 +3,11 @@ import { GraduationCap, Book, TrendingUp } from "lucide-react";
 export function Stats() {
     return (
         <section className="py-12 bg-white relative z-20 -mt-10">
-            <div className="container mx-auto px-4 max-w-6xl">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="container mx-auto px-4 max-w-7xl">
+                <div className="flex flex-wrap justify-center gap-6">
 
                     {/* Card 1: Active Learners - Red Border */}
-                    <div className="bg-white rounded-[2rem] p-6 border border-[#FF0031] shadow-sm flex items-center justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+                    <div className="w-[292px] h-[129px] bg-white rounded-[30px] p-6 border border-[#FF0031] shadow-sm flex items-center justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
                         <div className="relative z-10">
                             <h3 className="text-4xl font-bold text-gray-900 mb-1">50K+</h3>
                             <p className="text-gray-500 text-sm font-medium">Active Learners</p>
@@ -20,7 +20,7 @@ export function Stats() {
                     </div>
 
                     {/* Card 2: Courses - Light Border */}
-                    <div className="bg-white rounded-[2rem] p-6 border border-red-50 shadow-sm flex items-center justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+                    <div className="w-[292px] h-[129px] bg-white rounded-[30px] p-6 border border-red-50 shadow-sm flex items-center justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
                         <div className="relative z-10">
                             <h3 className="text-4xl font-bold text-gray-900 mb-1">200+</h3>
                             <p className="text-gray-500 text-sm font-medium">Courses</p>
@@ -32,7 +32,7 @@ export function Stats() {
                     </div>
 
                     {/* Card 3: Success Rate - Graph Background */}
-                    <div className="bg-white rounded-[2rem] p-6 border border-red-50 shadow-sm flex flex-col justify-center relative overflow-hidden group hover:shadow-md transition-shadow min-h-[110px]">
+                    <div className="w-[292px] h-[129px] bg-white rounded-[30px] p-6 border border-red-50 shadow-sm flex flex-col justify-center relative overflow-hidden group hover:shadow-md transition-shadow">
                         <div className="relative z-10">
                             <h3 className="text-4xl font-bold text-gray-900 mb-1">95%</h3>
                             <p className="text-gray-500 text-sm font-medium">Success Rate</p>
@@ -56,7 +56,7 @@ export function Stats() {
                     </div>
 
                     {/* Card 4: UGC - Badge */}
-                    <div className="bg-white rounded-[2rem] p-6 border border-red-50 shadow-sm flex items-center gap-4 relative overflow-hidden group hover:shadow-md transition-shadow">
+                    <div className="w-[292px] h-[129px] bg-white rounded-[30px] p-6 border border-red-50 shadow-sm flex items-center gap-4 relative overflow-hidden group hover:shadow-md transition-shadow">
                         {/* UGC Logo Placeholder */}
                         <div className="w-14 shrink-0 flex items-center justify-center">
                             {/* Approximation of the UGC logo */}
