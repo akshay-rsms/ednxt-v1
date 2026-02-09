@@ -6,7 +6,7 @@ import {
     ArrowRight, CheckCircle, XCircle, Clock, Globe, Users,
     Download, MonitorPlay, BrainCircuit, Code, Database,
     Layers, Cpu, Zap, Award, BookOpen, ChevronDown, ChevronUp,
-    PlayCircle, Briefcase, GraduationCap
+    PlayCircle, Briefcase, GraduationCap, Building2, UserCheck
 } from "lucide-react";
 
 export default function IITPatnaPage() {
@@ -31,94 +31,195 @@ export default function IITPatnaPage() {
 
     const modules = [
         {
-            title: "Module 1: Fundamentals of Generative AI and LLMs",
-            duration: "4 Weeks",
-            desc: "Build a deep understanding of how LLMs work, learn prompt engineering, and create apps with retrieval mechanisms.",
+            title: "Module 1: Foundations of Generative AI",
+            duration: "Weeks 1–2",
+            desc: "Gain a clear mental model of GenAI systems, understand transformers, and build your first GenAI script.",
             topics: [
-                "NLP Concepts: Tokenization, Transformers, Embeddings",
-                "LLM Architectures: GPT, Claude, Gemini, DeepSeek, Mistral",
-                "Prompt Engineering & Prompt Patterns",
-                "Retrieval-Augmented Generation (RAG) & Vector Databases",
-                "Intro to Fine-tuning (LoRA, PEFT)",
-                "Hosting LLM Locally"
+                "Evolution of AI: ML → Deep Learning → GenAI",
+                "Traditional AI vs Generative AI",
+                "Responsible AI: bias, harm, safety, guardrails",
+                "Transformers explained simply (tokens, embeddings, context windows)",
+                "What are LLMs? Pre-trained vs fine-tuned models",
+                "Essential Tools: Python, Jupyter, OpenAI Playground, Hugging Face Hub",
+                "Mini Project: Build a GenAI-powered Python script"
             ]
         },
         {
-            title: "Module 2: Multi-Modal AI",
-            duration: "4 Weeks",
-            desc: "Understand and build AI projects that integrate text, image, video, and audio generation.",
+            title: "Module 2: Working with Models & APIs",
+            duration: "Weeks 3–4",
+            desc: "Understand what's happening under the hood before using orchestration frameworks. Gain experience building real apps with APIs.",
             topics: [
-                "Generative AI for Visual, Audio, and Video Content",
-                "Prompt Crafting for Creative Tools",
-                "Multimodal Pipeline Design",
-                "Design a Visual Branding Kit using Midjourney",
-                "Produce an AI-generated Voice Ad using ElevenLabs",
-                "Launch a Multimodal Video Campaign using Runway ML"
+                "APIs vs Local models (OpenAI, Anthropic, Mistral, Hugging Face)",
+                "Installing and running local LLMs (Ollama, LM Studio, vLLM)",
+                "Cost management, prompt budgeting, rate limits",
+                "Comparing model behavior across providers",
+                "Prompt tuning vs fine-tuning",
+                "Lightweight finetuning (LoRA, QLoRA)",
+                "Mini Project: Build a chatbot with memory + UI using just Python + APIs"
             ]
         },
         {
-            title: "Module 3: AI Automation and Productivity",
-            duration: "4 Weeks",
-            desc: "Build scalable automation workflows using AI models and third-party APIs.",
+            title: "Module 3: LangChain Essentials & App Development",
+            duration: "Week 5",
+            desc: "Design modular, maintainable GenAI pipelines using LangChain's abstractions.",
             topics: [
-                "Event-based Workflow Design",
-                "No-code Automation (Zapier, Make)",
-                "Local Hosting & Scaling with Docker",
-                "Running and Integrating n8n Locally",
-                "Connecting APIs using Webhooks and Postman",
-                "Leveraging Firebase for Realtime Automation"
+                "What is LangChain? components: LLMs, Prompts, Chains, Tools, Agents",
+                "Prompt Engineering using LangChain (templates, few-shot)",
+                "Structured output + Output Parsers",
+                "Sequential & Router Chains",
+                "LangChain Runnables (LCEL)",
+                "Memory systems in LangChain",
+                "Mini Project: Build a 'Chat with Your Documents' assistant with citations"
             ]
         },
         {
-            title: "Module 4: AI Agents Implementation",
-            duration: "3 Weeks",
-            desc: "Master the creation of autonomous agents and multi-agent systems.",
-            topics: ["Building Autonomous Agents", "Agentic Workflows", "Multi-Agent Systems", "LangGraph & AutoGen"]
+            title: "Module 4: Agents, Tools & MCP",
+            duration: "Weeks 6–7",
+            desc: "Build tool-augmented agents that act, query systems, and integrate with MCP-based tools.",
+            topics: [
+                "Why Agents? Where they shine",
+                "Tool Calling: functions, APIs, custom python tools",
+                "Building multi-tool agents",
+                "Designing safe & predictable agent behavior",
+                "MCP (Model Context Protocol) fundamentals",
+                "Building MCP tools/servers",
+                "Comparing MCP Tools vs LangChain Tools",
+                "Mini Project: Build a multi-tool agent using LangChain and MCP"
+            ]
         },
         {
-            title: "Module 5: AI App Building",
-            duration: "4 Weeks",
-            desc: "Develop full-stack AI applications ready for deployment.",
-            topics: ["Full Stack AI Apps", "Streamlit & Gradio Interfaces", "Deployment & Monitoring", "Security Best Practices"]
+            title: "Module 5: RAG Systems From Basics to Advanced",
+            duration: "Weeks 8–9",
+            desc: "Build reliable, production-grade RAG systems and understand retrieval quality.",
+            topics: [
+                "What is RAG? Why it solves hallucination",
+                "Designing a RAG pipeline from scratch",
+                "Loaders, text splitters, chunking strategy",
+                "Embeddings + vector stores (FAISS, Chroma)",
+                "Retrievers: base, multi-query, contextual compression",
+                "RAG evaluation basics & Query rewriting",
+                "Mini Project: Build a portfolio-ready GenAI app with RAG"
+            ]
         },
         {
-            title: "Module 6: Domain Applications & Career",
-            duration: "2 Weeks",
-            desc: "Apply your skills to specific industries and prepare for the job market.",
-            topics: ["AI in Finance, Marketing, Healthcare", "Resume Building & Portfolio Review", "Interview Preparation"]
+            title: "Module 6: Advanced RAG Techniques",
+            duration: "Week 10",
+            desc: "Master hybrid search, re-ranking, and hallucination mitigation strategies.",
+            topics: [
+                "Hybrid search (Keywords + Vectors)",
+                "Two-stage retrieval + reranking",
+                "Multi-source retrieval & fusion",
+                "Context distillation and hallucination mitigation",
+                "Mini Project: Advanced RAG implementation"
+            ]
+        },
+        {
+            title: "Module 7: Agentic Workflows with LangGraph",
+            duration: "Weeks 10–11",
+            desc: "Design production-style, agentic GenAI applications using LangGraph.",
+            topics: [
+                "What is LangGraph? Nodes, Edges, State",
+                "Sequential, Parallel, Conditional, and Iterative workflows",
+                "Using tools inside LangGraph nodes",
+                "Streaming + persistence",
+                "Designing full agentic pipelines",
+                "Mini Project: Build a LangGraph-based workflow"
+            ]
+        },
+        {
+            title: "Module 8: Practical GenAI Tooling & Productivity",
+            duration: "Week 12",
+            desc: "Master modern AI coding assistants and development workflows.",
+            topics: [
+                "CursorAI → AI-first coding workflows",
+                "Windsurf → Pair programming with an AI-native IDE",
+                "Claude Code → Code generation & refactoring",
+                "LM Studio → Running local GGUF models",
+                "MCP (Advanced & Tooling Edition)",
+                "Replit Agents → Autonomous coding workflows"
+            ]
+        },
+        {
+            title: "Module 9: Agentic Ecosystems & Automation",
+            duration: "4 Months",
+            desc: "Build agentic automations with CrewAI & n8n.",
+            topics: [
+                "CrewAI – Multi-agent orchestration at scale",
+                "n8n – No-code + low-code automation with LLMs",
+                "Microsoft Copilot Stack – Comprehensive Guide",
+                "Building modular context tools",
+                "Workflow automation with MCP servers",
+                "End-to-end automation patterns"
+            ]
+        },
+        {
+            title: "Module 10: Career Acceleration & Portfolio",
+            duration: "Final Weeks",
+            desc: "Career readiness, interview prep, and personal GenAI strategy.",
+            topics: [
+                "Resume Building for GenAI Roles",
+                "Interview Hacks (Developer, Applied AI, MLE)",
+                "Building your personal learning system (PLS)",
+                "How to talk about GenAI projects confidently",
+                "Top GenAI Tools Every Developer Should Know",
+                "Capstone: End-to-end flagship AI portfolio project"
+            ]
         }
     ];
 
     const projects = [
         {
-            title: "RAG-powered FAQ Chatbot",
+            title: "Your Own AI Chat Assistant",
             icon: BrainCircuit,
-            desc: "Develop a chatbot using LM Studio that answers queries based on custom documents, ensuring accurate and context-aware responses."
+            desc: "Build a memory-powered AI chatbot with a polished UI, architected with clean, modular, production-ready code — your first real ChatGPT-style app."
         },
         {
-            title: "Visual Branding Kit",
+            title: "Autonomous AI Agents",
+            icon: Cpu,
+            desc: "Develop AI copilots that can think, plan, and take action — capable of calling APIs, fetching data, and reasoning through tasks like a digital teammate."
+        },
+        {
+            title: "Smart Text Transformation Tools",
+            icon: Code,
+            desc: "Create LLM-powered text apps that rewrite, summarize, and format content automatically with validated structured outputs and fail-safe parsing."
+        },
+        {
+            title: "Multi-Step Agentic Workflows",
             icon: Layers,
-            desc: "Design a complete visual identity for a brand using Midjourney for imagery and other AI tools for layout and typography."
+            desc: "Orchestrate complex AI workflows that plan → act → reflect intelligently using LangGraph-style pipelines, guardrails, and scalable architecture patterns."
         },
         {
-            title: "AI-Generated Voice Ad",
-            icon: MonitorPlay,
-            desc: "Produce a professional voice advertisement using ElevenLabs text-to-speech technology, indistinguishable from human narration."
-        },
-        {
-            title: "Multimodal Video Campaign",
-            icon: PlayCircle,
-            desc: "Launch a comprehensive video marketing campaign using Runway ML for video generation, combining text, image, and motion."
-        },
-        {
-            title: "Smart Email Automation",
-            icon: Zap,
-            desc: "Build a system to automatically categorize incoming emails and draft intelligent responses using Make and OpenAI's API."
-        },
-        {
-            title: "Custom CRM Workflow",
+            title: "Knowledge Retrieval Assistants (RAG)",
             icon: Database,
-            desc: "Host and integrate a custom Customer Relationship Management workflow with local n8n to automate lead nurturing."
+            desc: "Build a 'Chat with Your Documents' system that can understand PDFs, websites, and notes—retrieving accurate, citation-backed answers."
+        },
+        {
+            title: "Portfolio-Ready AI Developer Assistant",
+            icon: Briefcase,
+            desc: "Combine everything into a flagship AI portfolio project — an end-to-end assistant that integrates RAG, agents, memory, and multiple LLMs."
+        }
+    ];
+
+    const mentors = [
+        {
+            name: "Punit Kumar",
+            role: "Senior AI Engineer, NVIDIA",
+            desc: "10+ years at Deloitte and Netcracker, has led major digital transformations."
+        },
+        {
+            name: "Shivam Shrivastava",
+            role: "SWE-ML @ Google",
+            desc: "Senior data scientist at Akaike Technologies, builds and deploys ML systems across industries."
+        },
+        {
+            name: "Vignesh",
+            role: "AI Engineer",
+            desc: "Bridges AI, robotics, and emerging tech to build real-world, future-ready solutions."
+        },
+        {
+            name: "Vikash Das",
+            role: "Senior Data Scientist",
+            desc: "From Aspire General Insurance, turns data into actionable insights for risk and compliance."
         }
     ];
 
@@ -130,11 +231,14 @@ export default function IITPatnaPage() {
             <div className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isSticky ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"}`}>
                 <div className="bg-white/90 backdrop-blur-md border-b border-gray-200 shadow-lg px-8 md:px-12 py-4">
                     <div className="max-w-7xl mx-auto flex items-center justify-between">
-                        <span className="font-bold text-gray-900">IIT Patna GenAI Program</span>
+                        <div className="flex items-center gap-2">
+                            <span className="font-bold text-gray-900 text-sm md:text-base">IIT Patna GenAI & Agentic AI</span>
+                        </div>
                         <div className="hidden md:flex gap-8 text-sm font-medium text-gray-600">
                             <button onClick={() => scrollToSection("overview")} className="hover:text-[#FF0031] transition-colors">Overview</button>
                             <button onClick={() => scrollToSection("curriculum")} className="hover:text-[#FF0031] transition-colors">Curriculum</button>
                             <button onClick={() => scrollToSection("projects")} className="hover:text-[#FF0031] transition-colors">Projects</button>
+                            <button onClick={() => scrollToSection("mentors")} className="hover:text-[#FF0031] transition-colors">Mentors</button>
                             <button onClick={() => scrollToSection("fees")} className="hover:text-[#FF0031] transition-colors">Fees</button>
                         </div>
                         <button className="bg-[#FF0031] text-white px-6 py-2 rounded-full text-sm font-bold hover:bg-[#D9002A] transition-colors">
@@ -146,10 +250,8 @@ export default function IITPatnaPage() {
 
             {/* Hero Section */}
             <section id="overview" className="relative pt-32 pb-24 px-8 md:px-12 bg-[#0a0a0a] text-white overflow-hidden">
-                {/* Abstract Background */}
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-gray-800 via-gray-950 to-black opacity-80"></div>
                 <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#FF0031] rounded-full blur-[150px] opacity-10 translate-x-1/2 -translate-y-1/2 animate-pulse"></div>
-                <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-blue-900 rounded-full blur-[120px] opacity-10 -translate-x-1/3 translate-y-1/3"></div>
 
                 <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                     <div className="space-y-8">
@@ -158,15 +260,13 @@ export default function IITPatnaPage() {
                             <span className="tracking-wide">PG CERTIFICATION</span>
                         </div>
 
-                        <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.1]">
-                            Generative AI <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400">
-                                for Professionals
-                            </span>
+                        <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight leading-[1.1]">
+                            Generative AI & <br />
+                            <span className="text-[#FF0031]">Agentic AI</span> for Developers
                         </h1>
 
-                        <p className="text-xl text-gray-400 max-w-lg leading-relaxed">
-                            Master 50+ AI tools, build <span className="text-white font-semibold">10+ real-world projects</span>, and get certified by <span className="text-white font-semibold">IIT Patna</span>. No coding experience required.
+                        <p className="text-lg text-gray-300 max-w-lg leading-relaxed">
+                            Get a complete roadmap to become an <span className="text-white font-semibold">AI Engineer</span> from real-world experts & get a certificate from an <span className="text-white font-semibold">IIT</span>.
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 pt-4">
@@ -184,131 +284,142 @@ export default function IITPatnaPage() {
                         <div className="absolute top-4 right-4 bg-green-500 text-black text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
                             Enrollment Open
                         </div>
-                        <h3 className="text-2xl font-bold mb-6">Program Snapshot</h3>
-                        <div className="space-y-6">
-                            <div className="flex items-start gap-4">
+                        <h3 className="text-2xl font-bold mb-6">Program Highlights</h3>
+                        <div className="grid grid-cols-1 gap-6">
+                            <div className="flex items-center gap-4">
                                 <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center shrink-0">
                                     <Clock className="w-5 h-5 text-[#FF0031]" />
                                 </div>
                                 <div>
-                                    <p className="text-sm text-gray-400 uppercase tracking-widest font-bold">Duration</p>
-                                    <p className="text-lg font-semibold">6 Months (Weekend Classes)</p>
+                                    <p className="text-sm text-gray-400 uppercase font-bold">Duration</p>
+                                    <p className="text-lg font-semibold">6 Months</p>
                                 </div>
                             </div>
-                            <div className="flex items-start gap-4">
+                            <div className="flex items-center gap-4">
                                 <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center shrink-0">
-                                    <Globe className="w-5 h-5 text-[#FF0031]" />
+                                    <Code className="w-5 h-5 text-[#FF0031]" />
                                 </div>
                                 <div>
-                                    <p className="text-sm text-gray-400 uppercase tracking-widest font-bold">Format</p>
-                                    <p className="text-lg font-semibold">100% Online Live Sessions</p>
+                                    <p className="text-sm text-gray-400 uppercase font-bold">Tech Stack</p>
+                                    <p className="text-lg font-semibold">30+ AI Tools, SDKs & APIs</p>
                                 </div>
                             </div>
-                            <div className="flex items-start gap-4">
+                            <div className="flex items-center gap-4">
                                 <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center shrink-0">
-                                    <GraduationCap className="w-5 h-5 text-[#FF0031]" />
+                                    <Building2 className="w-5 h-5 text-[#FF0031]" />
                                 </div>
                                 <div>
-                                    <p className="text-sm text-gray-400 uppercase tracking-widest font-bold">Certification</p>
-                                    <p className="text-lg font-semibold">Executive Alumni Status from IIT Patna</p>
+                                    <p className="text-sm text-gray-400 uppercase font-bold">Immersion</p>
+                                    <p className="text-lg font-semibold">Optional 2-Day IIT Patna Campus Visit</p>
                                 </div>
                             </div>
-                            <div className="flex items-start gap-4">
+                            <div className="flex items-center gap-4">
                                 <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center shrink-0">
                                     <Briefcase className="w-5 h-5 text-[#FF0031]" />
                                 </div>
                                 <div>
-                                    <p className="text-sm text-gray-400 uppercase tracking-widest font-bold">Eligibility</p>
-                                    <p className="text-lg font-semibold">Graduates / Diploma Holders</p>
+                                    <p className="text-sm text-gray-400 uppercase font-bold">Outcomes</p>
+                                    <p className="text-lg font-semibold">Job-Ready AI Engineer</p>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Director's Message */}
+            <section className="py-20 px-8 md:px-12 bg-white">
+                <div className="max-w-5xl mx-auto flex flex-col md:flex-row gap-12 items-center">
+                    <div className="flex-1">
+                        <div className="w-full aspect-[4/5] bg-gray-200 rounded-2xl relative overflow-hidden shadow-xl">
+                            {/* Placeholder for Prof. T.N. Singh */}
+                            <div className="absolute inset-0 flex items-center justify-center text-gray-400">
+                                <UserCheck className="w-24 h-24 opacity-20" />
+                                <span className="absolute bottom-4 left-4 font-bold text-gray-500">Prof. T.N. Singh</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="flex-[1.5] space-y-6">
+                        <span className="text-[#FF0031] font-bold tracking-wider uppercase text-sm block">Director's Message</span>
+                        <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight">
+                            Welcome to the <span className="text-[#FF0031]">Future of AI</span> at IIT Patna.
+                        </h2>
+                        <div className="text-gray-600 text-lg space-y-4 leading-relaxed">
+                            <p className="font-serif italic text-xl text-gray-800">"Dear Future Innovators,"</p>
+                            <p>
+                                India is shaping the next generation of AI engineers — professionals capable of designing, deploying, and scaling intelligent systems responsibly.
+                            </p>
+                            <p>
+                                This program equips software developers and engineers with deep technical expertise in LLMs, RAG systems, and Agentic AI workflows.
+                            </p>
+                            <p>
+                                Whether you’re building smarter applications or leading automation initiatives, this curriculum ensures you graduate as an AI-native developer — ready for a future where AI is not just a tool, but a core engineering layer.
+                            </p>
+                            <p className="font-bold text-gray-900 pt-4">
+                                Prof. T.N. Singh<br />
+                                <span className="font-medium text-gray-500 text-sm">Director, IIT Patna</span>
+                            </p>
                         </div>
                     </div>
                 </div>
             </section>
 
             {/* Stats Strip */}
-            <div className="bg-[#FF0031] text-white py-6 overflow-hidden relative">
-                <div className="max-w-7xl mx-auto px-8 md:px-12 flex flex-wrap justify-center md:justify-between items-center gap-8 text-center md:text-left">
-                    <div>
-                        <p className="text-sm opacity-80 font-medium uppercase tracking-wider">Next Batch Starts</p>
-                        <p className="text-2xl font-bold">March 15, 2026</p>
+            <div className="bg-[#FF0031] text-white py-8">
+                <div className="max-w-7xl mx-auto px-8 md:px-12 flex flex-wrap justify-between items-center gap-8">
+                    <div className="text-center md:text-left">
+                        <p className="text-3xl font-extrabold">100%</p>
+                        <p className="text-sm font-medium opacity-80 uppercase tracking-wider">Hands-on Projects</p>
                     </div>
-                    <div className="h-10 w-px bg-white/20 hidden md:block"></div>
-                    <div>
-                        <p className="text-sm opacity-80 font-medium uppercase tracking-wider">Application Deadline</p>
-                        <p className="text-2xl font-bold">February 28, 2026</p>
+                    <div className="h-12 w-px bg-white/20 hidden md:block"></div>
+                    <div className="text-center md:text-left">
+                        <p className="text-3xl font-extrabold">10+</p>
+                        <p className="text-sm font-medium opacity-80 uppercase tracking-wider">Capstone Project</p>
                     </div>
-                    <div className="h-10 w-px bg-white/20 hidden md:block"></div>
-                    <div>
-                        <p className="text-sm opacity-80 font-medium uppercase tracking-wider">Total Fee</p>
-                        <p className="text-2xl font-bold">₹ 1,05,000 + GST</p>
+                    <div className="h-12 w-px bg-white/20 hidden md:block"></div>
+                    <div className="text-center md:text-left">
+                        <p className="text-3xl font-extrabold">10</p>
+                        <p className="text-sm font-medium opacity-80 uppercase tracking-wider">Structured Modules</p>
                     </div>
-                    <div className="h-10 w-px bg-white/20 hidden md:block"></div>
-                    <button className="px-6 py-2 bg-white text-[#FF0031] rounded-full font-bold hover:bg-gray-100 transition-colors shadow-lg">
-                        View Syllabus
-                    </button>
+                    <div className="h-12 w-px bg-white/20 hidden md:block"></div>
+                    <div className="text-center md:text-left">
+                        <p className="text-3xl font-extrabold">Lifetime</p>
+                        <p className="text-sm font-medium opacity-80 uppercase tracking-wider">Code Access</p>
+                    </div>
                 </div>
             </div>
 
-            {/* Comparison Section */}
-            <section className="py-24 px-8 md:px-12 bg-gray-50">
-                <div className="max-w-6xl mx-auto">
-                    <div className="text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">Why Choose This Program?</h2>
-                        <p className="text-gray-600 text-lg">Compare and see the difference.</p>
+            {/* Who is this for */}
+            <section className="py-20 px-8 md:px-12 bg-gray-50">
+                <div className="max-w-6xl mx-auto text-center">
+                    <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-12">Who is this program for?</h2>
+                    <div className="flex flex-wrap justify-center gap-4">
+                        {[
+                            "DevOps Engineer", "Product Manager", "Data Analyst",
+                            "BI Developer", "Data Engineer", "ML Ops Engineer",
+                            "Software Developers", "Data Scientists", "ML Engineers"
+                        ].map((role, i) => (
+                            <div key={i} className="px-6 py-3 bg-white rounded-full border border-gray-200 text-gray-700 font-bold hover:border-[#FF0031] hover:text-[#FF0031] transition-colors shadow-sm cursor-default">
+                                {role}
+                            </div>
+                        ))}
                     </div>
-
-                    <div className="overflow-x-auto">
-                        <div className="min-w-[800px] grid grid-cols-3 gap-0 border border-gray-200 rounded-2xl overflow-hidden shadow-xl bg-white">
-                            {/* Header */}
-                            <div className="col-span-1 p-8 bg-gray-50 border-b border-r border-gray-200 flex items-center">
-                                <span className="font-bold text-gray-500 uppercase tracking-wider text-sm">Feature</span>
-                            </div>
-                            <div className="col-span-1 p-8 bg-white border-b border-r border-gray-200 text-center">
-                                <span className="font-bold text-gray-400 text-lg block mb-2">Traditional Courses</span>
-                                <span className="text-xs text-gray-400 font-medium uppercase tracking-wider">Standard Curriculum</span>
-                            </div>
-                            <div className="col-span-1 p-8 bg-[#FF0031]/5 border-b border-gray-200 text-center relative">
-                                <div className="absolute top-0 left-0 w-full h-1 bg-[#FF0031]"></div>
-                                <span className="font-extrabold text-[#FF0031] text-xl block mb-2">IIT Patna GenAI</span>
-                                <span className="text-xs text-[#FF0031]/60 font-bold uppercase tracking-wider">Premium Certification</span>
-                            </div>
-
-                            {/* Rows */}
-                            {[
-                                { name: "Certification", trad: "Standard Certificate", iit: "IIT Patna Certification", highlight: true },
-                                { name: "Curriculum", trad: "Theoretical", iit: "Industry-Vetted & Practical", highlight: true },
-                                { name: "Projects", trad: "2-3 Basic Projects", iit: "10+ Industry Projects + Capstone", highlight: true },
-                                { name: "Faculty", trad: "General Trainers", iit: "IIT Professors & Industry Experts", highlight: true },
-                                { name: "Tools Covered", trad: "5-10 Tools", iit: "50+ Latest AI Tools", highlight: true },
-                                { name: "Career Support", trad: "Limited", iit: "Dedicated Placement Support", highlight: true },
-                            ].map((row, i) => (
-                                <React.Fragment key={i}>
-                                    <div className="col-span-1 p-6 bg-gray-50 border-b border-r border-gray-100 font-bold text-gray-700 flex items-center">
-                                        {row.name}
-                                    </div>
-                                    <div className="col-span-1 p-6 bg-white border-b border-r border-gray-100 text-center text-gray-500 flex items-center justify-center gap-2">
-                                        <XCircle className="w-5 h-5 text-gray-300" /> {row.trad}
-                                    </div>
-                                    <div className="col-span-1 p-6 bg-[#FF0031]/5 border-b border-gray-100 text-center font-bold text-gray-900 flex items-center justify-center gap-2">
-                                        <CheckCircle className="w-5 h-5 text-[#FF0031]" /> {row.iit}
-                                    </div>
-                                </React.Fragment>
-                            ))}
-                        </div>
+                    <div className="mt-8 p-6 bg-blue-50 rounded-xl inline-block border border-blue-100 max-w-2xl">
+                        <p className="text-blue-800 text-sm">
+                            <span className="font-bold">Note:</span> Basic Coding Knowledge will be Helpful! In certain sections, coding will be required. But for people with low experience, our faculty will support with basic lessons.
+                        </p>
                     </div>
                 </div>
             </section>
 
             {/* Detailed Curriculum Section - Accordion */}
             <section id="curriculum" className="py-24 px-8 md:px-12 bg-white">
-                <div className="max-w-4xl mx-auto">
+                <div className="max-w-5xl mx-auto">
                     <div className="text-center mb-16">
                         <span className="text-[#FF0031] font-bold tracking-wider uppercase text-sm mb-2 block">Syllabus</span>
                         <h2 className="text-3xl md:text-5xl font-extrabold text-gray-900 mb-6">Comprehensive Curriculum</h2>
                         <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-                            Designed by IIT Faculty and Industry Leaders to make you job-ready from Day 1.
+                            10 structured modules designed to take you from foundations to building agentic ecosystems.
                         </p>
                     </div>
 
@@ -342,14 +453,14 @@ export default function IITPatnaPage() {
                                     </div>
                                 </button>
 
-                                <div className={`overflow-hidden transition-all duration-500 ease-in-out ${activeModule === idx ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"}`}>
+                                <div className={`overflow-hidden transition-all duration-500 ease-in-out ${activeModule === idx ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"}`}>
                                     <div className="p-8 pt-0 border-t border-gray-100/50">
                                         <p className="text-gray-600 mb-6 italic border-l-4 border-red-100 pl-4 py-1">{mod.desc}</p>
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3">
                                             {mod.topics.map((topic, i) => (
                                                 <div key={i} className="flex items-start gap-3">
                                                     <div className="w-1.5 h-1.5 rounded-full bg-[#FF0031] mt-2 shrink-0"></div>
-                                                    <span className="text-gray-800 font-medium">{topic}</span>
+                                                    <span className="text-gray-800 font-medium text-sm leading-relaxed">{topic}</span>
                                                 </div>
                                             ))}
                                         </div>
@@ -358,151 +469,96 @@ export default function IITPatnaPage() {
                             </div>
                         ))}
                     </div>
+                    <div className="text-center mt-12">
+                        <button className="px-8 py-3 rounded-full border-2 border-[#FF0031] text-[#FF0031] font-bold hover:bg-red-50 transition-colors inline-flex items-center gap-2">
+                            <Download className="w-4 h-4" /> Download Detailed Syllabus
+                        </button>
+                    </div>
                 </div>
             </section>
 
-            {/* Tools Section - Marquee Style Grid */}
-            <section className="py-20 bg-gray-900 border-y border-gray-800 overflow-hidden">
-                <div className="max-w-7xl mx-auto px-8 mb-12 text-center">
-                    <h2 className="text-3xl font-bold text-white mb-2">Master 50+ Modern AI Tools</h2>
-                    <p className="text-gray-400">Detailed hands-on training on the latest tech stack.</p>
-                </div>
-
-                {/* Scrolling Marquee Effect (Simulated with grid for now to be safe, or CSS animation) */}
-                <div className="relative w-full overflow-hidden">
-                    <div className="flex flex-wrap justify-center gap-4 md:gap-6 px-4 max-w-6xl mx-auto opacity-80">
-                        {[
-                            "OpenAI", "ChatGPT", "Gemini", "Claude", "Llama 3", "Mistral", "Ollama", "LangChain",
-                            "HuggingFace", "Midjourney", "DALL-E 3", "Stable Diffusion", "Runway ML", "Pika",
-                            "ElevenLabs", "HeyGen", "Synthesia", "Zapier", "Make.com", "n8n", "Retool",
-                            "Firebase", "Supabase", "Docker", "Kubernetes", "Postman", "GitHub Copilot", "Cursor"
-                        ].map((tool, i) => (
-                            <div key={i} className="px-6 py-3 rounded-xl bg-white/5 border border-white/10 text-gray-300 font-bold hover:bg-[#FF0031] hover:text-white hover:border-[#FF0031] hover:scale-105 transition-all duration-300 cursor-default backdrop-blur-sm">
-                                {tool}
+            {/* Mentors Section */}
+            <section id="mentors" className="py-24 px-8 md:px-12 bg-gray-900 text-white">
+                <div className="max-w-7xl mx-auto">
+                    <div className="text-center mb-16">
+                        <h2 className="text-3xl md:text-5xl font-extrabold mb-6">Mentors from Top AI Companies</h2>
+                        <p className="text-gray-400 text-lg">Learn directly from experts building the future at NVIDIA, Google, and more.</p>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        {mentors.map((mentor, i) => (
+                            <div key={i} className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors">
+                                <div className="w-20 h-20 rounded-full bg-gray-700 mb-4 mx-auto overflow-hidden flex items-center justify-center">
+                                    <Users className="w-10 h-10 text-gray-400" />
+                                </div>
+                                <h3 className="text-xl font-bold text-center mb-1">{mentor.name}</h3>
+                                <p className="text-[#FF0031] text-sm font-bold text-center uppercase tracking-wider mb-4">{mentor.role}</p>
+                                <p className="text-gray-400 text-sm text-center leading-relaxed">
+                                    {mentor.desc}
+                                </p>
                             </div>
                         ))}
                     </div>
                 </div>
             </section>
 
-            {/* Projects & Portfolio */}
-            <section id="projects" className="py-24 px-8 md:px-12 bg-gray-50">
+            {/* Projects */}
+            <section id="projects" className="py-24 px-8 md:px-12 bg-white">
                 <div className="max-w-7xl mx-auto">
-                    <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
-                        <div>
-                            <span className="text-[#FF0031] font-bold tracking-wider uppercase text-sm mb-2 block">Portfolio</span>
-                            <h2 className="text-4xl font-extrabold text-gray-900 mb-4">Build Real-World Applications</h2>
-                            <p className="text-gray-600 text-lg max-w-xl">
-                                Don't just learn theory. Create a GitHub portfolio of 10+ deployment-ready AI applications.
-                            </p>
-                        </div>
-                        <button className="hidden md:flex items-center gap-2 text-[#FF0031] font-bold hover:translate-x-1 transition-transform">
-                            View All Projects <ArrowRight className="w-5 h-5" />
-                        </button>
+                    <div className="text-center mb-16">
+                        <span className="text-[#FF0031] font-bold tracking-wider uppercase text-sm mb-2 block">Portfolio</span>
+                        <h2 className="text-4xl font-extrabold text-gray-900 mb-6">Stuff You're Going to Build</h2>
+                        <p className="text-gray-600 max-w-2xl mx-auto">Choose your track and build an end-to-end project. Mentors will help you select the right project.</p>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {projects.map((project, idx) => (
-                            <div key={idx} className="group bg-white rounded-3xl p-1 overflow-hidden hover:shadow-2xl hover:shadow-gray-200 transition-all duration-500 border border-gray-100">
-                                <div className="bg-gray-50 rounded-[22px] p-8 h-full flex flex-col group-hover:bg-white transition-colors">
-                                    <div className="w-14 h-14 rounded-2xl bg-white shadow-sm flex items-center justify-center mb-6 group-hover:bg-[#FF0031] group-hover:text-white transition-all duration-300 border border-gray-100">
-                                        <project.icon className="w-7 h-7" />
-                                    </div>
-                                    <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-[#FF0031] transition-colors">
-                                        {project.title}
-                                    </h3>
-                                    <p className="text-gray-500 leading-relaxed text-sm mb-6 flex-grow">
-                                        {project.desc}
-                                    </p>
-                                    <div className="pt-6 border-t border-gray-200/50 flex items-center justify-between">
-                                        <span className="text-xs font-bold text-gray-400 uppercase tracking-wider">Capstone Project</span>
-                                        <div className="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center group-hover:bg-red-50 group-hover:text-[#FF0031] transition-colors">
-                                            <ArrowRight className="w-4 h-4" />
-                                        </div>
-                                    </div>
+                            <div key={idx} className="group bg-gray-50 rounded-3xl p-8 border border-gray-100 hover:bg-white hover:shadow-xl hover:border-red-100 transition-all duration-300">
+                                <div className="w-14 h-14 rounded-2xl bg-white shadow-sm flex items-center justify-center mb-6 group-hover:bg-[#FF0031] group-hover:text-white transition-all duration-300 border border-gray-100">
+                                    <project.icon className="w-7 h-7" />
                                 </div>
+                                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-[#FF0031] transition-colors">
+                                    {project.title}
+                                </h3>
+                                <p className="text-gray-600 leading-relaxed text-sm">
+                                    {project.desc}
+                                </p>
                             </div>
                         ))}
                     </div>
                 </div>
             </section>
 
-            {/* Certificate Section */}
-            <section className="py-24 px-8 md:px-12 bg-white border-t border-gray-100">
-                <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-16">
-                    <div className="flex-1 order-2 md:order-1 relative">
-                        {/* CSS Certificate Mockup */}
-                        <div className="relative w-full aspect-[1.4/1] bg-white border-[10px] border-gray-100 shadow-2xl rounded-sm p-8 flex flex-col items-center justify-center text-center overflow-hidden">
-                            <div className="absolute inset-0 border-[2px] border-gray-300 m-4 pointer-events-none"></div>
-                            {/* Watermark */}
-                            <div className="absolute inset-0 flex items-center justify-center opacity-[0.03]">
-                                <Award className="w-64 h-64" />
-                            </div>
+            {/* Final CTA / Fees */}
+            <section id="fees" className="py-24 px-8 md:px-12 bg-gradient-to-br from-gray-900 to-black text-white overflow-hidden relative">
+                <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#FF0031] rounded-full blur-[150px] opacity-20 -translate-y-1/2 translate-x-1/2"></div>
+                <div className="relative z-10 max-w-5xl mx-auto text-center">
+                    <h2 className="text-4xl md:text-6xl font-extrabold mb-8">Secure Your Spot</h2>
 
-                            <div className="w-16 h-16 bg-gray-900 rounded-full mb-6 flex items-center justify-center">
-                                <div className="text-white text-[8px] font-serif">IIT PATNA</div>
-                            </div>
-                            <h4 className="font-serif text-3xl font-bold text-gray-800 mb-2">Certificate of Completion</h4>
-                            <p className="text-gray-500 italic mb-6">is hereby awarded to</p>
-                            <p className="font-script text-4xl text-[#FF0031] mb-6 font-bold">John Doe</p>
-                            <div className="w-full max-w-md h-px bg-gray-200 mb-6"></div>
-                            <p className="text-gray-600 font-bold uppercase tracking-widest text-xs">PG Certificate in Generative AI</p>
+                    <div className="flex flex-col md:flex-row justify-center items-stretch gap-8 mb-12">
+                        <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/10 flex-1 relative overflow-hidden">
+                            <div className="absolute top-0 left-0 w-full h-1 bg-[#FF0031]"></div>
+                            <p className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-4">Current Batch</p>
+                            <p className="text-5xl font-extrabold text-white mb-2">₹ 99,999</p>
+                            <p className="text-sm text-green-400 font-bold mb-4">Open Now for 6 Months</p>
+                            <button className="w-full py-4 rounded-xl bg-[#FF0031] text-white font-bold text-lg hover:bg-[#D9002A] transition-colors shadow-lg">
+                                Apply Now
+                            </button>
                         </div>
-                        {/* Badge Overlay */}
-                        <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-[#FF0031] rounded-full flex items-center justify-center text-white font-bold text-center text-xs p-4 shadow-xl border-4 border-white rotate-12">
-                            Executive Alumni Status
+                        <div className="bg-transparent rounded-2xl p-8 border border-white/10 flex-1 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+                            <p className="text-sm font-bold text-gray-500 uppercase tracking-widest mb-4">Next Batch</p>
+                            <p className="text-4xl font-extrabold text-gray-400 mb-2">₹ 1,34,999</p>
+                            <p className="text-sm text-gray-500 mb-8">Starting soon</p>
+                            <button className="w-full py-4 rounded-xl bg-white/10 text-gray-300 font-bold text-lg cursor-not-allowed">
+                                Join Waitlist
+                            </button>
                         </div>
                     </div>
-                    <div className="flex-1 order-1 md:order-2">
-                        <span className="text-[#FF0031] font-bold tracking-wider uppercase text-sm mb-2 block">Prestigious Recognition</span>
-                        <h2 className="text-4xl font-extrabold text-gray-900 mb-6">Get Certified by IIT Patna</h2>
-                        <ul className="space-y-6">
-                            <li className="flex items-start gap-4">
-                                <CheckCircle className="w-6 h-6 text-[#FF0031] shrink-0" />
-                                <div>
-                                    <h4 className="font-bold text-lg text-gray-900">Executive Alumni Status</h4>
-                                    <p className="text-gray-500">Join the elite network of IIT Patna alumni and access exclusive benefits.</p>
-                                </div>
-                            </li>
-                            <li className="flex items-start gap-4">
-                                <CheckCircle className="w-6 h-6 text-[#FF0031] shrink-0" />
-                                <div>
-                                    <h4 className="font-bold text-lg text-gray-900">Verifiable Digital Credentials</h4>
-                                    <p className="text-gray-500">Share your achievement on LinkedIn with a globally recognized certificate.</p>
-                                </div>
-                            </li>
-                            <li className="flex items-start gap-4">
-                                <CheckCircle className="w-6 h-6 text-[#FF0031] shrink-0" />
-                                <div>
-                                    <h4 className="font-bold text-lg text-gray-900">Career Advancement</h4>
-                                    <p className="text-gray-500">Stand out to top recruiters with a certification from a premier institute.</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
 
-            {/* Final CTA */}
-            <section id="fees" className="py-24 px-8 md:px-12 bg-gray-900 text-white relative overflow-hidden">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-gray-800 to-black"></div>
-                <div className="relative z-10 max-w-4xl mx-auto text-center">
-                    <h2 className="text-4xl md:text-5xl font-extrabold mb-8">Ready to Future-Proof Your Career?</h2>
-                    <p className="text-xl text-gray-300 mb-12">Applications for the upcoming cohort are closing soon. Secure your spot today.</p>
-
-                    <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 mb-12 inline-block border border-white/10">
-                        <p className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-2">Program Fee</p>
-                        <p className="text-5xl font-extrabold text-white mb-2">₹ 1,05,000 <span className="text-xl text-gray-400 font-normal">+ GST</span></p>
-                        <p className="text-sm text-gray-400">EMI options starting at ₹5,500/month</p>
-                    </div>
-
-                    <div className="flex flex-col sm:flex-row justify-center gap-6">
-                        <button className="px-12 py-5 rounded-full bg-[#FF0031] text-white font-bold text-xl hover:bg-[#D9002A] transition-all shadow-xl hover:scale-105">
-                            Apply Now
-                        </button>
-                        <button className="px-12 py-5 rounded-full bg-transparent border-2 border-white text-white font-bold text-xl hover:bg-white hover:text-black transition-all">
-                            Talk to Counselor
-                        </button>
+                    <div className="flex flex-wrap justify-center gap-8 text-sm font-medium text-gray-400 mb-12">
+                        <span className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-[#FF0031]" /> EMI Options Available</span>
+                        <span className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-[#FF0031]" /> Refund: 80% before Day 1</span>
+                        <span className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-[#FF0031]" /> +91 8147625187</span>
+                        <span className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-[#FF0031]" /> support@iitpatna.com</span>
                     </div>
                 </div>
             </section>
