@@ -73,7 +73,7 @@ export function Navbar() {
                             </button>
 
                             {/* Dropdown Menu */}
-                            <div className="absolute top-full left-0 mt-2 w-[800px] bg-white rounded-xl shadow-2xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50 overflow-hidden flex h-[450px]">
+                            <div className="absolute top-full left-0 w-[800px] bg-white rounded-xl shadow-2xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50 overflow-hidden flex h-[450px]">
                                 {/* Left Sidebar: Institutions */}
                                 <div className="w-1/3 bg-gray-50 p-4 border-r border-gray-100 overflow-y-auto">
                                     <div className="space-y-2">
