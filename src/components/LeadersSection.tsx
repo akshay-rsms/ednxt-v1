@@ -23,14 +23,14 @@ const Card: React.FC<CardProps> = ({ i, leader, progress, range, targetScale }) 
     const scale = useTransform(progress, range, [1, targetScale]);
 
     return (
-        <div ref={container} className="h-screen flex items-center justify-center sticky top-0">
+        <div ref={container} className="h-[75vh] flex items-start justify-center sticky top-0 pt-16 sm:pt-24">
             <motion.div
                 style={{
                     scale,
                     backgroundColor: i % 2 === 0 ? "#ffffff" : "#fdfdfd", // Slight variation
-                    top: `calc(5vh + ${i * 25}px)`
+                    top: `calc(-5vh + ${i * 25}px)`
                 }}
-                className="flex flex-col relative -top-[25%] h-[450px] w-full md:w-[1000px] rounded-3xl p-10 border border-gray-200 shadow-xl transform origin-top hover:shadow-2xl hover:border-[#FF0031]/20 transition-all duration-500 group"
+                className="flex flex-col relative h-[450px] w-full md:w-[1000px] rounded-3xl p-10 border border-gray-200 shadow-xl transform origin-top hover:shadow-2xl hover:border-[#FF0031]/20 transition-all duration-500 group"
             >
                 <div className="flex h-full gap-10 flex-col md:flex-row">
                     {/* Left Content */}
