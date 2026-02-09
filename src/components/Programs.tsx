@@ -97,7 +97,7 @@ export function Programs() {
                 {/* Cards Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {filteredPrograms.map((prog, idx) => (
-                        <div key={idx} className="bg-white border border-red-100 rounded-[2rem] overflow-hidden hover:shadow-xl transition-all duration-300 group relative">
+                        <div key={idx} className="bg-white border border-[#FF0031] rounded-[2rem] overflow-hidden group relative">
 
                             {/* Badges Container */}
                             <div className="absolute top-0 left-0 w-full flex justify-center gap-2 z-20 pointer-events-none pt-0">

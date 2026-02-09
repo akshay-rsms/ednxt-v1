@@ -63,7 +63,7 @@ export function Blogs() {
                     {blogs.map((blog, idx) => (
                         <div
                             key={blog.id}
-                            className={`min-w-[320px] md:min-w-[380px] bg-white rounded-[2rem] overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 h-[500px] flex flex-col snap-center ${idx % 2 === 0 ? "-translate-y-6" : "translate-y-6"
+                            className={`min-w-[320px] md:min-w-[380px] bg-white rounded-[2rem] overflow-hidden border border-[#FF0031] h-[500px] flex flex-col snap-center ${idx % 2 === 0 ? "-translate-y-6" : "translate-y-6"
                                 }`}
                         >
                             {/* Top Image Section */}
@@ -108,6 +108,6 @@ export function Blogs() {
           scrollbar-width: none;
         }
       `}</style>
-        </section>
+        </section >
     );
 }

@@ -76,7 +76,7 @@ export function Testimonials() {
                 {/* Scrollable Container */}
                 <div className="flex gap-6 overflow-x-auto pb-12 hide-scrollbar snap-x">
                     {testimonials.map((card, idx) => (
-                        <div key={idx} className="min-w-[300px] md:min-w-[350px] bg-white rounded-[2rem] border border-red-100 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 snap-center flex flex-col">
+                        <div key={idx} className="min-w-[300px] md:min-w-[350px] bg-white rounded-[2rem] border border-[#FF0031] overflow-hidden snap-center flex flex-col">
 
                             {/* Render based on type */}
                             {card.type === 'image-top' && (
