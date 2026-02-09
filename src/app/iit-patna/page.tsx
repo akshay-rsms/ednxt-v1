@@ -243,9 +243,13 @@ export default function IITPatnaPage() {
                         <div className="hidden md:flex gap-8 text-sm font-medium text-gray-600">
                             <button onClick={() => scrollToSection("overview")} className="hover:text-[#FF0031] transition-colors">Overview</button>
                             <button onClick={() => scrollToSection("curriculum")} className="hover:text-[#FF0031] transition-colors">Curriculum</button>
-                            <button onClick={() => scrollToSection("projects")} className="hover:text-[#FF0031] transition-colors">Projects</button>
-                            <button onClick={() => scrollToSection("mentors")} className="hover:text-[#FF0031] transition-colors">Mentors</button>
+                            <button onClick={() => scrollToSection("projects")} className="hover:text-[#FF0031] transition-colors">Mentors</button>
+                            <button onClick={() => scrollToSection("mentors")} className="hover:text-[#FF0031] transition-colors">Projects</button>
+                            <button onClick={() => scrollToSection("mentors")} className="hover:text-[#FF0031] transition-colors">Certificates</button>
                             <button onClick={() => scrollToSection("fees")} className="hover:text-[#FF0031] transition-colors">Fees</button>
+                            <button onClick={() => scrollToSection("mentors")} className="hover:text-[#FF0031] transition-colors">FAQ's</button>
+
+
                         </div>
                         <button className="bg-[#FF0031] text-white px-6 py-2 rounded-full text-sm font-bold hover:bg-[#D9002A] transition-colors">
                             Apply Now
