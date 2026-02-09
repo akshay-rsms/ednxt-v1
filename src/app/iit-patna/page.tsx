@@ -9,6 +9,8 @@ import {
     PlayCircle, Briefcase, GraduationCap, Building2, UserCheck
 } from "lucide-react";
 
+import { InstituteInfo } from "@/components/InstituteInfo";
+
 export default function IITPatnaPage() {
     const [activeModule, setActiveModule] = useState<number | null>(0);
     const [isSticky, setIsSticky] = useState(false);
@@ -327,42 +329,6 @@ export default function IITPatnaPage() {
                 </div>
             </section>
 
-            {/* Director's Message */}
-            <section className="py-20 px-8 md:px-12 bg-white">
-                <div className="max-w-5xl mx-auto flex flex-col md:flex-row gap-12 items-center">
-                    <div className="flex-1">
-                        <div className="w-full aspect-[4/5] bg-gray-200 rounded-2xl relative overflow-hidden shadow-xl">
-                            {/* Placeholder for Prof. T.N. Singh */}
-                            <div className="absolute inset-0 flex items-center justify-center text-gray-400">
-                                <UserCheck className="w-24 h-24 opacity-20" />
-                                <span className="absolute bottom-4 left-4 font-bold text-gray-500">Prof. T.N. Singh</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="flex-[1.5] space-y-6">
-                        <span className="text-[#FF0031] font-bold tracking-wider uppercase text-sm block">Director's Message</span>
-                        <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight">
-                            Welcome to the <span className="text-[#FF0031]">Future of AI</span> at IIT Patna.
-                        </h2>
-                        <div className="text-gray-600 text-lg space-y-4 leading-relaxed">
-                            <p className="font-serif italic text-xl text-gray-800">"Dear Future Innovators,"</p>
-                            <p>
-                                India is shaping the next generation of AI engineers — professionals capable of designing, deploying, and scaling intelligent systems responsibly.
-                            </p>
-                            <p>
-                                This program equips software developers and engineers with deep technical expertise in LLMs, RAG systems, and Agentic AI workflows.
-                            </p>
-                            <p>
-                                Whether you’re building smarter applications or leading automation initiatives, this curriculum ensures you graduate as an AI-native developer — ready for a future where AI is not just a tool, but a core engineering layer.
-                            </p>
-                            <p className="font-bold text-gray-900 pt-4">
-                                Prof. T.N. Singh<br />
-                                <span className="font-medium text-gray-500 text-sm">Director, IIT Patna</span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
 
             {/* Stats Strip */}
             <div className="bg-[#FF0031] text-white py-8">
@@ -388,6 +354,9 @@ export default function IITPatnaPage() {
                     </div>
                 </div>
             </div>
+
+            {/* Institute Info Section */}
+            <InstituteInfo />
 
             {/* Who is this for */}
             <section className="py-20 px-8 md:px-12 bg-gray-50">
@@ -505,8 +474,8 @@ export default function IITPatnaPage() {
             <section id="projects" className="py-24 px-8 md:px-12 bg-white">
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-16">
-                        <span className="text-[#FF0031] font-bold tracking-wider uppercase text-sm mb-2 block">Portfolio</span>
-                        <h2 className="text-4xl font-extrabold text-gray-900 mb-6">Stuff You're Going to Build</h2>
+                        <span className="text-[#FF0031] font-bold tracking-wider uppercase text-sm mb-2 block"></span>
+                        <h2 className="text-4xl font-extrabold text-gray-900 mb-6">Stuff You&apos;re Going to Build by the end of the program</h2>
                         <p className="text-gray-600 max-w-2xl mx-auto">Choose your track and build an end-to-end project. Mentors will help you select the right project.</p>
                     </div>
 
@@ -524,6 +493,23 @@ export default function IITPatnaPage() {
                                 </p>
                             </div>
                         ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Certification Section */}
+            <section className="py-24 px-8 md:px-12 bg-gray-50">
+                <div className="max-w-4xl mx-auto text-center">
+                    <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-12">
+                        Official <span className="text-blue-600">IIT Patna</span> certification <br className="hidden md:block" />
+                        on completion of your program
+                    </h2>
+                    <div className="rounded-xl overflow-hidden shadow-2xl border border-gray-200">
+                        <img 
+                            src="/IITPATNA-CERTIFICATE.png" 
+                            alt="Official IIT Patna Certificate" 
+                            className="w-full h-auto"
+                        />
                     </div>
                 </div>
             </section>
