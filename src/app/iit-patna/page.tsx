@@ -9,6 +9,7 @@ import {
     PlayCircle, Briefcase, GraduationCap, Building2, UserCheck
 } from "lucide-react";
 
+import { MentorsCarousel } from "@/components/MentorsCarousel";
 import { InstituteInfo } from "@/components/InstituteInfo";
 
 export default function IITPatnaPage() {
@@ -283,7 +284,7 @@ export default function IITPatnaPage() {
 
                     {/* Program Snapshot Card */}
                     <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 shadow-2xl relative group hover:border-[#FF0031]/30 transition-colors duration-500">
-                        <div className="absolute top-4 right-4 bg-green-500 text-black text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                        <div className="absolute top-4 right-4 bg-yellow-300 text-black text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
                             Enrollment Open
                         </div>
                         <h3 className="text-2xl font-bold mb-6">Program Highlights</h3>
@@ -358,28 +359,9 @@ export default function IITPatnaPage() {
             {/* Institute Info Section */}
             <InstituteInfo />
 
-            {/* Who is this for */}
-            <section className="py-20 px-8 md:px-12 bg-gray-50">
-                <div className="max-w-6xl mx-auto text-center">
-                    <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-12">Who is this program for?</h2>
-                    <div className="flex flex-wrap justify-center gap-4">
-                        {[
-                            "DevOps Engineer", "Product Manager", "Data Analyst",
-                            "BI Developer", "Data Engineer", "ML Ops Engineer",
-                            "Software Developers", "Data Scientists", "ML Engineers"
-                        ].map((role, i) => (
-                            <div key={i} className="px-6 py-3 bg-white rounded-full border border-gray-200 text-gray-700 font-bold hover:border-[#FF0031] hover:text-[#FF0031] transition-colors shadow-sm cursor-default">
-                                {role}
-                            </div>
-                        ))}
-                    </div>
-                    <div className="mt-8 p-6 bg-blue-50 rounded-xl inline-block border border-blue-100 max-w-2xl">
-                        <p className="text-blue-800 text-sm">
-                            <span className="font-bold">Note:</span> Basic Coding Knowledge will be Helpful! In certain sections, coding will be required. But for people with low experience, our faculty will support with basic lessons.
-                        </p>
-                    </div>
-                </div>
-            </section>
+
+
+
 
             {/* Detailed Curriculum Section - Accordion */}
             <section id="curriculum" className="py-24 px-8 md:px-12 bg-white">
@@ -447,28 +429,7 @@ export default function IITPatnaPage() {
             </section>
 
             {/* Mentors Section */}
-            <section id="mentors" className="py-24 px-8 md:px-12 bg-gray-900 text-white">
-                <div className="max-w-7xl mx-auto">
-                    <div className="text-center mb-16">
-                        <h2 className="text-3xl md:text-5xl font-extrabold mb-6">Mentors from Top AI Companies</h2>
-                        <p className="text-gray-400 text-lg">Learn directly from experts building the future at NVIDIA, Google, and more.</p>
-                    </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                        {mentors.map((mentor, i) => (
-                            <div key={i} className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors">
-                                <div className="w-20 h-20 rounded-full bg-gray-700 mb-4 mx-auto overflow-hidden flex items-center justify-center">
-                                    <Users className="w-10 h-10 text-gray-400" />
-                                </div>
-                                <h3 className="text-xl font-bold text-center mb-1">{mentor.name}</h3>
-                                <p className="text-[#FF0031] text-sm font-bold text-center uppercase tracking-wider mb-4">{mentor.role}</p>
-                                <p className="text-gray-400 text-sm text-center leading-relaxed">
-                                    {mentor.desc}
-                                </p>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
+            <MentorsCarousel />
 
             {/* Projects */}
             <section id="projects" className="py-24 px-8 md:px-12 bg-white">
@@ -505,9 +466,9 @@ export default function IITPatnaPage() {
                         on completion of your program
                     </h2>
                     <div className="rounded-xl overflow-hidden shadow-2xl border border-gray-200">
-                        <img 
-                            src="/IITPATNA-CERTIFICATE.png" 
-                            alt="Official IIT Patna Certificate" 
+                        <img
+                            src="/IITPATNA-CERTIFICATE.png"
+                            alt="Official IIT Patna Certificate"
                             className="w-full h-auto"
                         />
                     </div>
@@ -612,6 +573,6 @@ export default function IITPatnaPage() {
             </section>
 
             <Footer />
-        </main>
+        </main >
     );
 }
