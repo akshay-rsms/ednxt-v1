@@ -269,7 +269,7 @@ export function MentorsCarousel() {
     };
 
     return (
-        <section className="py-24 bg-gray-50 overflow-hidden relative">
+        <section id="mentors" className="py-24 bg-gray-50 overflow-hidden relative">
             <div className="max-w-7xl mx-auto px-8 md:px-12 mb-12 flex items-end justify-between">
                 <div>
                     <h2 className="text-3xl md:text-5xl font-extrabold text-gray-900 mb-4">
