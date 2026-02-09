@@ -428,8 +428,8 @@ export default function IITPatnaPage() {
                             <div
                                 key={idx}
                                 className={`border rounded-2xl transition-all duration-300 overflow-hidden ${activeModule === idx
-                                        ? "border-[#FF0031] shadow-xl shadow-red-500/10 bg-white"
-                                        : "border-gray-100 bg-gray-50 hover:border-gray-300"
+                                    ? "border-[#FF0031] shadow-xl shadow-red-500/10 bg-white"
+                                    : "border-gray-100 bg-gray-50 hover:border-gray-300"
                                     }`}
                             >
                                 <button
@@ -559,6 +559,68 @@ export default function IITPatnaPage() {
                         <span className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-[#FF0031]" /> Refund: 80% before Day 1</span>
                         <span className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-[#FF0031]" /> +91 8147625187</span>
                         <span className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-[#FF0031]" /> support@iitpatna.com</span>
+                    </div>
+                </div>
+            </section>
+
+
+            {/* FAQ Section */}
+            <section id="faq" className="py-24 px-8 md:px-12 bg-gray-50">
+                <div className="max-w-4xl mx-auto">
+                    <div className="text-center mb-16">
+                        <span className="text-[#FF0031] font-bold tracking-wider uppercase text-sm mb-2 block">FAQ</span>
+                        <h2 className="text-3xl md:text-5xl font-extrabold text-gray-900 mb-6">Frequently Asked Questions</h2>
+                    </div>
+
+                    <div className="space-y-4">
+                        {[
+                            {
+                                q: "Is this program recognized by the industry?",
+                                a: "Absolutely. The certificate is awarded by IIT Patna, a prestigious institution. Additionally, the program is designed with input from industry leaders, ensuring the curriculum aligns with the latest trends and skills in demand."
+                            },
+                            {
+                                q: "What happens if I miss a live session?",
+                                a: "No worries! All live sessions are recorded and made available for you to access anytime, ensuring you never fall behind in your learning."
+                            },
+                            {
+                                q: "Are there any prerequisites for enrolling?",
+                                a: "There are no specific prerequisites. A basic understanding of computers and enthusiasm to learn are all you need. The program provides foundational content for those new to AI."
+                            },
+                            {
+                                q: "What kind of support will I receive during the program?",
+                                a: "You'll have access to Live Q&A sessions with instructors, a dedicated community platform for networking and peer support, and career guidance from experts."
+                            },
+                            {
+                                q: "Can I pursue this program while working or studying full-time?",
+                                a: "Yes! The program is designed to be flexible, with a manageable weekly commitment and recorded sessions you can access at your convenience."
+                            },
+                            {
+                                q: "Will I receive placement assistance after the program?",
+                                a: "While we do not guarantee placements, we provide career support workshops, networking opportunities, and resume-building sessions to enhance your chances of landing AI-related roles."
+                            },
+                            {
+                                q: "Can international students enroll in this program?",
+                                a: "Yes, the program is open to learners worldwide. All live sessions and resources are accessible online, making it easy for international students to participate."
+                            },
+                            {
+                                q: "What is your refund policy?",
+                                a: "80% of the fees will be refunded if requested before the semester begins."
+                            }
+                        ].map((faq, i) => (
+                            <div key={i} className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:border-[#FF0031]/50 transition-colors">
+                                <details className="group">
+                                    <summary className="flex justify-between items-center font-bold cursor-pointer list-none p-6 text-lg text-gray-900">
+                                        <span>{faq.q}</span>
+                                        <span className="transition group-open:rotate-180">
+                                            <ChevronDown className="w-5 h-5 text-[#FF0031]" />
+                                        </span>
+                                    </summary>
+                                    <div className="text-gray-600 px-6 pb-6 leading-relaxed animate-in slide-in-from-top-2">
+                                        {faq.a}
+                                    </div>
+                                </details>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </section>
