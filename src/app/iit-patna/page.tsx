@@ -11,6 +11,7 @@ import {
 
 import { MentorsCarousel } from "@/components/MentorsCarousel";
 import { InstituteInfo } from "@/components/InstituteInfo";
+import { AIProjects } from "@/components/AIProjects";
 
 export default function IITPatnaPage() {
     const [activeModule, setActiveModule] = useState<number | null>(0);
@@ -432,31 +433,7 @@ export default function IITPatnaPage() {
             <MentorsCarousel />
 
             {/* Projects */}
-            <section id="projects" className="py-24 px-8 md:px-12 bg-white">
-                <div className="max-w-7xl mx-auto">
-                    <div className="text-center mb-16">
-                        <span className="text-[#FF0031] font-bold tracking-wider uppercase text-sm mb-2 block"></span>
-                        <h2 className="text-4xl font-extrabold text-gray-900 mb-6">Stuff You&apos;re Going to Build by the end of the program</h2>
-                        <p className="text-gray-600 max-w-2xl mx-auto">Choose your track and build an end-to-end project. Mentors will help you select the right project.</p>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {projects.map((project, idx) => (
-                            <div key={idx} className="group bg-gray-50 rounded-3xl p-8 border border-gray-100 hover:bg-white hover:shadow-xl hover:border-red-100 transition-all duration-300">
-                                <div className="w-14 h-14 rounded-2xl bg-white shadow-sm flex items-center justify-center mb-6 group-hover:bg-[#FF0031] group-hover:text-white transition-all duration-300 border border-gray-100">
-                                    <project.icon className="w-7 h-7" />
-                                </div>
-                                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-[#FF0031] transition-colors">
-                                    {project.title}
-                                </h3>
-                                <p className="text-gray-600 leading-relaxed text-sm">
-                                    {project.desc}
-                                </p>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
+            <AIProjects />
 
             {/* Certification Section */}
             <section className="py-24 px-8 md:px-12 bg-gray-50">
