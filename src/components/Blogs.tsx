@@ -59,11 +59,12 @@ export function Blogs() {
                 </div>
 
                 {/* Carousel Container */}
-                <div className="flex gap-8 overflow-x-auto pb-12 hide-scrollbar snap-x">
+                <div className="flex gap-8 overflow-x-auto py-12 hide-scrollbar snap-x items-center">
                     {blogs.map((blog, idx) => (
                         <div
                             key={blog.id}
-                            className={`min-w-[320px] md:min-w-[380px] bg-white rounded-[2rem] overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 h-[500px] flex flex-col snap-center ${idx % 2 !== 0 ? "mt-0" : ""}`}
+                            className={`min-w-[320px] md:min-w-[380px] bg-white rounded-[2rem] overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 h-[500px] flex flex-col snap-center ${idx % 2 === 0 ? "-translate-y-6" : "translate-y-6"
+                                }`}
                         >
                             {/* Top Image Section */}
                             <div className="h-[55%] relative overflow-hidden">
