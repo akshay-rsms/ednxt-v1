@@ -68,7 +68,7 @@ export function Navbar() {
 
                         {/* Our Programs Dropdown */}
                         <div className="group relative">
-                            <button className="flex items-center gap-2 px-6 py-2.5 rounded-full bg-white border border-[#FF0031] text-sm font-bold text-[#FF0031] hover:bg-red-50 transition-colors">
+                            <button className="flex items-center gap-2 px-6 py-2.5 rounded-full bg-white border border-[#FF0031] text-sm font-bold text-[#FF0031] hover:bg-white transition-colors">
                                 OUR PROGRAMS <ChevronDown className="w-4 h-4 text-[#FF0031] group-hover:rotate-180 transition-transform duration-300" />
                             </button>
 
@@ -82,8 +82,8 @@ export function Navbar() {
                                                 key={inst.id}
                                                 onMouseEnter={() => setActiveProgramTab(inst.name)}
                                                 className={`px-4 py-3 rounded-lg cursor-pointer text-sm font-bold transition-all flex items-center justify-between ${activeProgramTab === inst.name
-                                                    ? "bg-red-50 text-[#FF0031] shadow-sm"
-                                                    : "text-gray-500 hover:bg-red-50 hover:text-[#FF0031]"
+                                                    ? "bg-whites text-[#FF0031] "
+                                                    : "text-gray-500 hover:bg-white hover:text-[#FF0031]"
                                                     }`}
                                             >
                                                 {inst.name}
