@@ -44,9 +44,9 @@ const cardVariants = {
 export function AIProjects() {
     return (
         <section id="projects" className="py-24 px-4 bg-white flex justify-center">
-            <div className="w-[90%] max-w-[1600px] bg-[#02040a] rounded-[3rem] p-12 md:p-20 relative overflow-hidden shadow-2xl">
+            <div className="w-[95%] max-w-[1800px] bg-gradient-to-b from-black via-[#0a0002] to-[#3d000b] rounded-[3rem] p-12 md:p-20 relative overflow-hidden shadow-2xl border border-gray-800">
                 {/* Background Gradients */}
-                <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-900/10 via-[#02040a] to-[#02040a] pointer-events-none" />
+                <div className="absolute top-0 left-0 w-full h-full bg-[linear-gradient(to_bottom,_transparent_0%,_#ff003120_100%)] pointer-events-none" />
                 
                 <div className="relative z-10">
                     <div className="text-left mb-16">
@@ -56,7 +56,7 @@ export function AIProjects() {
                         <p className="text-gray-400 text-xl max-w-3xl mb-8">
                             No prior coding experience required
                         </p>
-                        <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-blue-700 transition-colors shadow-lg shadow-blue-900/20">
+                        <button className="bg-[#FF0031] text-white px-8 py-3 rounded-lg font-bold hover:bg-[#D9002A] transition-colors shadow-lg shadow-red-900/20">
                             Apply Now
                         </button>
                         <p className="text-gray-500 text-sm mt-8 max-w-4xl">

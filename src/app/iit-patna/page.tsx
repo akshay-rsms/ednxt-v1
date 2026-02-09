@@ -12,6 +12,7 @@ import {
 import { MentorsCarousel } from "@/components/MentorsCarousel";
 import { InstituteInfo } from "@/components/InstituteInfo";
 import { AIProjects } from "@/components/AIProjects";
+import { Capstone } from "@/components/Capstone";
 
 export default function IITPatnaPage() {
     const [activeModule, setActiveModule] = useState<number | null>(0);
@@ -434,6 +435,9 @@ export default function IITPatnaPage() {
 
             {/* Projects */}
             <AIProjects />
+
+            {/* Capstone */}
+            <Capstone />
 
             {/* Certification Section */}
             <section className="py-24 px-8 md:px-12 bg-gray-50">
