@@ -26,21 +26,13 @@ interface Profile {
 
 // --- Mock Data ---
 const profiles: Profile[] = [
+
     {
         id: 1,
-        name: "Arjun Mehta",
-        role: "Director of AI",
-        company: "TechFlow",
-        description: "Leading AI transformation strategies for Fortune 500 companies. Expert in LLM deployment and enterprise scalability.",
-        image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=400",
-        logoIcon: Cpu
-    },
-    {
-        id: 2,
-        name: "Priya Sharma",
+        name: "Simran Anand",
         role: "Chief Marketing Officer",
         company: "BrandScale",
-        description: "Pioneering data-driven marketing ecosystems, blending creative storytelling with predictive analytics.",
+        description: "",
         image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400",
         logoIcon: TrendingUp
     },
@@ -50,25 +42,17 @@ const profiles: Profile[] = [
         role: "VP of Engineering",
         company: "NextGen Systems",
         description: "Architecting scalable cloud infrastructures for high-frequency trading and real-time data processing.",
-        image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=400",
+        image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=400",
         logoIcon: Layers
     },
-    {
-        id: 4,
-        name: "Sneha Reddy",
-        role: "Head of AI Research",
-        company: "DataMind",
-        description: "Specializing in Generative AI and Computer Vision. Published researcher with 15+ patents in neural networks.",
-        image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=400",
-        logoIcon: BrainCircuitIcon
-    },
+
     {
         id: 5,
         name: "Vikram Singh",
         role: "Chief Architect",
         company: "CloudMatrix",
         description: "Designing the future of serverless computing. Focused on reducing latency and improving edge AI performance.",
-        image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=400",
+        image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=400",
         logoIcon: Globe
     },
     {
@@ -77,7 +61,7 @@ const profiles: Profile[] = [
         role: "Product Lead",
         company: "SoftServe",
         description: "Bridging the gap between technical feasibility and user experience. 10+ years in SaaS product management.",
-        image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80&w=400",
+        image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=400",
         logoIcon: Zap
     },
     {
@@ -86,17 +70,25 @@ const profiles: Profile[] = [
         role: "CTO",
         company: "InnovateX",
         description: "Building the tech stack for the next unicorn. Passionate about open source and developer advocacy.",
-        image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=400",
+        image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=400",
         logoIcon: Rocket
     },
-
+    {
+        id: 8,
+        name: "Meera Joshi",
+        role: "Sr. Data Scientist",
+        company: "DeepLearningAI",
+        description: "Turning raw data into actionable business intelligence. Expert in predictive modeling and customer churn analysis.",
+        image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80&w=400",
+        logoIcon: BarChart
+    },
     {
         id: 9,
         name: "Sanjay Patel",
         role: "Marketing Director",
         company: "GrowthHack",
         description: "Growth hacker mindset with a focus on organic acquisition. Scaled startup from 0 to 1M users in 18 months.",
-        image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=400",
+        image: "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?auto=format&fit=crop&q=80&w=400",
         logoIcon: Target
     },
     {
@@ -166,9 +158,9 @@ const ProfileCard = ({ profile }: { profile: Profile }) => {
 
                     {/* Minimal Logo Badge */}
                     <div className="absolute bottom-6 right-6 opacity-100 transition-opacity">
-                         <div className="w-10 h-10 rounded-full bg-gray-50 border border-gray-100 flex items-center justify-center shadow-sm group-hover:bg-white group-hover:shadow-md transition-all">
+                        <div className="w-10 h-10 rounded-full bg-gray-50 border border-gray-100 flex items-center justify-center shadow-sm group-hover:bg-white group-hover:shadow-md transition-all">
                             <profile.logoIcon className="w-5 h-5 text-gray-800 group-hover:text-[#FF0031]" />
-                         </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -262,17 +254,17 @@ function ParallaxText({ children, baseVelocity = 100, isPaused }: ParallaxProps)
 
 export function MentorsCarousel() {
     const [isPaused, setIsPaused] = useState(false);
-    const [velocity, setVelocity] = useState(-0.8); // Initial speed
+    const [velocity, setVelocity] = useState(-0.4); // Initial speed
 
     // Handle Manual Navigation
     const handleNav = (direction: 'left' | 'right') => {
         // Change direction and speed temporarily
         const newVelocity = direction === 'left' ? -10 : 10;
         setVelocity(newVelocity);
-        
+
         // Reset to normal speed
         setTimeout(() => {
-             setVelocity(newVelocity > 0 ? 0.8 : -0.8);
+            setVelocity(newVelocity > 0 ? 0.4 : -0.4);
         }, 500);
     };
 
