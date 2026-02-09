@@ -501,7 +501,7 @@ export default function IITPatnaPage() {
             <section className="py-24 px-8 md:px-12 bg-gray-50">
                 <div className="max-w-4xl mx-auto text-center">
                     <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-12">
-                        Official <span className="text-blue-600">IIT Patna</span> certification <br className="hidden md:block" />
+                        Official <span className="text-[#FF0031]">IIT Patna</span> certification <br className="hidden md:block" />
                         on completion of your program
                     </h2>
                     <div className="rounded-xl overflow-hidden shadow-2xl border border-gray-200">
