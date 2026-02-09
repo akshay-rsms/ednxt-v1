@@ -11,6 +11,7 @@ import {
 
 import { MentorsCarousel } from "@/components/MentorsCarousel";
 import { InstituteInfo } from "@/components/InstituteInfo";
+import { LeadersSection } from "@/components/LeadersSection";
 import { AIProjects } from "@/components/AIProjects";
 import { Capstone } from "@/components/Capstone";
 
@@ -432,6 +433,9 @@ export default function IITPatnaPage() {
 
             {/* Mentors Section */}
             <MentorsCarousel />
+
+            {/* Global Leaders Section */}
+            <LeadersSection />
 
             {/* Projects */}
             <AIProjects />
