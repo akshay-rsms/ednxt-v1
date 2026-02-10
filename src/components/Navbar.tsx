@@ -80,7 +80,7 @@ export function Navbar() {
                     </Link>
 
                     {/* Main Links */}
-                    <div className="hidden lg:flex items-center gap-8 text-[15px] font-medium text-gray-800">
+                    <div className="hidden lg:flex items-center gap-4 text-[15px] font-medium text-gray-800">
 
                         {/* Our Programs Dropdown */}
                         <div className="group relative">
@@ -192,15 +192,7 @@ export function Navbar() {
                     </div>
                 </div>
 
-                {/* Center: Search Bar (Absolute Position) */}
-                <div className="hidden lg:flex items-center absolute left-1/2 -translate-x-1/2 w-1/3 max-w-sm">
-                    <input
-                        type="text"
-                        placeholder="What do you want to learn?"
-                        className="w-full pl-6 pr-10 py-2.5 rounded-full border border-gray-200 bg-white text-sm text-gray-600 focus:outline-none focus:border-[#FF0031] shadow-sm"
-                    />
-                    <SearchIcon className="w-4 h-4 absolute right-4 top-1/2 -translate-y-1/2 text-gray-400" />
-                </div>
+
 
                 {/* Right Side: Action Buttons */}
                 <div className="hidden lg:flex items-center gap-4">
