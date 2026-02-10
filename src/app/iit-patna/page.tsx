@@ -479,8 +479,8 @@ export default function IITPatnaPage() {
                         </div>
 
                         {/* Traditional Column (Loser) */}
-                        <div className="bg-white rounded-3xl border border-gray-200 mt-8 lg:mt-0 p-8 pt-20 lg:pt-8 opacity-80 hover:opacity-100 transition-opacity">
-                            <div className="text-center mb-8 border-b border-gray-100 pb-6">
+                        <div className="bg-white rounded-3xl border border-gray-200  lg:  p-8 pt-20 lg:pt-8 opacity-80 hover:opacity-100 transition-opacity">
+                            <div className="text-center mb-8 border-b border-gray-100 pb-2">
                                 <div className="inline-flex justify-center items-center w-12 h-12 bg-gray-100 rounded-full mb-3">
                                     <BookOpen className="w-6 h-6 text-gray-500" />
                                 </div>
