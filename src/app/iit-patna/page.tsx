@@ -424,6 +424,96 @@ export default function IITPatnaPage() {
 
 
 
+            {/* Comparison Section */}
+            <section className="py-24 px-8 md:px-12 bg-gray-50/50">
+                <div className="max-w-6xl mx-auto">
+                    <div className="text-center mb-16">
+                        <span className="text-[#FF0031] font-bold tracking-wider uppercase text-sm mb-2 block">Why This Program?</span>
+                        <h2 className="text-3xl md:text-5xl font-extrabold text-gray-900 mb-6">
+                            Traditional AI Courses vs. <br className="hidden md:block" />
+                            <span className="text-[#FF0031]">GenAI & Agentic AI</span>
+                        </h2>
+                    </div>
+
+                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-0 lg:gap-8 items-start">
+                        {/* Labels Column (Hidden on mobile, visible on lg) */}
+                        <div className="hidden lg:flex flex-col gap-6 pt-32">
+                            {["Core Philosophy", "Curriculum Depth", "Tech Stack", "Project Approach", "RAG Sophistication", "Developer Experience", "Career Outcome"].map((label, i) => (
+                                <div key={i} className="h-20 flex items-center text-lg font-bold text-gray-500">
+                                    {label}
+                                </div>
+                            ))}
+                        </div>
+
+                        {/* IIT Patna Column (Winner) */}
+                        <div className="relative bg-white rounded-3xl shadow-2xl border-2 border-[#FF0031] overflow-hidden z-10 transform lg:-translate-y-4">
+                            <div className="bg-[#FF0031] text-white p-6 text-center">
+                                <div className="inline-flex justify-center items-center w-12 h-12 bg-white/20 rounded-full mb-3">
+                                    <BrainCircuit className="w-6 h-6 text-white" />
+                                </div>
+                                <h3 className="text-xl font-bold">IIT Patna: GenAI & Agentic AI</h3>
+                                <p className="text-white/80 text-sm mt-1">For Builders & Engineers</p>
+                            </div>
+
+                            <div className="p-8 space-y-6">
+                                {[
+                                    { label: "Core Philosophy", text: "Building Autonomous Agents & Systems", active: true },
+                                    { label: "Curriculum Depth", text: "Agentic Workflows, MCP, Multi-Agent Orchestration", active: true },
+                                    { label: "Tech Stack", text: "LangGraph, CrewAI, n8n, OpenAI, Anthropic", active: true },
+                                    { label: "Project Approach", text: "Live, Production-Grade Full Stack Apps", active: true },
+                                    { label: "RAG Sophistication", text: "Advanced (Hybrid, GraphRAG, Re-ranking)", active: true },
+                                    { label: "Developer Experience", text: "AI-First (Cursor, Windsurf, Claude Code)", active: true },
+                                    { label: "Career Outcome", text: "GenAI Product Engineer / Agentic Architect", active: true },
+                                ].map((item, i) => (
+                                    <div key={i} className="h-auto lg:h-20 flex flex-col justify-center border-b border-gray-100 last:border-0 py-4 lg:py-0">
+                                        <span className="lg:hidden text-xs font-bold text-gray-400 uppercase tracking-widest mb-1">{item.label}</span>
+                                        <div className="flex items-start gap-4">
+                                            <div className="mt-1 w-6 h-6 rounded-full bg-green-100 flex items-center justify-center shrink-0">
+                                                <CheckCircle className="w-4 h-4 text-green-600" />
+                                            </div>
+                                            <p className="text-gray-900 font-bold text-md leading-tight">{item.text}</p>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* Traditional Column (Loser) */}
+                        <div className="bg-white rounded-3xl border border-gray-200 mt-8 lg:mt-0 p-8 pt-20 lg:pt-8 opacity-80 hover:opacity-100 transition-opacity">
+                            <div className="text-center mb-8 border-b border-gray-100 pb-6">
+                                <div className="inline-flex justify-center items-center w-12 h-12 bg-gray-100 rounded-full mb-3">
+                                    <BookOpen className="w-6 h-6 text-gray-500" />
+                                </div>
+                                <h3 className="text-xl font-bold text-gray-700">Traditional AI Courses</h3>
+                                <p className="text-gray-400 text-sm mt-1">For Researchers & Analysts</p>
+                            </div>
+
+                            <div className="space-y-6">
+                                {[
+                                    { label: "Core Philosophy", text: "Theory-heavy Machine Learning & Deep Learning" },
+                                    { label: "Curriculum Depth", text: "Basic Chatbots & Intro to APIs" },
+                                    { label: "Tech Stack", text: "Jupyter Notebooks, Scikit-learn, Basic Python" },
+                                    { label: "Project Approach", text: "Isolated Notebooks & Toy Examples" },
+                                    { label: "RAG Sophistication", text: "Basic Vector Search" },
+                                    { label: "Developer Experience", text: "Traditional IDEs & Manual Coding" },
+                                    { label: "Career Outcome", text: "Junior ML Engineer / Data Analyst" },
+                                ].map((item, i) => (
+                                    <div key={i} className="h-auto lg:h-20 flex flex-col justify-center border-b border-gray-100 last:border-0 py-4 lg:py-0">
+                                        <span className="lg:hidden text-xs font-bold text-gray-400 uppercase tracking-widest mb-1">{item.label}</span>
+                                        <div className="flex items-start gap-4">
+                                            <div className="mt-1 w-6 h-6 rounded-full bg-red-50 flex items-center justify-center shrink-0">
+                                                <XCircle className="w-4 h-4 text-red-400" />
+                                            </div>
+                                            <p className="text-gray-500 font-medium text-md leading-tight">{item.text}</p>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             {/* Detailed Curriculum Section - Accordion */}
             <section id="curriculum" className="py-24 px-8 md:px-12 bg-white">
                 <div className="max-w-5xl mx-auto">
