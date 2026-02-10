@@ -22,6 +22,7 @@ export default function IITPatnaPage() {
     const [isModulesUnlocked, setIsModulesUnlocked] = useState(false);
 
     // Sticky Navbar Handler & Scroll Spy
+    // Sticky Navbar Handler & Scroll Spy
     useEffect(() => {
         const handleScroll = () => {
             // Sticky Check
@@ -30,22 +31,25 @@ export default function IITPatnaPage() {
             // Scroll Spy Logic
             const sections = ["overview", "comparison", "curriculum", "mentors", "projects", "certificate", "fees", "faq"];
 
-            // Find the section that is currently most visible in formatting
-            // We use a simple offset check - if the section top is near the scroll position
+            let currentSection = "overview";
+
             for (const section of sections) {
                 const element = document.getElementById(section);
                 if (element) {
                     const rect = element.getBoundingClientRect();
-                    // If the section is roughly in the top third of the screen, it's active
-                    // Or if we are near the top of the element
-                    if (rect.top >= -100 && rect.top <= 300) {
-                        setActiveSection(section);
-                        break;
+                    // 150px offset accounts for the sticky navbar height + some buffer
+                    if (rect.top <= 150) {
+                        currentSection = section;
                     }
                 }
             }
+            setActiveSection(currentSection);
         };
+
         window.addEventListener("scroll", handleScroll);
+        // Run once on mount to handle initial scroll position (e.g. reload)
+        handleScroll();
+
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
