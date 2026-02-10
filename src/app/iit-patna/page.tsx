@@ -437,7 +437,7 @@ export default function IITPatnaPage() {
 
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-0 lg:gap-8 items-start">
                         {/* Labels Column (Hidden on mobile, visible on lg) */}
-                        <div className="hidden lg:flex flex-col gap-6 pt-32">
+                        <div className="hidden lg:flex flex-col gap-7 pt-40">
                             {["Core Philosophy", "Curriculum Depth", "Tech Stack", "Project Approach", "RAG Sophistication", "Developer Experience", "Career Outcome"].map((label, i) => (
                                 <div key={i} className="h-20 flex items-center text-lg font-bold text-gray-500">
                                     {label}
