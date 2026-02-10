@@ -132,9 +132,7 @@ export function Navbar() {
                             </div>
                         </div>
 
-                        <Link href="/about-us" className="px-6 py-2.5 text-sm font-bold text-gray-800 hover:text-[#FF0031] transition-colors">
-                            ABOUT US
-                        </Link>
+
 
                         {/* Resources Dropdown */}
                         <div className="group relative">
@@ -186,6 +184,10 @@ export function Navbar() {
                                 </div>
                             </div>
                         </div>
+
+                        <Link href="/about-us" className="px-6 py-2.5 text-sm font-bold text-[#FF0031] hover:text-[#D9002A] transition-colors">
+                            ABOUT US
+                        </Link>
 
                     </div>
                 </div>
