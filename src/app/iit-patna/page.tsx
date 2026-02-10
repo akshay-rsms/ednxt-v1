@@ -431,7 +431,7 @@ export default function IITPatnaPage() {
                         <span className="text-[#FF0031] font-bold tracking-wider uppercase text-sm mb-2 block">Why This Program?</span>
                         <h2 className="text-3xl md:text-5xl font-extrabold text-gray-900 mb-6">
                             Traditional AI Courses vs. <br className="hidden md:block" />
-                            <span className="text-[#FF0031]">GenAI & Agentic AI</span>
+                            <span className="text-[#FF0031]">GenAI & Agentic AI by IIT Patna</span>
                         </h2>
                     </div>
 
