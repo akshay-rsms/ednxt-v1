@@ -6,7 +6,7 @@ import {
     ArrowRight, CheckCircle, XCircle, Clock, Globe, Users,
     Download, MonitorPlay, BrainCircuit, Code, Database,
     Layers, Cpu, Zap, Award, BookOpen, ChevronDown, ChevronUp,
-    PlayCircle, Briefcase, GraduationCap, Building2, UserCheck
+    PlayCircle, Briefcase, GraduationCap, Building2, UserCheck, Lock
 } from "lucide-react";
 
 import { MentorsCarousel } from "@/components/MentorsCarousel";
@@ -19,6 +19,7 @@ export default function IITPatnaPage() {
     const [activeModule, setActiveModule] = useState<number | null>(0);
     const [isSticky, setIsSticky] = useState(false);
     const [activeSection, setActiveSection] = useState("overview");
+    const [isModulesUnlocked, setIsModulesUnlocked] = useState(false);
 
     // Sticky Navbar Handler & Scroll Spy
     useEffect(() => {
@@ -435,50 +436,75 @@ export default function IITPatnaPage() {
                     </div>
 
                     <div className="space-y-4">
-                        {modules.map((mod, idx) => (
-                            <div
-                                key={idx}
-                                className={`border rounded-2xl transition-all duration-300 overflow-hidden ${activeModule === idx
-                                    ? "border-[#FF0031] shadow-xl shadow-red-500/10 bg-white"
-                                    : "border-gray-100 bg-gray-50 hover:border-gray-300"
-                                    }`}
-                            >
-                                <button
-                                    onClick={() => setActiveModule(activeModule === idx ? null : idx)}
-                                    className="w-full flex items-center justify-between p-6 md:p-8 text-left focus:outline-none"
+                        {modules.map((mod, idx) => {
+                            if (idx >= 3 && !isModulesUnlocked) return null;
+                            return (
+                                <div
+                                    key={idx}
+                                    className={`border rounded-2xl transition-all duration-300 overflow-hidden ${activeModule === idx
+                                        ? "border-[#FF0031] shadow-xl shadow-red-500/10 bg-white"
+                                        : "border-gray-100 bg-gray-50 hover:border-gray-300"
+                                        }`}
                                 >
-                                    <div className="flex items-center gap-6">
-                                        <div className={`w-12 h-12 rounded-xl flex items-center justify-center text-xl font-bold shrink-0 transition-colors ${activeModule === idx ? "bg-[#FF0031] text-white" : "bg-white border border-gray-200 text-gray-500"
-                                            }`}>
-                                            {idx + 1}
+                                    <button
+                                        onClick={() => setActiveModule(activeModule === idx ? null : idx)}
+                                        className="w-full flex items-center justify-between p-6 md:p-8 text-left focus:outline-none"
+                                    >
+                                        <div className="flex items-center gap-6">
+                                            <div className={`w-12 h-12 rounded-xl flex items-center justify-center text-xl font-bold shrink-0 transition-colors ${activeModule === idx ? "bg-[#FF0031] text-white" : "bg-white border border-gray-200 text-gray-500"
+                                                }`}>
+                                                {idx + 1}
+                                            </div>
+                                            <div>
+                                                <h3 className={`text-xl font-bold ${activeModule === idx ? "text-gray-900" : "text-gray-600"}`}>
+                                                    {mod.title}
+                                                </h3>
+                                                <p className="text-sm text-gray-400 mt-1 font-medium">{mod.duration}</p>
+                                            </div>
                                         </div>
-                                        <div>
-                                            <h3 className={`text-xl font-bold ${activeModule === idx ? "text-gray-900" : "text-gray-600"}`}>
-                                                {mod.title}
-                                            </h3>
-                                            <p className="text-sm text-gray-400 mt-1 font-medium">{mod.duration}</p>
+                                        <div className={`transition-transform duration-300 ${activeModule === idx ? "rotate-180" : ""}`}>
+                                            <ChevronDown className={`w-6 h-6 ${activeModule === idx ? "text-[#FF0031]" : "text-gray-400"}`} />
                                         </div>
-                                    </div>
-                                    <div className={`transition-transform duration-300 ${activeModule === idx ? "rotate-180" : ""}`}>
-                                        <ChevronDown className={`w-6 h-6 ${activeModule === idx ? "text-[#FF0031]" : "text-gray-400"}`} />
-                                    </div>
-                                </button>
+                                    </button>
 
-                                <div className={`overflow-hidden transition-all duration-500 ease-in-out ${activeModule === idx ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"}`}>
-                                    <div className="p-8 pt-0 border-t border-gray-100/50">
-                                        <p className="text-gray-600 mb-6 italic border-l-4 border-red-100 pl-4 py-1">{mod.desc}</p>
-                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3">
-                                            {mod.topics.map((topic, i) => (
-                                                <div key={i} className="flex items-start gap-3">
-                                                    <div className="w-1.5 h-1.5 rounded-full bg-[#FF0031] mt-2 shrink-0"></div>
-                                                    <span className="text-gray-800 font-medium text-sm leading-relaxed">{topic}</span>
-                                                </div>
-                                            ))}
+                                    <div className={`overflow-hidden transition-all duration-500 ease-in-out ${activeModule === idx ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"}`}>
+                                        <div className="p-8 pt-0 border-t border-gray-100/50">
+                                            <p className="text-gray-600 mb-6 italic border-l-4 border-red-100 pl-4 py-1">{mod.desc}</p>
+                                            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3">
+                                                {mod.topics.map((topic, i) => (
+                                                    <div key={i} className="flex items-start gap-3">
+                                                        <div className="w-1.5 h-1.5 rounded-full bg-[#FF0031] mt-2 shrink-0"></div>
+                                                        <span className="text-gray-800 font-medium text-sm leading-relaxed">{topic}</span>
+                                                    </div>
+                                                ))}
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
+                            );
+                        })}
+
+                        {!isModulesUnlocked && (
+                            <div className="relative border border-gray-200 bg-gray-50 rounded-2xl p-8 md:p-12 text-center overflow-hidden">
+                                <div className="absolute top-0 right-0 w-64 h-64 bg-red-500/5 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2"></div>
+
+                                <div className="relative z-10 max-w-lg mx-auto">
+                                    <div className="w-16 h-16 bg-white rounded-2xl shadow-sm border border-gray-200 flex items-center justify-center mx-auto mb-6 transform rotate-3">
+                                        <Lock className="w-8 h-8 text-[#FF0031]" />
+                                    </div>
+                                    <h3 className="text-2xl font-bold text-gray-900 mb-3">7 More Modules Locked</h3>
+                                    <p className="text-gray-500 mb-8 max-w-sm mx-auto">
+                                        Unlock the complete syllabus including RAG Systems, Agents, and Career Acceleration tracks.
+                                    </p>
+                                    <button
+                                        onClick={() => setIsModulesUnlocked(true)}
+                                        className="px-8 py-4 rounded-full bg-[#FF0031] text-white font-bold hover:bg-[#D9002A] transition-all shadow-lg hover:shadow-red-500/25 active:scale-95 flex items-center justify-center gap-2 mx-auto"
+                                    >
+                                        Enquire to Unlock
+                                    </button>
+                                </div>
                             </div>
-                        ))}
+                        )}
                     </div>
                     <div className="text-center mt-12">
                         <button className="px-8 py-3 rounded-full border-2 border-[#FF0031] text-[#FF0031] font-bold hover:bg-red-50 transition-colors inline-flex items-center gap-2">
