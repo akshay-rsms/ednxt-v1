@@ -28,7 +28,7 @@ export default function IITPatnaPage() {
             setIsSticky(window.scrollY > 600);
 
             // Scroll Spy Logic
-            const sections = ["overview", "curriculum", "mentors", "projects", "certificate", "fees", "faq"];
+            const sections = ["overview", "comparison", "curriculum", "mentors", "projects", "certificate", "fees", "faq"];
 
             // Find the section that is currently most visible in formatting
             // We use a simple offset check - if the section top is near the scroll position
@@ -269,6 +269,12 @@ export default function IITPatnaPage() {
                                 Overview
                             </button>
                             <button
+                                onClick={() => scrollToSection("comparison")}
+                                className={`transition-colors ${activeSection === "comparison" ? "text-[#FF0031] font-bold" : "hover:text-[#FF0031]"}`}
+                            >
+                                Comparison
+                            </button>
+                            <button
                                 onClick={() => scrollToSection("curriculum")}
                                 className={`transition-colors ${activeSection === "curriculum" ? "text-[#FF0031] font-bold" : "hover:text-[#FF0031]"}`}
                             >
@@ -439,7 +445,7 @@ export default function IITPatnaPage() {
 
 
             {/* Comparison Section */}
-            <section className="py-24 px-8 md:px-12 bg-gray-50/50">
+            <section id="comparison" className="py-24 px-8 md:px-12 bg-gray-50/50">
                 <div className="max-w-6xl mx-auto">
                     <div className="text-center mb-16">
                         <span className="text-[#FF0031] font-bold tracking-wider uppercase text-sm mb-2 block">Why This Program?</span>
