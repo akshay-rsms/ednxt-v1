@@ -39,7 +39,8 @@ const institutions: Institution[] = [
             {
                 title: "M.Tech in Data Science & Artificial Intelligence",
                 icon: Cpu,
-                type: "Degree Program"
+                type: "Degree Program",
+                link: "/iiit-dharwad"
             }
         ]
     },
@@ -131,6 +132,10 @@ export function Navbar() {
                             </div>
                         </div>
 
+                        <Link href="/about-us" className="px-6 py-2.5 text-sm font-bold text-gray-800 hover:text-[#FF0031] transition-colors">
+                            ABOUT US
+                        </Link>
+
                         {/* Resources Dropdown */}
                         <div className="group relative">
                             <button className="flex items-center gap-2 px-6 py-2.5  text-sm font-bold text-[#FF0031] hover:bg-red-50 transition-colors">
@@ -152,13 +157,7 @@ export function Navbar() {
                                             </div>
                                         </Link>
 
-                                        <Link href="#" className="flex gap-4 group/item hover:bg-gray-50 p-3 -mx-3 rounded-lg transition-colors">
-                                            <Flag className="w-6 h-6 text-gray-600 group-hover/item:text-[#FF0031] mt-1" />
-                                            <div>
-                                                <h5 className="font-bold text-gray-900 group-hover/item:text-[#FF0031]">About Us</h5>
-                                                <p className="text-sm text-gray-500 mt-1">Learn more about our story, our mission and offerings</p>
-                                            </div>
-                                        </Link>
+
                                     </div>
                                 </div>
 
