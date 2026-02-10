@@ -320,11 +320,11 @@ export default function IITPatnaPage() {
                 <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                     <div className="space-y-8">
                         <div className="flex items-center justify-start w-full gap-4 md:gap-8">
-                            <div className="w-20 h-20 md:w-24 md:h-24 bg-white rounded-full flex items-center justify-center p-2 shadow-lg shadow-white/10">
+                            <div className="w-24 h-24 md:w-32 md:h-32 bg-white rounded-full flex items-center justify-center p-2 shadow-lg shadow-white/10">
                                 <img src="/iit-patna-logo.png" alt="IIT Patna" className="w-full h-full object-contain" />
                             </div>
 
-                            <div className="text-[#FF0031] font-bold text-2xl">X</div>
+                            <div className="h-16 w-0.5 bg-gray-700"></div>
 
                             <div>
                                 <svg width="101" height="27" viewBox="0 0 101 27" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-8 md:h-10 w-auto">
