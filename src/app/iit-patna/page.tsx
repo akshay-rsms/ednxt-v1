@@ -323,12 +323,19 @@ export default function IITPatnaPage() {
             </div>
 
             {/* Hero Section */}
-            <section id="overview" className="relative pt-16 pb-24 px-8 md:px-12 bg-[#0a0a0a] text-white overflow-hidden">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-gray-800 via-gray-950 to-black opacity-80"></div>
-                <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#FF0031] rounded-full blur-[150px] opacity-10 translate-x-1/2 -translate-y-1/2 animate-pulse"></div>
+            <section id="overview" className="relative min-h-[75vh] flex items-center pt-16 pb-24 px-8 md:px-12 bg-[#0a0a0a] text-white overflow-hidden">
+                <div className="absolute inset-0 z-0">
+                    <img
+                        src="/iitpatnacampus.png"
+                        alt="IIT Patna Campus"
+                        className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-black/60"></div>
+                </div>
 
-                <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                    <div className="space-y-8">
+
+                <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center -mt-20">
+                    <div className="space-y-8 md:pl-12">
                         <div className="flex items-center justify-start w-full gap-4 md:gap-8">
                             <div className="w-24 h-24 md:w-32 md:h-32 bg-white rounded-full flex items-center justify-center p-2 shadow-lg shadow-white/10">
                                 <img src="/iit-patna-logo.png" alt="IIT Patna" className="w-full h-full object-contain" />
