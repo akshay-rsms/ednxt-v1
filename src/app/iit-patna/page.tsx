@@ -18,11 +18,31 @@ import { Capstone } from "@/components/Capstone";
 export default function IITPatnaPage() {
     const [activeModule, setActiveModule] = useState<number | null>(0);
     const [isSticky, setIsSticky] = useState(false);
+    const [activeSection, setActiveSection] = useState("overview");
 
-    // Sticky Navbar Handler
+    // Sticky Navbar Handler & Scroll Spy
     useEffect(() => {
         const handleScroll = () => {
+            // Sticky Check
             setIsSticky(window.scrollY > 600);
+
+            // Scroll Spy Logic
+            const sections = ["overview", "curriculum", "mentors", "projects", "certificate", "fees", "faq"];
+
+            // Find the section that is currently most visible in formatting
+            // We use a simple offset check - if the section top is near the scroll position
+            for (const section of sections) {
+                const element = document.getElementById(section);
+                if (element) {
+                    const rect = element.getBoundingClientRect();
+                    // If the section is roughly in the top third of the screen, it's active
+                    // Or if we are near the top of the element
+                    if (rect.top >= -100 && rect.top <= 300) {
+                        setActiveSection(section);
+                        break;
+                    }
+                }
+            }
         };
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
@@ -241,15 +261,48 @@ export default function IITPatnaPage() {
                             <span className="font-bold text-gray-900 text-sm md:text-base"></span>
                         </div>
                         <div className="hidden md:flex gap-8 text-sm font-medium text-gray-600">
-                            <button onClick={() => scrollToSection("overview")} className="hover:text-[#FF0031] transition-colors">Overview</button>
-                            <button onClick={() => scrollToSection("curriculum")} className="hover:text-[#FF0031] transition-colors">Curriculum</button>
-                            <button onClick={() => scrollToSection("projects")} className="hover:text-[#FF0031] transition-colors">Mentors</button>
-                            <button onClick={() => scrollToSection("mentors")} className="hover:text-[#FF0031] transition-colors">Projects</button>
-                            <button onClick={() => scrollToSection("mentors")} className="hover:text-[#FF0031] transition-colors">Certificates</button>
-                            <button onClick={() => scrollToSection("fees")} className="hover:text-[#FF0031] transition-colors">Fees</button>
-                            <button onClick={() => scrollToSection("mentors")} className="hover:text-[#FF0031] transition-colors">FAQ's</button>
-
-
+                            <button
+                                onClick={() => scrollToSection("overview")}
+                                className={`transition-colors ${activeSection === "overview" ? "text-[#FF0031] font-bold" : "hover:text-[#FF0031]"}`}
+                            >
+                                Overview
+                            </button>
+                            <button
+                                onClick={() => scrollToSection("curriculum")}
+                                className={`transition-colors ${activeSection === "curriculum" ? "text-[#FF0031] font-bold" : "hover:text-[#FF0031]"}`}
+                            >
+                                Curriculum
+                            </button>
+                            <button
+                                onClick={() => scrollToSection("mentors")}
+                                className={`transition-colors ${activeSection === "mentors" ? "text-[#FF0031] font-bold" : "hover:text-[#FF0031]"}`}
+                            >
+                                Mentors
+                            </button>
+                            <button
+                                onClick={() => scrollToSection("projects")}
+                                className={`transition-colors ${activeSection === "projects" ? "text-[#FF0031] font-bold" : "hover:text-[#FF0031]"}`}
+                            >
+                                Projects
+                            </button>
+                            <button
+                                onClick={() => scrollToSection("certificate")}
+                                className={`transition-colors ${activeSection === "certificate" ? "text-[#FF0031] font-bold" : "hover:text-[#FF0031]"}`}
+                            >
+                                Certificates
+                            </button>
+                            <button
+                                onClick={() => scrollToSection("fees")}
+                                className={`transition-colors ${activeSection === "fees" ? "text-[#FF0031] font-bold" : "hover:text-[#FF0031]"}`}
+                            >
+                                Fees
+                            </button>
+                            <button
+                                onClick={() => scrollToSection("faq")}
+                                className={`transition-colors ${activeSection === "faq" ? "text-[#FF0031] font-bold" : "hover:text-[#FF0031]"}`}
+                            >
+                                FAQ's
+                            </button>
                         </div>
                         <button className="bg-[#FF0031] text-white px-6 py-2 rounded-full text-sm font-bold hover:bg-[#D9002A] transition-colors">
                             Apply Now
@@ -442,13 +495,15 @@ export default function IITPatnaPage() {
             <LeadersSection />
 
             {/* Projects */}
-            <AIProjects />
+            <div id="projects">
+                <AIProjects />
+            </div>
 
             {/* Capstone */}
             <Capstone />
 
             {/* Certification Section */}
-            <section className="py-24 px-8 md:px-12 bg-gray-50">
+            <section id="certificate" className="py-24 px-8 md:px-12 bg-gray-50">
                 <div className="max-w-4xl mx-auto text-center">
                     <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-12">
                         Official <span className="text-[#FF0031]">IIT Patna</span> certification <br className="hidden md:block" />
