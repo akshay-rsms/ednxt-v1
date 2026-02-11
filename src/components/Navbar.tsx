@@ -45,8 +45,8 @@ const institutions: Institution[] = [
         ]
     },
     {
-        id: "nit-karnataka",
-        name: "NIT Karnataka",
+        id: "nit-surathkal",
+        name: "NIT Surathkal",
         programs: [
             {
                 title: "MBA",

@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Search, ChevronDown } from "lucide-react";
 
 export function Hero() {
     const images = [
@@ -68,7 +69,7 @@ export function Hero() {
             {/* Main Content */}
             <div className="relative z-10 flex flex-col items-center text-center max-w-5xl mx-auto px-4 -mt-4 mb-12">
                 {/* Trust Badge */}
-                <div className="flex flex-col items-center mb-4">
+                <div className="flex flex-col items-center mb-4 mt-12">
                     <img src="/india's-most.svg" alt="India's Most Trusted" className="h-16 w-auto" />
                 </div>
 
@@ -87,6 +88,59 @@ export function Hero() {
                         Talk to Counsellor
                     </button>
                 </div>
+
+                {/* Search Bar */}
+                {/* Search Bar - Premium Glass Morph */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.2, duration: 0.6 }}
+                    className="w-full max-w-6xl relative z-20 mb-12 mt-4 px-4"
+                >
+                    <div className="group relative w-full">
+                        {/* Glow Effect */}
+                        <div className="absolute -inset-0.5 bg-gradient-to-r from-transparent via-[#FF0031]/20 to-transparent rounded-full opacity-50 blur-lg group-hover:opacity-75 transition-opacity duration-500" />
+
+                        <div className="relative w-full bg-white/[0.08] backdrop-blur-xl border border-white/10 rounded-3xl md:rounded-full p-2 md:p-3 flex flex-col md:flex-row items-center gap-3 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] hover:border-[#FF0031]/30 hover:shadow-[0_0_20px_rgba(255,0,49,0.15)] transition-all duration-300">
+
+                            {/* Label */}
+                            <div className="hidden md:flex items-center pl-4 pr-2 border-r border-white/10 h-full">
+                                <span className="text-gray-400 text-sm font-medium whitespace-nowrap">Find Your programs</span>
+                            </div>
+
+                            {/* Domain Select */}
+                            <div className="relative w-full md:w-auto md:min-w-[260px] flex-1 group/input">
+                                <div className="absolute left-4 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white/5 flex items-center justify-center">
+                                    <Search className="w-4 h-4 text-[#FF0031]" />
+                                </div>
+                                <select className="w-full appearance-none bg-black/20 border border-white/5 rounded-2xl md:rounded-full py-3 md:py-3.5 pl-14 pr-10 text-sm font-medium text-gray-200 outline-none focus:bg-black/40 focus:border-[#FF0031]/50 transition-all cursor-pointer placeholder-gray-500 hover:bg-black/30">
+                                    <option className="bg-[#121212] text-gray-300">Select Domain</option>
+                                    <option className="bg-[#121212] text-gray-300">Data Science</option>
+                                    <option className="bg-[#121212] text-gray-300">Management</option>
+                                    <option className="bg-[#121212] text-gray-300">Technology</option>
+                                </select>
+                                <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500 pointer-events-none group-hover/input:text-[#FF0031] transition-colors" />
+                            </div>
+
+                            {/* University Select */}
+                            <div className="relative w-full md:w-auto md:min-w-[260px] flex-1 group/input">
+                                <select className="w-full appearance-none bg-black/20 border border-white/5 rounded-2xl md:rounded-full py-3 md:py-3.5 pl-6 pr-10 text-sm font-medium text-gray-200 outline-none focus:bg-black/40 focus:border-[#FF0031]/50 transition-all cursor-pointer hover:bg-black/30">
+                                    <option className="bg-[#121212] text-gray-300">Select University</option>
+                                    <option className="bg-[#121212] text-gray-300">IIT Patna</option>
+                                    <option className="bg-[#121212] text-gray-300">IIIT Dharwad</option>
+                                    <option className="bg-[#121212] text-gray-300">NIT Surathkal</option>
+                                </select>
+                                <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500 pointer-events-none group-hover/input:text-[#FF0031] transition-colors" />
+                            </div>
+
+                            {/* Search Button */}
+                            <button className="w-full md:w-auto px-8 py-3.5 rounded-2xl md:rounded-full bg-gradient-to-br from-[#FF0031] to-[#FF4D6D] text-white font-bold text-sm shadow-lg shadow-red-900/20 hover:shadow-red-500/30 hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center gap-2">
+                                <Search className="w-4 h-4" />
+                                <span>Search</span>
+                            </button>
+                        </div>
+                    </div>
+                </motion.div>
             </div>
 
             {/* 3D Continuous Carousel Container */}
