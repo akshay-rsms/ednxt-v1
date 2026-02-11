@@ -19,6 +19,17 @@ export function Hero() {
     const rotationRef = useRef(0);
     const frameRef = useRef<number>(0);
 
+    const [selectedProgram, setSelectedProgram] = useState("Select Program");
+    const [selectedUniversity, setSelectedUniversity] = useState("Select University");
+
+    const programToUniversity: { [key: string]: string } = {
+        "GenAI & Agentic AI": "IIT Patna",
+        "M.Tech in Data Science & AI": "IIIT Dharwad",
+        "PGPM": "IIM Trichy",
+        "MBA": "NIT Surathkal",
+        "M.Tech": "NIT Surathkal"
+    };
+
     // Continuous rotation logic
     useEffect(() => {
         const animate = () => {
@@ -110,23 +121,39 @@ export function Hero() {
                                 </span>
                             </div>
 
-                            {/* Domain Select */}
+                            {/* Program Select */}
                             <div className="relative w-full md:w-auto md:min-w-[260px] flex-1 group/input">
                                 <div className="absolute left-4 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white/5 flex items-center justify-center">
                                     <Search className="w-4 h-4 text-[#FF0031]" />
                                 </div>
-                                <select className="w-full appearance-none bg-black/20 border border-white/5 rounded-2xl md:rounded-full py-3 md:py-3.5 pl-14 pr-10 text-sm font-medium text-gray-200 outline-none focus:bg-black/40 focus:border-[#FF0031]/50 transition-all cursor-pointer placeholder-gray-500 hover:bg-black/30">
-                                    <option className="bg-[#121212] text-gray-300">Select Domain</option>
-                                    <option className="bg-[#121212] text-gray-300">Data Science</option>
-                                    <option className="bg-[#121212] text-gray-300">Management</option>
-                                    <option className="bg-[#121212] text-gray-300">Technology</option>
+                                <select
+                                    value={selectedProgram}
+                                    onChange={(e) => {
+                                        const program = e.target.value;
+                                        setSelectedProgram(program);
+                                        if (program !== "Select Program" && programToUniversity[program]) {
+                                            setSelectedUniversity(programToUniversity[program]);
+                                        } else {
+                                            setSelectedUniversity("Select University");
+                                        }
+                                    }}
+                                    className="w-full appearance-none bg-black/20 border border-white/5 rounded-2xl md:rounded-full py-3 md:py-3.5 pl-14 pr-10 text-sm font-medium text-gray-200 outline-none focus:bg-black/40 focus:border-[#FF0031]/50 transition-all cursor-pointer placeholder-gray-500 hover:bg-black/30"
+                                >
+                                    <option className="bg-[#121212] text-gray-300">Select Program</option>
+                                    {Object.keys(programToUniversity).map((prog) => (
+                                        <option key={prog} value={prog} className="bg-[#121212] text-gray-300">{prog}</option>
+                                    ))}
                                 </select>
                                 <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500 pointer-events-none group-hover/input:text-[#FF0031] transition-colors" />
                             </div>
 
                             {/* University Select */}
                             <div className="relative w-full md:w-auto md:min-w-[260px] flex-1 group/input">
-                                <select className="w-full appearance-none bg-black/20 border border-white/5 rounded-2xl md:rounded-full py-3 md:py-3.5 pl-6 pr-10 text-sm font-medium text-gray-200 outline-none focus:bg-black/40 focus:border-[#FF0031]/50 transition-all cursor-pointer hover:bg-black/30">
+                                <select
+                                    value={selectedUniversity}
+                                    onChange={(e) => setSelectedUniversity(e.target.value)}
+                                    className="w-full appearance-none bg-black/20 border border-white/5 rounded-2xl md:rounded-full py-3 md:py-3.5 pl-6 pr-10 text-sm font-medium text-gray-200 outline-none focus:bg-black/40 focus:border-[#FF0031]/50 transition-all cursor-pointer hover:bg-black/30"
+                                >
                                     <option className="bg-[#121212] text-gray-300">Select University</option>
                                     <option className="bg-[#121212] text-gray-300">IIT Patna</option>
                                     <option className="bg-[#121212] text-gray-300">IIIT Dharwad</option>
