@@ -205,22 +205,7 @@ export function Navbar() {
                 </div>
             </div>
 
-            {/* Bottom Sub-Bar */}
-            <div className="w-full bg-[#FFF5F7] h-10 border-t border-red-50">
-                <div className="w-full px-8 md:px-12 h-full flex items-center justify-center gap-8 text-[13px] font-bold text-[#FF0031]">
-                    <span className="font-extrabold text-[#FF0031]">Explore</span>
 
-                    <Link href="#" className="flex items-center gap-1 hover:underline">
-                        <ArrowRight className="w-3 h-3" /> Under Graduate
-                    </Link>
-                    <Link href="#" className="flex items-center gap-1 hover:underline">
-                        <ArrowRight className="w-3 h-3" /> Post Graduate
-                    </Link>
-                    <Link href="#" className="flex items-center gap-1 hover:underline">
-                        <ArrowRight className="w-3 h-3" /> Certifications
-                    </Link>
-                </div>
-            </div>
         </nav>
     );
 }
