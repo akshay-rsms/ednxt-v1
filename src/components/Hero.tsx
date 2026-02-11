@@ -96,7 +96,15 @@ export function Hero() {
     };
 
     const handleSearch = () => {
-        if (selectedUniversity && selectedUniversity !== "Select University") {
+        if (selectedUniversity === "NIT Surathkal") {
+            if (selectedProgram === "MBA") {
+                router.push("/nit-surathkal-mba");
+            } else if (selectedProgram === "M.Tech") {
+                router.push("/nit-surathkal-mtech");
+            } else {
+                router.push("/nit-surathkal");
+            }
+        } else if (selectedUniversity && selectedUniversity !== "Select University") {
             const slug = selectedUniversity.toLowerCase().replace(/\s+/g, '-');
             router.push(`/${slug}`);
         }
