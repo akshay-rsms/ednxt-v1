@@ -2,13 +2,13 @@ import { ArrowRight } from "lucide-react";
 
 export function UnsureDegree() {
     return (
-        <section className="py-20 bg-white">
+        <section className="py-12 md:py-20 bg-white">
             <div className="container mx-auto px-6 font-sans">
-                <div className="bg-[#2B1D10] rounded-[2.5rem] overflow-hidden flex flex-col md:flex-row relative min-h-[500px]">
+                <div className="bg-[#2B1D10] rounded-[2.5rem] overflow-hidden flex flex-col md:flex-row relative min-h-[400px] md:min-h-[500px]">
 
                     {/* Left Content */}
-                    <div className="w-full md:w-1/2 p-20 md:px-36 flex flex-col justify-center items-start text-left relative z-10">
-                        <h2 className="text-white font-bold mb-6 leading-[1.14] tracking-[-0.05em]" style={{ fontSize: '49.97px', fontFamily: 'Inter, sans-serif' }}>
+                    <div className="w-full md:w-1/2 p-8 md:p-20 md:px-36 flex flex-col justify-center items-start text-left relative z-10">
+                        <h2 className="text-white font-bold mb-6 leading-[1.14] tracking-[-0.05em] text-3xl md:text-[49.97px] font-sans">
                             Unsure which <br />
                             <span className="relative inline-block">
                                 degree
@@ -23,7 +23,7 @@ export function UnsureDegree() {
                                 </svg>
                             </span> for you?
                         </h2>
-                        <p className="text-gray-300 text-lg mb-10 max-w-md">
+                        <p className="text-gray-300 text-base md:text-lg mb-8 md:mb-10 max-w-md">
                             Talk to our admissions counselor and join the best degree that you deserve
                         </p>
                         <button className="bg-white text-[#FF0031] px-8 py-3 rounded-full font-bold flex items-center gap-2 w-fit hover:bg-gray-100 transition-colors shadow-lg">

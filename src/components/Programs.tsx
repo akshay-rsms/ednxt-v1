@@ -53,25 +53,25 @@ export function Programs() {
     const displayPrograms = programs;
 
     return (
-        <section className="py-24 bg-white relative overflow-hidden">
+        <section className="py-12 md:py-24 bg-white relative overflow-hidden">
             {/* Background Elements for Premium Feel */}
             <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-gray-50 via-white to-white z-0 pointer-events-none" />
 
             <div className="container mx-auto px-6 font-sans relative z-10">
 
                 {/* Enhanced Header */}
-                <div className="mb-16 text-center max-w-3xl mx-auto">
+                <div className="mb-12 md:mb-16 text-center max-w-3xl mx-auto">
 
-                    <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6 tracking-tight leading-tight">
+                    <h2 className="text-3xl md:text-5xl font-extrabold text-gray-900 mb-6 tracking-tight leading-tight">
                         Our Flagship <span className="text-[#FF0031]">Programs</span>
                     </h2>
-                    <p className="text-lg text-gray-500 font-medium leading-relaxed">
+                    <p className="text-base md:text-lg text-gray-500 font-medium leading-relaxed">
                         Industry-ready programs built with top universities and real-world AI experience. Curated for excellence.
                     </p>
                 </div>
 
                 {/* Cards Grid - No Tabs */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 xl:gap-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 xl:gap-10">
                     {displayPrograms.map((prog, idx) => (
                         <div key={idx} className="bg-white rounded-[2rem] overflow-hidden group relative border border-[#FF0031]">
 

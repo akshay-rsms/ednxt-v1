@@ -60,13 +60,27 @@ export function Hero() {
         };
     }, []);
 
+    const [radius, setRadius] = useState(300); // Default to smaller radius for mobile
+
+    useEffect(() => {
+        const handleResize = () => {
+            setRadius(window.innerWidth < 768 ? 300 : 750);
+        };
+
+        // Set initial
+        handleResize();
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
     // Helper to calculate styles for each image based on current rotation
     const getImageStyle = (index: number) => {
         const totalImages = displayImages.length;
         const angle = (index * (2 * Math.PI) / totalImages) + rotation;
 
         // Calculate 3D position
-        const xOffset = Math.sin(angle) * 750; // Increased radius to create gaps between items
+        const xOffset = Math.sin(angle) * radius; // Responsive radius
         const z = Math.cos(angle); // Depth factor (-1 to 1)
 
         // Use a power curve for scaling to make the center prominent and sides drop off faster
@@ -79,13 +93,6 @@ export function Hero() {
         const opacity = z < -0.3 ? 0.3 : 1; // More aggressive fade for back items
         const zIndex = Math.round(z * 100);
 
-        return {
-            x: `calc(-50% + ${xOffset}px)`,
-            scale: scale,
-            zIndex: zIndex,
-            opacity: opacity,
-            filter: `brightness(${0.6 + (scale * 0.4)})`, // Dim back items less aggressively
-        };
         return {
             x: `calc(-50% + ${xOffset}px)`,
             scale: scale,
@@ -111,7 +118,7 @@ export function Hero() {
     };
 
     return (
-        <section className="bg-black relative pt-8 pb-48 overflow-hidden min-h-[850px] flex flex-col items-center">
+        <section className="bg-black relative pt-8 pb-24 md:pb-48 overflow-hidden min-h-[600px] md:min-h-[850px] flex flex-col items-center">
             {/* Radial Background Lines */}
             <div className="absolute inset-0 top-[-10%] flex items-center justify-center pointer-events-none">
                 <img src="/hero-circle.svg" alt="" className="w-[1000px] h-[1000px] opacity-20" />

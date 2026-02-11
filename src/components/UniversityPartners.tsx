@@ -2,13 +2,13 @@ import { ArrowRight, TrendingUp } from "lucide-react";
 
 export function UniversityPartners() {
     return (
-        <section className="py-20 bg-white">
+        <section className="py-12 md:py-20 bg-white">
             <div className="container mx-auto px-6 font-sans">
 
                 {/* Header */}
                 <div className="mb-12">
                     <h4 className="text-[#FF0031] font-bold text-sm tracking-widest uppercase mb-3">UNIVERSITY PARTNERS</h4>
-                    <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
+                    <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-8">
                         Learn from <span className="relative inline-block">
                             Top-Ranked
                             <svg className="absolute w-full h-3 -bottom-1 left-0" viewBox="0 0 100 10" preserveAspectRatio="none">
@@ -18,7 +18,7 @@ export function UniversityPartners() {
                     </h2>
 
                     <div className="flex flex-col md:flex-row md:items-center gap-6 text-sm">
-                        <button className="bg-[#FF0031] text-white px-6 py-3 rounded-full font-bold flex items-center gap-2 hover:bg-[#D9002A] transition-colors shadow-lg shadow-red-100">
+                        <button className="bg-[#FF0031] text-white px-6 py-3 rounded-full font-bold flex items-center gap-2 hover:bg-[#D9002A] transition-colors shadow-lg shadow-red-100 w-fit">
                             Explore All <ArrowRight className="w-4 h-4" />
                         </button>
                         <div className="flex items-center gap-1 font-medium text-gray-700">

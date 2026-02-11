@@ -43,19 +43,19 @@ export function Features() {
     ]
 
     return (
-        <section className="py-20 bg-white">
+        <section className="py-12 md:py-20 bg-white">
             <div className="container mx-auto px-6 font-sans">
 
                 {/* Header */}
-                <div className="mb-16">
+                <div className="mb-12 md:mb-16">
                     <h4 className="text-[#FF0031] font-bold text-sm tracking-widest uppercase mb-3">WHY CHOOSE US</h4>
-                    <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                    <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
                         Everything You Need to <span className="relative inline-block">
                             Succeed
                             <div className="absolute left-0 bottom-1 w-full h-1 bg-[#FF0031]"></div>
                         </span>
                     </h2>
-                    <p className="text-gray-500 max-w-2xl text-lg">
+                    <p className="text-gray-500 max-w-2xl text-base md:text-lg">
                         Our platform combines cutting-edge technology with proven educational methods
                         to deliver an unmatched learning experience.
                     </p>

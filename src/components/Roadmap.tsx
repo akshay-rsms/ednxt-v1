@@ -23,7 +23,7 @@ export function Roadmap() {
     ];
 
     return (
-        <section className="py-24 bg-white relative overflow-hidden font-sans">
+        <section className="py-12 md:py-24 bg-white relative overflow-hidden font-sans">
 
             {/* Background Ambience */}
             <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-red-100/40 rounded-full blur-[100px] pointer-events-none"></div>
@@ -32,11 +32,11 @@ export function Roadmap() {
             <div className="container mx-auto px-6 relative z-10">
 
                 {/* Header */}
-                <div className="text-center mb-24">
+                <div className="text-center mb-12 md:mb-24">
                     <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
                         Why choose <span className="text-[#FF0031]">Online</span> Degree?
                     </h2>
-                    <p className="text-gray-600 max-w-2xl mx-auto">
+                    <p className="text-gray-600 max-w-2xl mx-auto text-base md:text-lg">
                         Gain industry-relevant skills, flexible learning, and career growth
                     </p>
                 </div>
@@ -68,7 +68,7 @@ export function Roadmap() {
                     </div>
 
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 relative">
                         {steps.map((step, idx) => (
                             <div key={idx} className="flex flex-col items-center text-center group">
 
