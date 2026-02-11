@@ -103,9 +103,9 @@ export function Navbar() {
                             </button>
 
                             {/* Dropdown Menu */}
-                            <div className="absolute top-full left-0 w-[800px] bg-[#0A0A0A]/95 backdrop-blur-3xl rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] border border-white/10 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50 overflow-hidden flex h-[350px]">
+                            <div className="absolute top-full left-0 w-[800px] bg-white/95 backdrop-blur-3xl rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50 overflow-hidden flex h-[350px]">
                                 {/* Left Sidebar: Institutions */}
-                                <div className="w-1/3 bg-white/5 border-r border-white/10 p-2 overflow-y-auto custom-scrollbar">
+                                <div className="w-1/3 bg-gray-50 border-r border-gray-100 p-2 overflow-y-auto custom-scrollbar">
                                     <div className="space-y-1 p-2">
                                         <h4 className="px-4 py-2 text-xs font-bold text-gray-500 uppercase tracking-widest mb-2">Institutions</h4>
                                         {institutions.map((inst) => (
@@ -113,8 +113,8 @@ export function Navbar() {
                                                 key={inst.id}
                                                 onMouseEnter={() => setActiveProgramTab(inst.name)}
                                                 className={`px-4 py-3.5 rounded-xl cursor-pointer text-sm font-bold transition-all flex items-center justify-between group/inst ${activeProgramTab === inst.name
-                                                    ? "bg-[#FF0031] text-white shadow-lg shadow-red-900/20"
-                                                    : "text-gray-400 hover:bg-white/5 hover:text-white"
+                                                    ? "bg-[#FF0031] text-white shadow-lg shadow-red-500/20"
+                                                    : "text-gray-600 hover:bg-gray-200/50 hover:text-gray-900"
                                                     }`}
                                             >
                                                 {inst.name}
@@ -131,17 +131,17 @@ export function Navbar() {
                                     <h4 className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-6">Available Programs</h4>
                                     <div className="grid grid-cols-2 gap-4">
                                         {activePrograms.map((prog, idx) => (
-                                            <Link href={prog.link || "#"} key={idx} className="group/prog flex flex-col gap-3 p-5 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-[#FF0031]/50 hover:shadow-[0_0_20px_rgba(255,0,49,0.15)] transition-all duration-300 relative overflow-hidden">
-                                                <div className="absolute top-0 right-0 w-20 h-20 bg-[#FF0031]/10 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2 group-hover/prog:bg-[#FF0031]/20 transition-colors" />
+                                            <Link href={prog.link || "#"} key={idx} className="group/prog flex flex-col gap-3 p-5 rounded-2xl bg-white border border-gray-100 hover:bg-gray-50 hover:border-[#FF0031]/30 hover:shadow-lg hover:shadow-red-500/10 transition-all duration-300 relative overflow-hidden">
+                                                <div className="absolute top-0 right-0 w-20 h-20 bg-[#FF0031]/5 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2 group-hover/prog:bg-[#FF0031]/10 transition-colors" />
 
-                                                <div className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center group-hover/prog:bg-[#FF0031] transition-colors duration-300 shrink-0">
-                                                    <prog.icon className="w-5 h-5 text-gray-300 group-hover/prog:text-white transition-colors" />
+                                                <div className="w-10 h-10 rounded-lg bg-gray-50 flex items-center justify-center group-hover/prog:bg-[#FF0031] transition-colors duration-300 shrink-0">
+                                                    <prog.icon className="w-5 h-5 text-gray-400 group-hover/prog:text-white transition-colors" />
                                                 </div>
                                                 <div>
-                                                    <h5 className="font-bold text-gray-200 text-sm group-hover/prog:text-white transition-colors leading-snug">
+                                                    <h5 className="font-bold text-gray-900 text-sm group-hover/prog:text-[#FF0031] transition-colors leading-snug">
                                                         {prog.title}
                                                     </h5>
-                                                    <p className="text-[11px] font-medium text-gray-500 mt-1.5 uppercase tracking-wide group-hover/prog:text-gray-400">{prog.type}</p>
+                                                    <p className="text-[11px] font-medium text-gray-500 mt-1.5 uppercase tracking-wide group-hover/prog:text-gray-600">{prog.type}</p>
                                                 </div>
                                             </Link>
                                         ))}
@@ -159,19 +159,20 @@ export function Navbar() {
                             </button>
 
                             {/* Dropdown Menu */}
-                            <div className="absolute top-full left-0 mt-2 w-[900px] bg-[#0A0A0A]/95 backdrop-blur-3xl rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] border border-white/10 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50 overflow-hidden flex">
+                            {/* Dropdown Menu */}
+                            <div className="absolute top-full left-0 mt-2 w-[900px] bg-white/95 backdrop-blur-3xl rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50 overflow-hidden flex">
 
                                 {/* Left Column: Navigation Links */}
-                                <div className="w-1/3 p-6 border-r border-white/10 bg-white/5">
+                                <div className="w-1/3 p-6 border-r border-gray-100 bg-gray-50">
                                     <h4 className="text-gray-500 text-xs font-bold uppercase tracking-wider mb-6">Resources & Company</h4>
                                     <div className="space-y-4">
-                                        <Link href="#" className="flex gap-4 group/item hover:bg-white/5 p-3 -mx-3 rounded-xl transition-all border border-transparent hover:border-white/5">
-                                            <div className="mt-1 w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center group-hover/item:bg-[#FF0031] transition-colors shrink-0">
-                                                <BookOpen className="w-4 h-4 text-gray-300 group-hover/item:text-white" />
+                                        <Link href="#" className="flex gap-4 group/item hover:bg-gray-200/50 p-3 -mx-3 rounded-xl transition-all border border-transparent hover:border-gray-200">
+                                            <div className="mt-1 w-8 h-8 rounded-lg bg-gray-200/50 flex items-center justify-center group-hover/item:bg-[#FF0031] transition-colors shrink-0">
+                                                <BookOpen className="w-4 h-4 text-gray-600 group-hover/item:text-white" />
                                             </div>
                                             <div>
-                                                <h5 className="font-bold text-gray-200 group-hover/item:text-white text-sm">Blogs & Insights</h5>
-                                                <p className="text-xs text-gray-500 mt-1 group-hover/item:text-gray-400">Latest updates from our expert team</p>
+                                                <h5 className="font-bold text-gray-900 group-hover/item:text-[#FF0031] text-sm">Blogs & Insights</h5>
+                                                <p className="text-xs text-gray-500 mt-1 group-hover/item:text-gray-600">Latest updates from our expert team</p>
                                             </div>
                                         </Link>
                                     </div>
@@ -181,18 +182,18 @@ export function Navbar() {
                                 <div className="w-2/3 p-8 bg-transparent">
                                     <div className="flex items-center justify-between mb-6">
                                         <h4 className="text-gray-500 text-xs font-bold uppercase tracking-wider">Featured from Blog</h4>
-                                        <Link href="#" className="text-xs font-bold text-[#FF0031] flex items-center gap-1 hover:text-white transition-colors">
+                                        <Link href="#" className="text-xs font-bold text-[#FF0031] flex items-center gap-1 hover:text-[#D9002A] transition-colors">
                                             View All <ArrowRight className="w-3 h-3" />
                                         </Link>
                                     </div>
 
                                     <div className="grid grid-cols-2 gap-4">
                                         {blogs.slice(0, 2).map((blog) => (
-                                            <Link href="#" key={blog.id} className="group/blog block bg-white/5 border border-white/10 rounded-2xl p-3 hover:bg-white/10 hover:border-[#FF0031]/30 transition-all">
+                                            <Link href="#" key={blog.id} className="group/blog block bg-white border border-gray-100 rounded-2xl p-3 hover:bg-gray-50 hover:border-[#FF0031]/30 transition-all">
                                                 <div className="aspect-video rounded-xl overflow-hidden mb-3 relative">
-                                                    <img src={blog.image} alt={blog.title} className="w-full h-full object-cover group-hover/blog:scale-105 transition-transform duration-500 opacity-80 group-hover/blog:opacity-100" />
+                                                    <img src={blog.image} alt={blog.title} className="w-full h-full object-cover group-hover/blog:scale-105 transition-transform duration-500" />
                                                 </div>
-                                                <h5 className="font-bold text-gray-200 text-sm leading-snug mb-2 group-hover/blog:text-white transition-colors line-clamp-2">
+                                                <h5 className="font-bold text-gray-900 text-sm leading-snug mb-2 group-hover/blog:text-[#FF0031] transition-colors line-clamp-2">
                                                     {blog.title}
                                                 </h5>
                                                 <span className="text-[#FF0031] text-[10px] font-bold uppercase tracking-wider flex items-center gap-1">Read Article <ArrowRight className="w-3 h-3" /></span>
