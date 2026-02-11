@@ -105,7 +105,9 @@ export function Hero() {
 
                             {/* Label */}
                             <div className="hidden md:flex items-center pl-4 pr-2 border-r border-white/10 h-full">
-                                <span className="text-gray-400 text-sm font-medium whitespace-nowrap">Find Your programs</span>
+                                <span className="text-white text-sm font-medium whitespace-nowrap">
+                                    Explore  <span className="text-[#ff0031] font-semibold"></span> Programs
+                                </span>
                             </div>
 
                             {/* Domain Select */}
@@ -128,6 +130,7 @@ export function Hero() {
                                     <option className="bg-[#121212] text-gray-300">Select University</option>
                                     <option className="bg-[#121212] text-gray-300">IIT Patna</option>
                                     <option className="bg-[#121212] text-gray-300">IIIT Dharwad</option>
+                                    <option className="bg-[#121212] text-gray-300">IIM Trichy</option>
                                     <option className="bg-[#121212] text-gray-300">NIT Surathkal</option>
                                 </select>
                                 <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500 pointer-events-none group-hover/input:text-[#FF0031] transition-colors" />

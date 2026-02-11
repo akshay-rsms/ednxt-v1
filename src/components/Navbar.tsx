@@ -45,6 +45,17 @@ const institutions: Institution[] = [
         ]
     },
     {
+        id: "iim-trichy",
+        name: "IIM Trichy",
+        programs: [
+            {
+                title: "PGPM",
+                icon: Briefcase,
+                type: "Degree Program"
+            }
+        ]
+    },
+    {
         id: "nit-surathkal",
         name: "NIT Surathkal",
         programs: [
