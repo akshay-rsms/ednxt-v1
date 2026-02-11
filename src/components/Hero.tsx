@@ -2,6 +2,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Search, ChevronDown } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 export function Hero() {
     const images = [
@@ -21,6 +22,8 @@ export function Hero() {
 
     const [selectedProgram, setSelectedProgram] = useState("Select Program");
     const [selectedUniversity, setSelectedUniversity] = useState("Select University");
+    const [openDropdown, setOpenDropdown] = useState<'program' | 'university' | null>(null);
+    const router = useRouter();
 
     const programToUniversity: { [key: string]: string } = {
         "GenAI & Agentic AI": "IIT Patna",
@@ -68,6 +71,20 @@ export function Hero() {
             opacity: opacity,
             filter: `brightness(${0.6 + (scale * 0.4)})`, // Dim back items less aggressively
         };
+        return {
+            x: `calc(-50% + ${xOffset}px)`,
+            scale: scale,
+            zIndex: zIndex,
+            opacity: opacity,
+            filter: `brightness(${0.6 + (scale * 0.4)})`, // Dim back items less aggressively
+        };
+    };
+
+    const handleSearch = () => {
+        if (selectedUniversity && selectedUniversity !== "Select University") {
+            const slug = selectedUniversity.toLowerCase().replace(/\s+/g, '-');
+            router.push(`/${slug}`);
+        }
     };
 
     return (
@@ -78,7 +95,7 @@ export function Hero() {
             </div>
 
             {/* Main Content */}
-            <div className="relative z-10 flex flex-col items-center text-center max-w-5xl mx-auto px-4 -mt-4 mb-12">
+            <div className="relative z-[101] flex flex-col items-center text-center max-w-5xl mx-auto px-4 -mt-4 mb-12">
                 {/* Trust Badge */}
                 <div className="flex flex-col items-center mb-4 mt-12">
                     <img src="/india's-most.svg" alt="India's Most Trusted" className="h-16 w-auto" />
@@ -106,7 +123,7 @@ export function Hero() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.2, duration: 0.6 }}
-                    className="w-full max-w-6xl relative z-20 mb-12 mt-4 px-4"
+                    className="w-full max-w-6xl relative z-50 mb-12 mt-4 px-4"
                 >
                     <div className="group relative w-full">
                         {/* Glow Effect */}
@@ -121,50 +138,127 @@ export function Hero() {
                                 </span>
                             </div>
 
-                            {/* Program Select */}
-                            <div className="relative w-full md:w-auto md:min-w-[260px] flex-1 group/input">
-                                <div className="absolute left-4 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white/5 flex items-center justify-center">
-                                    <Search className="w-4 h-4 text-[#FF0031]" />
-                                </div>
-                                <select
-                                    value={selectedProgram}
-                                    onChange={(e) => {
-                                        const program = e.target.value;
-                                        setSelectedProgram(program);
-                                        if (program !== "Select Program" && programToUniversity[program]) {
-                                            setSelectedUniversity(programToUniversity[program]);
-                                        } else {
-                                            setSelectedUniversity("Select University");
-                                        }
-                                    }}
-                                    className="w-full appearance-none bg-black/20 border border-white/5 rounded-2xl md:rounded-full py-3 md:py-3.5 pl-14 pr-10 text-sm font-medium text-gray-200 outline-none focus:bg-black/40 focus:border-[#FF0031]/50 transition-all cursor-pointer placeholder-gray-500 hover:bg-black/30"
+                            {/* Program Dropdown */}
+                            <div className="relative w-full md:w-auto md:min-w-[260px] flex-1">
+                                <button
+                                    onClick={() => setOpenDropdown(openDropdown === 'program' ? null : 'program')}
+                                    className="w-full flex items-center justify-between bg-black/20 border border-white/5 rounded-2xl md:rounded-full py-3 md:py-3.5 pl-4 pr-6 text-sm font-medium text-gray-200 focus:bg-black/40 focus:border-[#FF0031]/50 transition-all hover:bg-black/30"
                                 >
-                                    <option className="bg-[#121212] text-gray-300">Select Program</option>
-                                    {Object.keys(programToUniversity).map((prog) => (
-                                        <option key={prog} value={prog} className="bg-[#121212] text-gray-300">{prog}</option>
-                                    ))}
-                                </select>
-                                <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500 pointer-events-none group-hover/input:text-[#FF0031] transition-colors" />
+                                    <div className="flex items-center gap-3">
+                                        <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center shrink-0">
+                                            <Search className="w-4 h-4 text-[#FF0031]" />
+                                        </div>
+                                        <span className={selectedProgram === "Select Program" ? "text-gray-400" : "text-white"}>
+                                            {selectedProgram}
+                                        </span>
+                                    </div>
+                                    <ChevronDown className={`w-4 h-4 text-gray-500 transition-transform duration-300 ${openDropdown === 'program' ? 'rotate-180' : ''}`} />
+                                </button>
+
+                                <AnimatePresence>
+                                    {openDropdown === 'program' && (
+                                        <motion.div
+                                            initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                                            animate={{ opacity: 1, y: 0, scale: 1 }}
+                                            exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                                            transition={{ duration: 0.2 }}
+                                            className="absolute top-full left-0 w-full mt-2 bg-[#0A0A0A]/90 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl overflow-hidden z-50 p-2"
+                                        >
+                                            <div className="max-h-[240px] overflow-y-auto scrollbar-hide">
+                                                <button
+                                                    onClick={() => {
+                                                        setSelectedProgram("Select Program");
+                                                        // Logic for resetting university if needed, keeping simple for now as requested
+                                                        setOpenDropdown(null);
+                                                    }}
+                                                    className="w-full text-left px-4 py-2.5 rounded-xl hover:bg-white/5 text-gray-400 text-sm transition-colors"
+                                                >
+                                                    Select Program
+                                                </button>
+                                                {(selectedUniversity !== "Select University"
+                                                    ? Object.keys(programToUniversity).filter(p => programToUniversity[p] === selectedUniversity)
+                                                    : Object.keys(programToUniversity)
+                                                ).map((prog) => (
+                                                    <button
+                                                        key={prog}
+                                                        onClick={() => {
+                                                            setSelectedProgram(prog);
+                                                            if (programToUniversity[prog]) {
+                                                                setSelectedUniversity(programToUniversity[prog]);
+                                                            }
+                                                            setOpenDropdown(null);
+                                                        }}
+                                                        className={`w-full text-left px-4 py-2.5 rounded-xl hover:bg-white/10 text-sm transition-colors ${selectedProgram === prog ? 'text-[#FF0031] bg-white/5' : 'text-gray-200'}`}
+                                                    >
+                                                        {prog}
+                                                    </button>
+                                                ))}
+                                            </div>
+                                        </motion.div>
+                                    )}
+                                </AnimatePresence>
                             </div>
 
-                            {/* University Select */}
-                            <div className="relative w-full md:w-auto md:min-w-[260px] flex-1 group/input">
-                                <select
-                                    value={selectedUniversity}
-                                    onChange={(e) => setSelectedUniversity(e.target.value)}
-                                    className="w-full appearance-none bg-black/20 border border-white/5 rounded-2xl md:rounded-full py-3 md:py-3.5 pl-6 pr-10 text-sm font-medium text-gray-200 outline-none focus:bg-black/40 focus:border-[#FF0031]/50 transition-all cursor-pointer hover:bg-black/30"
+                            {/* University Dropdown */}
+                            <div className="relative w-full md:w-auto md:min-w-[260px] flex-1">
+                                <button
+                                    onClick={() => setOpenDropdown(openDropdown === 'university' ? null : 'university')}
+                                    className="w-full flex items-center justify-between bg-black/20 border border-white/5 rounded-2xl md:rounded-full py-3 md:py-3.5 pl-6 pr-6 text-sm font-medium text-gray-200 focus:bg-black/40 focus:border-[#FF0031]/50 transition-all hover:bg-black/30"
                                 >
-                                    <option className="bg-[#121212] text-gray-300">Select University</option>
-                                    <option className="bg-[#121212] text-gray-300">IIT Patna</option>
-                                    <option className="bg-[#121212] text-gray-300">IIIT Dharwad</option>
-                                    <option className="bg-[#121212] text-gray-300">IIM Trichy</option>
-                                    <option className="bg-[#121212] text-gray-300">NIT Surathkal</option>
-                                </select>
-                                <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500 pointer-events-none group-hover/input:text-[#FF0031] transition-colors" />
+                                    <span className={selectedUniversity === "Select University" ? "text-gray-400" : "text-white"}>
+                                        {selectedUniversity}
+                                    </span>
+                                    <ChevronDown className={`w-4 h-4 text-gray-500 transition-transform duration-300 ${openDropdown === 'university' ? 'rotate-180' : ''}`} />
+                                </button>
+
+                                <AnimatePresence>
+                                    {openDropdown === 'university' && (
+                                        <motion.div
+                                            initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                                            animate={{ opacity: 1, y: 0, scale: 1 }}
+                                            exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                                            transition={{ duration: 0.2 }}
+                                            className="absolute top-full left-0 w-full mt-2 bg-[#0A0A0A]/90 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl overflow-hidden z-50 p-2"
+                                        >
+                                            <div className="max-h-[240px] overflow-y-auto scrollbar-hide">
+                                                <button
+                                                    onClick={() => {
+                                                        setSelectedUniversity("Select University");
+                                                        setOpenDropdown(null);
+                                                    }}
+                                                    className="w-full text-left px-4 py-2.5 rounded-xl hover:bg-white/5 text-gray-400 text-sm transition-colors"
+                                                >
+                                                    Select University
+                                                </button>
+                                                {(selectedProgram !== "Select Program"
+                                                    ? [programToUniversity[selectedProgram]]
+                                                    : Array.from(new Set(Object.values(programToUniversity)))
+                                                ).map((uni) => (
+                                                    <button
+                                                        key={uni}
+                                                        onClick={() => {
+                                                            setSelectedUniversity(uni);
+                                                            if (selectedProgram !== "Select Program" && programToUniversity[selectedProgram] !== uni) {
+                                                                setSelectedProgram("Select Program");
+                                                            }
+                                                            setOpenDropdown(null);
+                                                        }}
+                                                        className={`w-full text-left px-4 py-2.5 rounded-xl hover:bg-white/10 text-sm transition-colors ${selectedUniversity === uni ? 'text-[#FF0031] bg-white/5' : 'text-gray-200'}`}
+                                                    >
+                                                        {uni}
+                                                    </button>
+                                                ))}
+                                            </div>
+                                        </motion.div>
+                                    )}
+                                </AnimatePresence>
                             </div>
 
                             {/* Search Button */}
-                            <button className="w-full md:w-auto px-8 py-3.5 rounded-2xl md:rounded-full bg-gradient-to-br from-[#FF0031] to-[#FF4D6D] text-white font-bold text-sm shadow-lg shadow-red-900/20 hover:shadow-red-500/30 hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center gap-2">
+                            <button
+                                onClick={handleSearch}
+                                className="w-full md:w-auto px-8 py-3.5 rounded-2xl md:rounded-full bg-gradient-to-br from-[#FF0031] to-[#FF4D6D] text-white font-bold text-sm shadow-lg shadow-red-900/20 hover:shadow-red-500/30 hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center gap-2"
+                            >
                                 <Search className="w-4 h-4" />
                                 <span>Search</span>
                             </button>
