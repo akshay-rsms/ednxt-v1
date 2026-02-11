@@ -79,7 +79,7 @@ export function Navbar() {
     const activePrograms = institutions.find(i => i.name === activeProgramTab)?.programs || [];
 
     return (
-        <nav className="w-full bg-white z-50 flex flex-col font-sans">
+        <nav className="w-full bg-white z-[102] relative flex flex-col font-sans">
             {/* Top Main Bar */}
             <div className="w-full px-8 md:px-12 h-20 flex items-center justify-between relative">
 
