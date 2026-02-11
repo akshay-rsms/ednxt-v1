@@ -30,7 +30,7 @@ export function Stats() {
                             <h3 className="text-[38.04px] font-bold text-[#444444] leading-[1.14] tracking-[-0.05em] font-sans mb-1">95%</h3>
                             <p className="text-[16.31px] font-normal text-[#727272] leading-[1.49] tracking-[-0.05em] font-sans">Success Rate</p>
                         </div>
-                        <img src="/95%25.svg" alt="Success Rate" className="w-20 h-20 object-contain" />
+                        <img src="/success_graph.svg" alt="Success Rate" className="w-20 h-20 object-contain" />
                     </div>
 
                     {/* Card 4: UGC - Badge */}
