@@ -24,6 +24,7 @@ export function Hero() {
     const [selectedUniversity, setSelectedUniversity] = useState("Select University");
     const [openDropdown, setOpenDropdown] = useState<'program' | 'university' | null>(null);
     const router = useRouter();
+    const searchBarRef = useRef<HTMLDivElement>(null);
 
     const programToUniversity: { [key: string]: string } = {
         "GenAI & Agentic AI": "IIT Patna",
@@ -43,6 +44,20 @@ export function Hero() {
         frameRef.current = requestAnimationFrame(animate);
 
         return () => cancelAnimationFrame(frameRef.current);
+    }, []);
+
+    // Close dropdown when clicking outside
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (searchBarRef.current && !searchBarRef.current.contains(event.target as Node)) {
+                setOpenDropdown(null);
+            }
+        };
+
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
     }, []);
 
     // Helper to calculate styles for each image based on current rotation
@@ -123,6 +138,7 @@ export function Hero() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.2, duration: 0.6 }}
+                    ref={searchBarRef}
                     className="w-full max-w-6xl relative z-50 mb-12 mt-4 px-4"
                 >
                     <div className="group relative w-full">
