@@ -299,7 +299,11 @@ export function Hero() {
             </div>
 
             {/* Mobile Carousel (2 Columns) */}
-            <div className="flex md:hidden w-full max-w-md mx-auto h-[500px] gap-2 px-2 mt-0 overflow-hidden relative">
+            <div className="flex md:hidden w-full max-w-md mx-auto h-[500px] gap-2 px-2 -mt-12 overflow-hidden relative">
+                {/* Top Blur Mask */}
+                <div className="absolute top-0 left-0 w-full h-12 bg-gradient-to-b from-black via-black/60 to-transparent z-20 pointer-events-none"></div>
+                {/* Bottom Blur Mask */}
+                <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-black via-black/60 to-transparent z-20 pointer-events-none"></div>
 
                 {/* Column 1 - Upward */}
                 <div className="w-1/2 h-full overflow-hidden relative flex flex-col justify-start">
