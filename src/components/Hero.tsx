@@ -118,7 +118,7 @@ export function Hero() {
     };
 
     return (
-        <section className="bg-black relative pt-10 md:pt-8 pb-8 md:pb-48 overflow-hidden min-h-[500px] md:min-h-[850px] flex flex-col items-center">
+        <section className="bg-black relative pt-10 md:pt-8 pb-8 md:pb-48 overflow-hidden min-h-[600px] md:min-h-[850px] flex flex-col items-center">
             {/* Radial Background Lines */}
             <div className="absolute inset-0 top-[-10%] flex items-center justify-center pointer-events-none">
                 <img src="/hero-circle.svg" alt="" className="w-[1000px] h-[1000px] opacity-20" />
@@ -299,7 +299,7 @@ export function Hero() {
             </div>
 
             {/* Mobile Carousel (2 Columns) */}
-            <div className="flex md:hidden w-full max-w-md mx-auto h-[500px] gap-2 px-2 -mt-12 overflow-hidden relative">
+            <div className="flex md:hidden w-full max-w-md mx-auto h-[600px] gap-2 px-2 -mt-12 overflow-hidden relative">
                 {/* Top Blur Mask */}
                 <div className="absolute top-0 left-0 w-full h-12 bg-gradient-to-b from-black via-black/60 to-transparent z-20 pointer-events-none"></div>
                 {/* Bottom Blur Mask */}
