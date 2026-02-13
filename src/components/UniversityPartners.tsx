@@ -3,7 +3,7 @@ import { ArrowRight, TrendingUp } from "lucide-react";
 export function UniversityPartners() {
     return (
         <section className="py-12 md:py-20 bg-white">
-            <div className="container mx-auto px-6 font-sans">
+            <div className="container mx-auto px-3 md:px-6 font-sans">
 
                 {/* Header */}
                 <div className="mb-12">
@@ -21,18 +21,12 @@ export function UniversityPartners() {
                         <button className="bg-[#FF0031] text-white px-6 py-3 rounded-full font-bold flex items-center gap-2 hover:bg-[#D9002A] transition-colors shadow-lg shadow-red-100 w-fit">
                             Explore All <ArrowRight className="w-4 h-4" />
                         </button>
-                        <div className="flex items-center gap-1 font-medium text-gray-700">
-                            <span className="font-bold text-black">100+ Universities available</span>
-                            <span className="text-gray-500">throughout the country!</span>
-                            <a href="#" className="flex items-center gap-1 text-gray-400 hover:text-[#FF0031] ml-1 transition-colors">
-                                Explore Now <ArrowRight className="w-3 h-3" />
-                            </a>
-                        </div>
+                        {/* Removed 100+ Universities text and Explore Now link as requested */}
                     </div>
                 </div>
 
                 {/* Grid Layout */}
-                <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
+                <div className="grid grid-cols-1 lg:grid-cols-5 gap-2 md:gap-6">
 
                     {/* Large Card (Left) - Spans 3 columns */}
                     <div className="lg:col-span-3 bg-[#FFFCDA] rounded-[2.5rem] relative overflow-hidden min-h-[400px] group cursor-pointer">
@@ -58,11 +52,11 @@ export function UniversityPartners() {
                         </div>
                     </div>
 
-                    {/* Right Column - Stacked Cards - Spans 2 columns */}
-                    <div className="lg:col-span-2 flex flex-col gap-6">
+                    {/* Right Column - Stacked Cards (Desktop) / Side-by-Side (Mobile) */}
+                    <div className="lg:col-span-2 flex flex-row lg:flex-col gap-2 md:gap-6">
 
                         {/* Top Card */}
-                        <div className="flex-1 bg-[#D3FFFF] rounded-[2.5rem] relative overflow-hidden p-8 flex flex-col justify-between group cursor-pointer min-h-[300px]">
+                        <div className="flex-1 bg-[#D3FFFF] rounded-[2rem] md:rounded-[2.5rem] relative overflow-hidden p-4 md:p-8 flex flex-col justify-between group cursor-pointer min-h-[200px] md:min-h-[300px]">
                             {/* Background Image */}
                             <div className="absolute inset-0 w-full h-full">
                                 <img
@@ -83,7 +77,7 @@ export function UniversityPartners() {
                         </div>
 
                         {/* Bottom Card */}
-                        <div className="flex-1 bg-[#DEFFEC] rounded-[2.5rem] relative overflow-hidden p-8 flex flex-col justify-between group cursor-pointer min-h-[300px]">
+                        <div className="flex-1 bg-[#DEFFEC] rounded-[2rem] md:rounded-[2.5rem] relative overflow-hidden p-4 md:p-8 flex flex-col justify-between group cursor-pointer min-h-[200px] md:min-h-[300px]">
                             {/* Background Image */}
                             <div className="absolute inset-0 w-full h-full">
                                 <img
