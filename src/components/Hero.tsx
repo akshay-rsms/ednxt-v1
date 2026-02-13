@@ -299,7 +299,7 @@ export function Hero() {
             </div>
 
             {/* Mobile Carousel (2 Columns) */}
-            <div className="flex md:hidden w-full max-w-md mx-auto h-[600px] gap-2 px-2 -mt-4 overflow-hidden relative">
+            <div className="flex md:hidden w-full max-w-md mx-auto h-[600px] gap-2 px-2 -mt-8 overflow-hidden relative">
                 {/* Top Blur Mask */}
                 <div className="absolute top-0 left-0 w-full h-12 bg-gradient-to-b from-black via-black/60 to-transparent z-20 pointer-events-none"></div>
                 {/* Bottom Blur Mask */}
