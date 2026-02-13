@@ -105,7 +105,7 @@ export function Programs() {
             <div className="flex overflow-x-auto md:grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 pb-8 md:pb-0 -mx-6 px-6 md:mx-0 md:px-0 snap-x snap-mandatory scrollbar-hide">
                 {courses.map((prog, idx) => (
                     // Card Container: Red border always, no shadow, tall enough for details
-                    <div key={idx} className="min-w-[85%] md:min-w-0 snap-center bg-white rounded-[20px] md:rounded-[32px] overflow-hidden group relative border border-[#FF0031] flex flex-col h-full min-h-[500px]">
+                    <div key={idx} className="min-w-[85%] md:min-w-0 snap-center bg-white rounded-[20px] md:rounded-[32px] overflow-hidden group relative border border-[#FF0031] flex flex-col h-[520px] md:h-auto md:min-h-[520px]">
 
                         {/* Image */}
                         <div className="h-52 md:h-56 overflow-hidden relative shrink-0">
