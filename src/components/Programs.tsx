@@ -89,7 +89,7 @@ export function Programs() {
     ];
 
     const ProgramSection = ({ title, courses, subtitle }: { title: React.ReactNode, courses: Program[], subtitle?: string }) => (
-        <div className="mb-16 last:mb-0">
+        <div className="mb-10 md:mb-16 last:mb-0">
             <div className="mb-6 md:mb-8 text-left">
                 {subtitle && (
                     <p className="text-xs md:text-sm font-bold text-gray-500 uppercase tracking-widest mb-2">
@@ -163,7 +163,7 @@ export function Programs() {
     );
 
     return (
-        <section className="py-12 md:py-24 bg-white relative overflow-hidden">
+        <section className="py-8 md:py-24 bg-white relative overflow-hidden">
             {/* Background Elements */}
             <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-gray-50 via-white to-white z-0 pointer-events-none" />
 

@@ -2,7 +2,7 @@
 
 export function Stats() {
     return (
-        <section className="py-12 bg-white relative z-20 -mt-10">
+        <section className="py-8 md:py-12 bg-white relative z-20 -mt-10">
             <div className="container mx-auto px-3 md:px-6">
                 <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6">
 
