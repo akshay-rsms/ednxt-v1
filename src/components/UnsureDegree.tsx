@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 export function UnsureDegree() {
     return (
         <section className="py-12 md:py-20 bg-white">
-            <div className="container mx-auto px-6 font-sans">
+            <div className="container mx-auto px-3 md:px-6 font-sans">
                 <div className="bg-[#2B1D10] rounded-[2.5rem] overflow-hidden flex flex-col md:flex-row relative min-h-[400px] md:min-h-[500px]">
 
                     {/* Left Content */}
