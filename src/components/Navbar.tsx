@@ -81,6 +81,7 @@ export function Navbar() {
     const [activeProgramTab, setActiveProgramTab] = useState("IIT Patna");
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isMobileProgramsOpen, setIsMobileProgramsOpen] = useState(false);
+    const [isResourcesOpen, setIsResourcesOpen] = useState(false);
 
     // Prevent body scroll when menu is open
     useEffect(() => {
@@ -251,40 +252,65 @@ export function Navbar() {
                 </div>
             </div>
 
-            {/* Mobile Menu Drawer (Hamburger) */}
+            {/* Mobile Menu Dropdown (Hamburger) */}
             <AnimatePresence>
                 {isMobileMenuOpen && (
                     <motion.div
-                        initial={{ x: "100%" }}
-                        animate={{ x: 0 }}
-                        exit={{ x: "100%" }}
-                        transition={{ type: "spring", damping: 25, stiffness: 200 }}
-                        className="fixed inset-0 z-[200] bg-white flex flex-col pt-14 px-6 lg:hidden"
+                        initial={{ opacity: 0, y: -10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -10 }}
+                        transition={{ duration: 0.2 }}
+                        className="absolute top-[calc(100%+8px)] left-0 w-full bg-white z-40 rounded-b-3xl rounded-t-lg shadow-[0_20px_60px_-15px_rgba(0,0,0,0.3)] flex flex-col lg:hidden border-t border-gray-100 overflow-hidden p-6"
                     >
-                        {/* Header */}
-                        <div className="absolute top-0 left-0 w-full h-14 flex items-center justify-between px-4 border-b border-gray-100">
-                            <span className="font-bold text-lg text-gray-900">Menu</span>
-                            <button onClick={() => setIsMobileMenuOpen(false)} className="p-2 rounded-full hover:bg-gray-100">
-                                <X className="w-6 h-6 text-gray-600" />
-                            </button>
-                        </div>
+                        {/* Links Container */}
+                        <div className="flex flex-col gap-2">
+                            {/* Resources Accordion */}
+                            <div className="border-b border-gray-50 pb-2">
+                                <button
+                                    onClick={() => setIsResourcesOpen(!isResourcesOpen)}
+                                    className="w-full flex items-center justify-between text-base font-bold text-gray-900 py-3"
+                                >
+                                    RESOURCES
+                                    <ChevronDown className={`w-4 h-4 text-gray-500 transition-transform duration-300 ${isResourcesOpen ? 'rotate-180' : ''}`} />
+                                </button>
+                                <AnimatePresence>
+                                    {isResourcesOpen && (
+                                        <motion.div
+                                            initial={{ height: 0, opacity: 0 }}
+                                            animate={{ height: "auto", opacity: 1 }}
+                                            exit={{ height: 0, opacity: 0 }}
+                                            className="overflow-hidden bg-gray-50 rounded-xl"
+                                        >
+                                            <Link
+                                                href="/blogs"
+                                                onClick={() => setIsMobileMenuOpen(false)}
+                                                className="flex items-center gap-3 p-4 text-sm font-medium text-gray-600 hover:text-[#FF0031]"
+                                            >
+                                                <div className="w-8 h-8 rounded-lg bg-white flex items-center justify-center text-[#FF0031] shadow-sm">
+                                                    <BookOpen className="w-4 h-4" />
+                                                </div>
+                                                Blogs & Insights
+                                            </Link>
+                                        </motion.div>
+                                    )}
+                                </AnimatePresence>
+                            </div>
 
-                        {/* Links */}
-                        <div className="flex flex-col gap-6 mt-6">
-                            <Link href="/blogs" className="text-lg font-medium text-gray-800 flex items-center justify-between" onClick={() => setIsMobileMenuOpen(false)}>
-                                Blogs & Insights <ChevronRight className="w-5 h-5 text-gray-400" />
-                            </Link>
-                            <Link href="/about-us" className="text-lg font-medium text-gray-800 flex items-center justify-between" onClick={() => setIsMobileMenuOpen(false)}>
-                                About Us <ChevronRight className="w-5 h-5 text-gray-400" />
+                            <Link
+                                href="/about-us"
+                                className="text-base font-bold text-gray-900 py-3 border-b border-gray-50 flex items-center justify-between"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                                ABOUT US
                             </Link>
                         </div>
 
                         {/* Mobile CTA */}
-                        <div className="mt-auto mb-8 flex flex-col gap-4">
-                            <button className="w-full py-3 rounded-full border border-[#FF0031] text-[#FF0031] font-bold text-sm">
+                        <div className="mt-8 flex flex-col gap-3">
+                            <button className="w-full py-3 rounded-full border border-[#FF0031] text-[#FF0031] font-bold text-sm hover:bg-red-50 transition-colors">
                                 Talk to Counsellor
                             </button>
-                            <button className="w-full py-3 rounded-full bg-[#FF0031] text-white font-bold text-sm shadow-lg shadow-red-200">
+                            <button className="w-full py-3 rounded-full bg-[#FF0031] text-white font-bold text-sm shadow-lg shadow-red-200 hover:bg-[#D9002A] transition-colors">
                                 Enroll Now
                             </button>
                         </div>
@@ -311,8 +337,8 @@ export function Navbar() {
                                         key={inst.id}
                                         onClick={() => setActiveProgramTab(inst.name)}
                                         className={`whitespace-nowrap px-4 py-2.5 rounded-xl text-xs font-bold transition-all border ${activeProgramTab === inst.name
-                                                ? "bg-[#FF0031] border-[#FF0031] text-white shadow-md shadow-red-200"
-                                                : "bg-white border-gray-200 text-gray-600 hover:bg-gray-50"
+                                            ? "bg-[#FF0031] border-[#FF0031] text-white shadow-md shadow-red-200"
+                                            : "bg-white border-gray-200 text-gray-600 hover:bg-gray-50"
                                             }`}
                                     >
                                         {inst.name}
