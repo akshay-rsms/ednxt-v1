@@ -125,7 +125,7 @@ export function Hero() {
             </div>
 
             {/* Main Content */}
-            <div className="relative z-[101] flex flex-col items-center text-center max-w-5xl mx-auto px-4 -mt-4 mb-12">
+            <div className="relative z-[101] flex flex-col items-center text-center max-w-5xl mx-auto px-3 md:px-4 -mt-4 mb-12">
                 {/* Trust Badge */}
                 <div className="flex flex-col items-center mb-6 md:mb-4 mt-6 md:mt-12">
                     <img src="/india's-most.svg" alt="India's Most Trusted" className="h-14 md:h-16 w-auto" />
@@ -154,7 +154,7 @@ export function Hero() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.2, duration: 0.6 }}
                     ref={searchBarRef}
-                    className="w-[calc(100%+2rem)] -mx-4 md:w-full md:mx-0 max-w-6xl relative z-50 mb-4 mt-2 px-0 md:px-4"
+                    className="w-[calc(100%+1.5rem)] -mx-3 md:w-full md:mx-0 max-w-6xl relative z-50 mb-4 mt-2 px-0 md:px-4"
                 >
                     <div className="group relative w-full">
                         {/* Glow Effect */}

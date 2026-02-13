@@ -102,7 +102,7 @@ export function Programs() {
             </div>
 
             {/* Carousel Container */}
-            <div className="flex overflow-x-auto md:grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 pb-8 md:pb-0 -mx-6 px-6 md:mx-0 md:px-0 snap-x snap-mandatory scrollbar-hide">
+            <div className="flex overflow-x-auto md:grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 pb-8 md:pb-0 -mx-3 px-3 md:mx-0 md:px-0 snap-x snap-mandatory scrollbar-hide">
                 {courses.map((prog, idx) => (
                     // Card Container: Red border always, no shadow, tall enough for details
                     <div key={idx} className="min-w-[85%] md:min-w-0 snap-center bg-white rounded-[20px] md:rounded-[32px] overflow-hidden group relative border border-[#FF0031] flex flex-col h-[520px] md:h-auto md:min-h-[520px]">
@@ -167,7 +167,7 @@ export function Programs() {
             {/* Background Elements */}
             <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-gray-50 via-white to-white z-0 pointer-events-none" />
 
-            <div className="container mx-auto px-6 font-sans relative z-10">
+            <div className="container mx-auto px-3 md:px-6 font-sans relative z-10">
                 <ProgramSection
                     title={<span>Explore our <span className="text-[#FF0031]">most popular programs</span></span>}
                     subtitle="TRENDING COURSES"

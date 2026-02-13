@@ -44,7 +44,7 @@ export function Features() {
 
     return (
         <section className="py-12 md:py-20 bg-white">
-            <div className="container mx-auto px-6 font-sans">
+            <div className="container mx-auto px-3 md:px-6 font-sans">
 
                 {/* Header */}
                 <div className="mb-12 md:mb-16">
@@ -64,26 +64,26 @@ export function Features() {
                 {/* Grid Layout */}
                 <div className="flex flex-col gap-6">
 
-                    {/* Top Row: 3 Cards */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    {/* Top Row: 3 Cards (Mobile: 2-1) */}
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-6">
                         {features.map((feature, idx) => (
-                            <div key={idx} className={`${feature.bg} rounded-[2.5rem] p-8 md:p-10 transition-transform hover:-translate-y-1 duration-300`}>
-                                <feature.icon className={`w-10 h-10 ${feature.iconColor} mb-6`} strokeWidth={2.5} />
-                                <h3 className="text-2xl font-bold text-gray-900 mb-4">{feature.title}</h3>
-                                <p className="text-gray-500 leading-relaxed">
+                            <div key={idx} className={`${feature.bg} rounded-[2rem] md:rounded-[2.5rem] p-6 md:p-10 transition-transform hover:-translate-y-1 duration-300 ${idx === 2 ? 'col-span-2 md:col-span-1' : 'col-span-1'}`}>
+                                <feature.icon className={`w-8 h-8 md:w-10 md:h-10 ${feature.iconColor} mb-4 md:mb-6`} strokeWidth={2.5} />
+                                <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3 md:mb-4 leading-tight">{feature.title}</h3>
+                                <p className="text-sm md:text-base text-gray-500 leading-relaxed">
                                     {feature.description}
                                 </p>
                             </div>
                         ))}
                     </div>
 
-                    {/* Bottom Row: 2 Cards */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {/* Bottom Row: 2 Cards (Mobile: 2) */}
+                    <div className="grid grid-cols-2 md:grid-cols-2 gap-2 md:gap-6">
                         {featuresBottom.map((feature, idx) => (
-                            <div key={idx} className={`${feature.bg} rounded-[2.5rem] p-8 md:p-10 transition-transform hover:-translate-y-1 duration-300`}>
-                                <feature.icon className={`w-10 h-10 ${feature.iconColor} mb-6`} strokeWidth={2.5} />
-                                <h3 className="text-2xl font-bold text-gray-900 mb-4">{feature.title}</h3>
-                                <p className="text-gray-500 leading-relaxed">
+                            <div key={idx} className={`${feature.bg} rounded-[2rem] md:rounded-[2.5rem] p-6 md:p-10 transition-transform hover:-translate-y-1 duration-300 col-span-1`}>
+                                <feature.icon className={`w-8 h-8 md:w-10 md:h-10 ${feature.iconColor} mb-4 md:mb-6`} strokeWidth={2.5} />
+                                <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3 md:mb-4 leading-tight">{feature.title}</h3>
+                                <p className="text-sm md:text-base text-gray-500 leading-relaxed">
                                     {feature.description}
                                 </p>
                             </div>

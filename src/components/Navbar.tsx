@@ -121,7 +121,7 @@ export function Navbar() {
     return (
         <nav className="w-full bg-white z-[102] relative flex flex-col font-sans">
             {/* Top Main Bar */}
-            <div className="w-full px-4 md:px-12 h-14 md:h-20 flex items-center justify-between relative">
+            <div className="w-full px-3 md:px-12 h-14 md:h-20 flex items-center justify-between relative">
 
                 {/* Left Side: Logo & Links */}
                 <div className="flex items-center gap-12">
