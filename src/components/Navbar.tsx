@@ -92,6 +92,30 @@ export function Navbar() {
         }
     }, [isMobileMenuOpen, isMobileProgramsOpen]);
 
+    // Close menu when clicking outside
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            const target = event.target as HTMLElement;
+            // Check if click is inside the mobile menu or the toggle button
+            const isMenuClick = target.closest('.mobile-menu-container') || target.closest('.mobile-menu-toggle');
+
+            if (isMobileMenuOpen && !isMenuClick) {
+                setIsMobileMenuOpen(false);
+            }
+
+            // Also close programs dropdown if clicked outside
+            const isProgramsClick = target.closest('.mobile-programs-container') || target.closest('.mobile-programs-toggle');
+            if (isMobileProgramsOpen && !isProgramsClick) {
+                setIsMobileProgramsOpen(false);
+            }
+        };
+
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, [isMobileMenuOpen, isMobileProgramsOpen]);
+
     const activePrograms = institutions.find(i => i.name === activeProgramTab)?.programs || [];
 
     return (
@@ -238,16 +262,16 @@ export function Navbar() {
                 <div className="flex lg:hidden items-center gap-3">
                     <button
                         onClick={() => setIsMobileProgramsOpen(!isMobileProgramsOpen)}
-                        className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-[#FF0031] text-[#FF0031] text-[10px] font-bold hover:bg-red-50 transition-colors"
+                        className="mobile-programs-toggle flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-[#FF0031] text-[#FF0031] text-[10px] font-bold hover:bg-red-50 transition-colors"
                     >
                         OUR PROGRAMS <ChevronDown className={`w-3 h-3 transition-transform duration-200 ${isMobileProgramsOpen ? 'rotate-180' : ''}`} />
                     </button>
 
                     <button
-                        onClick={() => setIsMobileMenuOpen(true)}
-                        className="p-2 rounded-full hover:bg-gray-100 text-gray-800"
+                        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                        className="mobile-menu-toggle p-2 rounded-full hover:bg-gray-100 text-gray-800"
                     >
-                        <Menu className="w-6 h-6" />
+                        {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
                     </button>
                 </div>
             </div>
@@ -260,7 +284,7 @@ export function Navbar() {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -10 }}
                         transition={{ duration: 0.2 }}
-                        className="absolute top-[calc(100%+8px)] left-0 w-full bg-white z-40 rounded-b-3xl rounded-t-lg shadow-[0_20px_60px_-15px_rgba(0,0,0,0.3)] flex flex-col lg:hidden border-t border-gray-100 overflow-hidden p-6"
+                        className="mobile-menu-container absolute top-[calc(100%+8px)] left-0 w-full bg-white z-40 rounded-b-3xl rounded-t-lg shadow-[0_20px_60px_-15px_rgba(0,0,0,0.3)] flex flex-col lg:hidden border-t border-gray-100 overflow-hidden p-6"
                     >
                         {/* Links Container */}
                         <div className="flex flex-col gap-2">
@@ -326,7 +350,7 @@ export function Navbar() {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -10 }}
                         transition={{ duration: 0.2 }}
-                        className="absolute top-[calc(100%+8px)] left-0 w-full bg-white z-40 rounded-b-3xl rounded-t-lg shadow-[0_20px_60px_-15px_rgba(0,0,0,0.3)] flex flex-col lg:hidden border-t border-gray-100 max-h-[85vh] overflow-hidden"
+                        className="mobile-programs-container absolute top-[calc(100%+8px)] left-0 w-full bg-white z-40 rounded-b-3xl rounded-t-lg shadow-[0_20px_60px_-15px_rgba(0,0,0,0.3)] flex flex-col lg:hidden border-t border-gray-100 max-h-[85vh] overflow-hidden"
                     >
                         {/* Content */}
                         <div className="flex flex-col h-full bg-white">

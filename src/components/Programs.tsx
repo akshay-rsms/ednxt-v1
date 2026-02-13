@@ -105,10 +105,10 @@ export function Programs() {
             <div className="flex overflow-x-auto md:grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 pb-8 md:pb-0 -mx-6 px-6 md:mx-0 md:px-0 snap-x snap-mandatory scrollbar-hide">
                 {courses.map((prog, idx) => (
                     // Card Container: Red border always, no shadow, tall enough for details
-                    <div key={idx} className="min-w-[85%] md:min-w-0 snap-center bg-white rounded-[20px] md:rounded-[32px] overflow-hidden group relative border border-[#FF0031] flex flex-col h-full min-h-[480px] md:min-h-[520px]">
+                    <div key={idx} className="min-w-[85%] md:min-w-0 snap-center bg-white rounded-[20px] md:rounded-[32px] overflow-hidden group relative border border-[#FF0031] flex flex-col h-full min-h-[500px]">
 
                         {/* Image */}
-                        <div className="h-48 md:h-56 overflow-hidden relative shrink-0">
+                        <div className="h-52 md:h-56 overflow-hidden relative shrink-0">
                             {/* No Badges Overlay */}
                             <img
                                 src={prog.image}
@@ -118,18 +118,18 @@ export function Programs() {
                         </div>
 
                         {/* Content */}
-                        <div className="p-5 md:p-8 flex flex-col flex-grow">
+                        <div className="p-6 md:p-8 flex flex-col flex-grow">
                             {/* University Name */}
                             <p className="text-xs md:text-sm font-semibold text-gray-500 mb-2">{prog.university}</p>
 
                             {/* Full Title */}
-                            <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 leading-tight">{prog.fullTitle}</h3>
+                            <h3 className="text-lg md:text-2xl font-bold text-gray-900 mb-3 md:mb-4 leading-tight line-clamp-2 md:line-clamp-none">{prog.fullTitle}</h3>
 
                             {/* Divider */}
                             <div className="bg-gray-100 h-px w-full my-4"></div>
 
                             {/* Details with SVGs (Students, Duration, etc.) */}
-                            <div className="space-y-4 mb-6">
+                            <div className="space-y-3 md:space-y-4 mb-4 md:mb-6">
                                 <div className="flex items-center gap-3">
                                     <img src="/students.svg" alt="Students" className="w-5 h-5 md:w-6 md:h-6" />
                                     <span className="text-sm md:text-base font-bold text-gray-800">{prog.students}</span>
