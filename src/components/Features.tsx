@@ -67,10 +67,12 @@ export function Features() {
                     {/* Top Row: 3 Cards (Mobile: 2-1) */}
                     <div className="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-6">
                         {features.map((feature, idx) => (
-                            <div key={idx} className={`${feature.bg} rounded-[2rem] md:rounded-[2.5rem] p-6 md:p-10 transition-transform hover:-translate-y-1 duration-300 ${idx === 2 ? 'col-span-2 md:col-span-1' : 'col-span-1'}`}>
-                                <feature.icon className={`w-8 h-8 md:w-10 md:h-10 ${feature.iconColor} mb-4 md:mb-6`} strokeWidth={2.5} />
-                                <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3 md:mb-4 leading-tight">{feature.title}</h3>
-                                <p className="text-sm md:text-base text-gray-500 leading-relaxed">
+                            <div key={idx} className={`${feature.bg} rounded-[2rem] md:rounded-[2.5rem] p-4 md:p-10 transition-transform hover:-translate-y-1 duration-300 ${idx === 2 ? 'col-span-2 md:col-span-1' : 'col-span-1'}`}>
+                                <div className="flex items-center gap-3 mb-2 md:block md:mb-0">
+                                    <feature.icon className={`w-6 h-6 md:w-10 md:h-10 ${feature.iconColor} md:mb-6 shrink-0`} strokeWidth={2.5} />
+                                    <h3 className="text-sm md:text-2xl font-bold text-gray-900 md:mb-4 leading-tight">{feature.title}</h3>
+                                </div>
+                                <p className="text-xs md:text-base text-gray-500 leading-relaxed">
                                     {feature.description}
                                 </p>
                             </div>
@@ -80,10 +82,12 @@ export function Features() {
                     {/* Bottom Row: 2 Cards (Mobile: 2) */}
                     <div className="grid grid-cols-2 md:grid-cols-2 gap-2 md:gap-6">
                         {featuresBottom.map((feature, idx) => (
-                            <div key={idx} className={`${feature.bg} rounded-[2rem] md:rounded-[2.5rem] p-6 md:p-10 transition-transform hover:-translate-y-1 duration-300 col-span-1`}>
-                                <feature.icon className={`w-8 h-8 md:w-10 md:h-10 ${feature.iconColor} mb-4 md:mb-6`} strokeWidth={2.5} />
-                                <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3 md:mb-4 leading-tight">{feature.title}</h3>
-                                <p className="text-sm md:text-base text-gray-500 leading-relaxed">
+                            <div key={idx} className={`${feature.bg} rounded-[2rem] md:rounded-[2.5rem] p-4 md:p-10 transition-transform hover:-translate-y-1 duration-300 col-span-1`}>
+                                <div className="flex items-center gap-3 mb-2 md:block md:mb-0">
+                                    <feature.icon className={`w-6 h-6 md:w-10 md:h-10 ${feature.iconColor} md:mb-6 shrink-0`} strokeWidth={2.5} />
+                                    <h3 className="text-sm md:text-2xl font-bold text-gray-900 md:mb-4 leading-tight">{feature.title}</h3>
+                                </div>
+                                <p className="text-xs md:text-base text-gray-500 leading-relaxed">
                                     {feature.description}
                                 </p>
                             </div>
