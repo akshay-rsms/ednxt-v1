@@ -118,7 +118,7 @@ export function Hero() {
     };
 
     return (
-        <section className="bg-black relative pt-2 md:pt-8 pb-8 md:pb-48 overflow-hidden min-h-[500px] md:min-h-[850px] flex flex-col items-center">
+        <section className="bg-black relative pt-10 md:pt-8 pb-8 md:pb-48 overflow-hidden min-h-[500px] md:min-h-[850px] flex flex-col items-center">
             {/* Radial Background Lines */}
             <div className="absolute inset-0 top-[-10%] flex items-center justify-center pointer-events-none">
                 <img src="/hero-circle.svg" alt="" className="w-[1000px] h-[1000px] opacity-20" />
@@ -128,21 +128,21 @@ export function Hero() {
             <div className="relative z-[101] flex flex-col items-center text-center max-w-5xl mx-auto px-4 -mt-4 mb-12">
                 {/* Trust Badge */}
                 <div className="flex flex-col items-center mb-6 md:mb-4 mt-6 md:mt-12">
-                    <img src="/india's-most.svg" alt="India's Most Trusted" className="h-12 md:h-16 w-auto" />
+                    <img src="/india's-most.svg" alt="India's Most Trusted" className="h-14 md:h-16 w-auto" />
                 </div>
 
                 {/* Heading */}
-                <h1 className="text-xl md:text-4xl lg:text-5xl font-bold text-white mb-6 md:mb-6 leading-tight tracking-tight">
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 md:mb-6 leading-tight tracking-tight">
                     Transform Your Future with <br />
                     AI Enhanced Education
                 </h1>
 
                 {/* Buttons */}
                 <div className="flex items-center gap-2 md:gap-4 mb-8">
-                    <button className="px-6 md:px-8 py-2.5 md:py-3 rounded-full bg-[#FF0031] text-white font-bold hover:bg-[#D9002A] transition-colors shadow-lg shadow-red-900/30 tracking-wide text-sm">
+                    <button className="px-6 md:px-8 py-3 md:py-3 rounded-full bg-[#FF0031] text-white font-bold hover:bg-[#D9002A] transition-colors shadow-lg shadow-red-900/30 tracking-wide text-base md:text-sm">
                         Enroll Now
                     </button>
-                    <button className="px-6 md:px-8 py-2.5 md:py-3 rounded-full border border-gray-600 text-white font-bold hover:border-white hover:bg-white/5 transition-colors tracking-wide text-sm">
+                    <button className="px-6 md:px-8 py-3 md:py-3 rounded-full border border-gray-600 text-white font-bold hover:border-white hover:bg-white/5 transition-colors tracking-wide text-base md:text-sm">
                         Talk to Counsellor
                     </button>
                 </div>
@@ -173,7 +173,7 @@ export function Hero() {
                             <div className="relative w-full md:w-auto md:min-w-[260px] flex-1">
                                 <button
                                     onClick={() => setOpenDropdown(openDropdown === 'program' ? null : 'program')}
-                                    className="w-full flex items-center justify-between bg-black/20 border border-white/5 rounded-lg md:rounded-full py-2 md:py-3.5 pl-2 md:pl-4 pr-2 md:pr-6 text-[10px] md:text-sm font-medium text-gray-200 focus:bg-black/40 focus:border-[#FF0031]/50 transition-all hover:bg-black/30"
+                                    className="w-full flex items-center justify-between bg-black/20 border border-white/5 rounded-lg md:rounded-2xl py-2.5 md:py-3.5 pl-3 md:pl-4 pr-3 md:pr-6 text-xs md:text-sm font-medium text-gray-200 focus:bg-black/40 focus:border-[#FF0031]/50 transition-all hover:bg-black/30"
                                 >
                                     <div className="flex items-center gap-3">
                                         <div className="hidden md:flex w-8 h-8 rounded-full bg-white/5 items-center justify-center shrink-0">
@@ -234,7 +234,7 @@ export function Hero() {
                             <div className="relative w-full md:w-auto md:min-w-[260px] flex-1">
                                 <button
                                     onClick={() => setOpenDropdown(openDropdown === 'university' ? null : 'university')}
-                                    className="w-full flex items-center justify-between bg-black/20 border border-white/5 rounded-lg md:rounded-full py-2 md:py-3.5 pl-2 md:pl-6 pr-2 md:pr-6 text-[10px] md:text-sm font-medium text-gray-200 focus:bg-black/40 focus:border-[#FF0031]/50 transition-all hover:bg-black/30"
+                                    className="w-full flex items-center justify-between bg-black/20 border border-white/5 rounded-lg md:rounded-2xl py-2.5 md:py-3.5 pl-3 md:pl-6 pr-3 md:pr-6 text-xs md:text-sm font-medium text-gray-200 focus:bg-black/40 focus:border-[#FF0031]/50 transition-all hover:bg-black/30"
                                 >
                                     <span className={`truncate ${selectedUniversity === "Select University" ? "text-gray-400" : "text-white"}`}>
                                         {selectedUniversity === "Select University" ? "University" : selectedUniversity}
@@ -288,9 +288,9 @@ export function Hero() {
                             {/* Search Button */}
                             <button
                                 onClick={handleSearch}
-                                className="w-auto md:w-auto px-3 md:px-8 py-2 md:py-3.5 rounded-lg md:rounded-full bg-gradient-to-br from-[#FF0031] to-[#FF4D6D] text-white font-bold text-[10px] md:text-sm shadow-lg shadow-red-900/20 hover:shadow-red-500/30 hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center gap-1 md:gap-2"
+                                className="w-auto md:w-auto px-4 md:px-8 py-2.5 md:py-3.5 rounded-lg md:rounded-full bg-gradient-to-br from-[#FF0031] to-[#FF4D6D] text-white font-bold text-xs md:text-sm shadow-lg shadow-red-900/20 hover:shadow-red-500/30 hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center gap-1.5 md:gap-2"
                             >
-                                <Search className="w-4 h-4" />
+                                <Search className="w-5 h-5 md:w-4 md:h-4" />
                                 <span className="hidden md:inline">Search</span>
                             </button>
                         </div>
@@ -306,7 +306,7 @@ export function Hero() {
                     <motion.div
                         className="flex flex-col gap-2"
                         animate={{ y: ["0%", "-50%"] }}
-                        transition={{ repeat: Infinity, duration: 40, ease: "linear" }}
+                        transition={{ repeat: Infinity, duration: 150, ease: "linear" }}
                     >
                         {[...images, ...images, ...images, ...images].map((img, i) => (
                             <div key={`col1-${i}`} className="w-full aspect-[3/4] rounded-xl overflow-hidden shadow-lg border border-white/10 bg-gray-900 shrink-0">
@@ -321,7 +321,7 @@ export function Hero() {
                     <motion.div
                         className="flex flex-col gap-2"
                         animate={{ y: ["-50%", "0%"] }}
-                        transition={{ repeat: Infinity, duration: 40, ease: "linear" }}
+                        transition={{ repeat: Infinity, duration: 150, ease: "linear" }}
                     >
                         {[...images, ...images, ...images, ...images].map((img, i) => (
                             <div key={`col2-${i}`} className="w-full aspect-[3/4] rounded-xl overflow-hidden shadow-lg border border-white/10 bg-gray-900 shrink-0">

@@ -84,13 +84,13 @@ export function Navbar() {
     return (
         <nav className="w-full bg-white z-[102] relative flex flex-col font-sans">
             {/* Top Main Bar */}
-            <div className="w-full px-8 md:px-12 h-20 flex items-center justify-between relative">
+            <div className="w-full px-4 md:px-12 h-14 md:h-20 flex items-center justify-between relative">
 
                 {/* Left Side: Logo & Links */}
                 <div className="flex items-center gap-12">
                     {/* Logo */}
                     <Link href="/" className="flex items-center">
-                        <img src="/logo.svg" alt="EdNxt.ai Logo" className="h-6 md:h-8 w-auto" />
+                        <img src="/logo.svg" alt="EdNxt.ai Logo" className="h-5 md:h-8 w-auto" />
                     </Link>
 
                     {/* Main Links */}
