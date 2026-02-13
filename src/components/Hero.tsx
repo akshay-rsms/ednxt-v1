@@ -118,7 +118,7 @@ export function Hero() {
     };
 
     return (
-        <section className="bg-black relative pt-8 pb-24 md:pb-48 overflow-hidden min-h-[600px] md:min-h-[850px] flex flex-col items-center">
+        <section className="bg-black relative pt-2 md:pt-8 pb-8 md:pb-48 overflow-hidden min-h-[500px] md:min-h-[850px] flex flex-col items-center">
             {/* Radial Background Lines */}
             <div className="absolute inset-0 top-[-10%] flex items-center justify-center pointer-events-none">
                 <img src="/hero-circle.svg" alt="" className="w-[1000px] h-[1000px] opacity-20" />
@@ -127,22 +127,22 @@ export function Hero() {
             {/* Main Content */}
             <div className="relative z-[101] flex flex-col items-center text-center max-w-5xl mx-auto px-4 -mt-4 mb-12">
                 {/* Trust Badge */}
-                <div className="flex flex-col items-center mb-4 mt-12">
-                    <img src="/india's-most.svg" alt="India's Most Trusted" className="h-16 w-auto" />
+                <div className="flex flex-col items-center mb-6 md:mb-4 mt-6 md:mt-12">
+                    <img src="/india's-most.svg" alt="India's Most Trusted" className="h-12 md:h-16 w-auto" />
                 </div>
 
                 {/* Heading */}
-                <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight tracking-tight">
+                <h1 className="text-xl md:text-4xl lg:text-5xl font-bold text-white mb-6 md:mb-6 leading-tight tracking-tight">
                     Transform Your Future with <br />
                     AI Enhanced Education
                 </h1>
 
                 {/* Buttons */}
-                <div className="flex items-center gap-4 mb-6">
-                    <button className="px-8 py-3 rounded-full bg-[#FF0031] text-white font-bold hover:bg-[#D9002A] transition-colors shadow-lg shadow-red-900/30 tracking-wide text-sm">
+                <div className="flex items-center gap-2 md:gap-4 mb-8">
+                    <button className="px-6 md:px-8 py-2.5 md:py-3 rounded-full bg-[#FF0031] text-white font-bold hover:bg-[#D9002A] transition-colors shadow-lg shadow-red-900/30 tracking-wide text-sm">
                         Enroll Now
                     </button>
-                    <button className="px-8 py-3 rounded-full border border-gray-600 text-white font-bold hover:border-white hover:bg-white/5 transition-colors tracking-wide text-sm">
+                    <button className="px-6 md:px-8 py-2.5 md:py-3 rounded-full border border-gray-600 text-white font-bold hover:border-white hover:bg-white/5 transition-colors tracking-wide text-sm">
                         Talk to Counsellor
                     </button>
                 </div>
@@ -154,13 +154,13 @@ export function Hero() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.2, duration: 0.6 }}
                     ref={searchBarRef}
-                    className="w-full max-w-6xl relative z-50 mb-12 mt-4 px-4"
+                    className="w-[calc(100%+2rem)] -mx-4 md:w-full md:mx-0 max-w-6xl relative z-50 mb-4 mt-2 px-0 md:px-4"
                 >
                     <div className="group relative w-full">
                         {/* Glow Effect */}
                         <div className="absolute -inset-0.5 bg-gradient-to-r from-transparent via-[#FF0031]/20 to-transparent rounded-full opacity-50 blur-lg group-hover:opacity-75 transition-opacity duration-500" />
 
-                        <div className="relative w-full bg-white/[0.08] backdrop-blur-xl border border-white/10 rounded-3xl md:rounded-full p-2 md:p-3 flex flex-col md:flex-row items-center gap-3 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] hover:border-[#FF0031]/30 hover:shadow-[0_0_20px_rgba(255,0,49,0.15)] transition-all duration-300">
+                        <div className="relative w-full bg-white/[0.08] backdrop-blur-xl border border-white/10 rounded-xl md:rounded-full p-1 md:p-3 flex flex-row items-center gap-1 md:gap-3 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] hover:border-[#FF0031]/30 hover:shadow-[0_0_20px_rgba(255,0,49,0.15)] transition-all duration-300">
 
                             {/* Label */}
                             <div className="hidden md:flex items-center pl-4 pr-2 border-r border-white/10 h-full">
@@ -173,14 +173,14 @@ export function Hero() {
                             <div className="relative w-full md:w-auto md:min-w-[260px] flex-1">
                                 <button
                                     onClick={() => setOpenDropdown(openDropdown === 'program' ? null : 'program')}
-                                    className="w-full flex items-center justify-between bg-black/20 border border-white/5 rounded-2xl md:rounded-full py-3 md:py-3.5 pl-4 pr-6 text-sm font-medium text-gray-200 focus:bg-black/40 focus:border-[#FF0031]/50 transition-all hover:bg-black/30"
+                                    className="w-full flex items-center justify-between bg-black/20 border border-white/5 rounded-lg md:rounded-full py-2 md:py-3.5 pl-2 md:pl-4 pr-2 md:pr-6 text-[10px] md:text-sm font-medium text-gray-200 focus:bg-black/40 focus:border-[#FF0031]/50 transition-all hover:bg-black/30"
                                 >
                                     <div className="flex items-center gap-3">
-                                        <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center shrink-0">
+                                        <div className="hidden md:flex w-8 h-8 rounded-full bg-white/5 items-center justify-center shrink-0">
                                             <Search className="w-4 h-4 text-[#FF0031]" />
                                         </div>
-                                        <span className={selectedProgram === "Select Program" ? "text-gray-400" : "text-white"}>
-                                            {selectedProgram}
+                                        <span className={`truncate ${selectedProgram === "Select Program" ? "text-gray-400" : "text-white"}`}>
+                                            {selectedProgram === "Select Program" ? "Program" : selectedProgram}
                                         </span>
                                     </div>
                                     <ChevronDown className={`w-4 h-4 text-gray-500 transition-transform duration-300 ${openDropdown === 'program' ? 'rotate-180' : ''}`} />
@@ -234,10 +234,10 @@ export function Hero() {
                             <div className="relative w-full md:w-auto md:min-w-[260px] flex-1">
                                 <button
                                     onClick={() => setOpenDropdown(openDropdown === 'university' ? null : 'university')}
-                                    className="w-full flex items-center justify-between bg-black/20 border border-white/5 rounded-2xl md:rounded-full py-3 md:py-3.5 pl-6 pr-6 text-sm font-medium text-gray-200 focus:bg-black/40 focus:border-[#FF0031]/50 transition-all hover:bg-black/30"
+                                    className="w-full flex items-center justify-between bg-black/20 border border-white/5 rounded-lg md:rounded-full py-2 md:py-3.5 pl-2 md:pl-6 pr-2 md:pr-6 text-[10px] md:text-sm font-medium text-gray-200 focus:bg-black/40 focus:border-[#FF0031]/50 transition-all hover:bg-black/30"
                                 >
-                                    <span className={selectedUniversity === "Select University" ? "text-gray-400" : "text-white"}>
-                                        {selectedUniversity}
+                                    <span className={`truncate ${selectedUniversity === "Select University" ? "text-gray-400" : "text-white"}`}>
+                                        {selectedUniversity === "Select University" ? "University" : selectedUniversity}
                                     </span>
                                     <ChevronDown className={`w-4 h-4 text-gray-500 transition-transform duration-300 ${openDropdown === 'university' ? 'rotate-180' : ''}`} />
                                 </button>
@@ -288,18 +288,52 @@ export function Hero() {
                             {/* Search Button */}
                             <button
                                 onClick={handleSearch}
-                                className="w-full md:w-auto px-8 py-3.5 rounded-2xl md:rounded-full bg-gradient-to-br from-[#FF0031] to-[#FF4D6D] text-white font-bold text-sm shadow-lg shadow-red-900/20 hover:shadow-red-500/30 hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center gap-2"
+                                className="w-auto md:w-auto px-3 md:px-8 py-2 md:py-3.5 rounded-lg md:rounded-full bg-gradient-to-br from-[#FF0031] to-[#FF4D6D] text-white font-bold text-[10px] md:text-sm shadow-lg shadow-red-900/20 hover:shadow-red-500/30 hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center gap-1 md:gap-2"
                             >
                                 <Search className="w-4 h-4" />
-                                <span>Search</span>
+                                <span className="hidden md:inline">Search</span>
                             </button>
                         </div>
                     </div>
                 </motion.div>
             </div>
 
-            {/* 3D Continuous Carousel Container */}
-            <div className="relative w-full max-w-[1200px] h-[500px] flex justify-center items-center perspective-1000">
+            {/* Mobile Carousel (2 Columns) */}
+            <div className="flex md:hidden w-full max-w-md mx-auto h-[500px] gap-2 px-2 mt-0 overflow-hidden relative">
+
+                {/* Column 1 - Upward */}
+                <div className="w-1/2 h-full overflow-hidden relative flex flex-col justify-start">
+                    <motion.div
+                        className="flex flex-col gap-2"
+                        animate={{ y: ["0%", "-50%"] }}
+                        transition={{ repeat: Infinity, duration: 40, ease: "linear" }}
+                    >
+                        {[...images, ...images, ...images, ...images].map((img, i) => (
+                            <div key={`col1-${i}`} className="w-full aspect-[3/4] rounded-xl overflow-hidden shadow-lg border border-white/10 bg-gray-900 shrink-0">
+                                <img src={img} alt={`Mobile Hero 1-${i}`} className="w-full h-full object-cover" />
+                            </div>
+                        ))}
+                    </motion.div>
+                </div>
+
+                {/* Column 2 - Downward */}
+                <div className="w-1/2 h-full overflow-hidden relative flex flex-col justify-start">
+                    <motion.div
+                        className="flex flex-col gap-2"
+                        animate={{ y: ["-50%", "0%"] }}
+                        transition={{ repeat: Infinity, duration: 40, ease: "linear" }}
+                    >
+                        {[...images, ...images, ...images, ...images].map((img, i) => (
+                            <div key={`col2-${i}`} className="w-full aspect-[3/4] rounded-xl overflow-hidden shadow-lg border border-white/10 bg-gray-900 shrink-0">
+                                <img src={img} alt={`Mobile Hero 2-${i}`} className="w-full h-full object-cover" />
+                            </div>
+                        ))}
+                    </motion.div>
+                </div>
+            </div>
+
+            {/* 3D Continuous Carousel Container (Desktop) */}
+            <div className="hidden md:flex relative w-full max-w-[1200px] h-[500px] justify-center items-center perspective-1000">
                 {displayImages.map((img, i) => {
                     const style = getImageStyle(i);
                     return (
