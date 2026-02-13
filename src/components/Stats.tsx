@@ -7,7 +7,7 @@ export function Stats() {
                 <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6">
 
                     {/* Card 1: Active Learners - Red Border */}
-                    <div className="w-full h-auto md:h-[129px] bg-white rounded-2xl md:rounded-[30px] p-2.5 md:p-8 border border-[#FFE7E7] flex flex-row items-center justify-between relative overflow-hidden group hover:border-[#FF0031] transition-colors duration-300">
+                    <div className="w-full h-auto md:h-[129px] bg-white rounded-2xl md:rounded-[30px] p-4 md:p-8 border border-[#FF0031] md:border-[#FFE7E7] flex flex-row items-center justify-between relative overflow-hidden group hover:border-[#FF0031] transition-colors duration-300">
                         <div className="relative z-10">
                             <h3 className="text-lg md:text-[38.04px] font-bold text-[#444444] leading-tight tracking-[-0.05em] font-sans mb-0 md:mb-1">50K+</h3>
                             <p className="text-[10px] md:text-[16.31px] font-normal text-[#727272] leading-tight tracking-[-0.05em] font-sans">Active Learners</p>
@@ -16,7 +16,7 @@ export function Stats() {
                     </div>
 
                     {/* Card 2: Courses - Light Border */}
-                    <div className="w-full h-auto md:h-[129px] bg-white rounded-2xl md:rounded-[30px] p-2.5 md:p-8 border border-[#FFE7E7] flex flex-row items-center justify-between relative overflow-hidden group hover:border-[#FF0031] transition-colors duration-300">
+                    <div className="w-full h-auto md:h-[129px] bg-white rounded-2xl md:rounded-[30px] p-4 md:p-8 border border-[#FF0031] md:border-[#FFE7E7] flex flex-row items-center justify-between relative overflow-hidden group hover:border-[#FF0031] transition-colors duration-300">
                         <div className="relative z-10">
                             <h3 className="text-lg md:text-[38.04px] font-bold text-[#444444] leading-tight tracking-[-0.05em] font-sans mb-0 md:mb-1">200+</h3>
                             <p className="text-[10px] md:text-[16.31px] font-normal text-[#727272] leading-tight tracking-[-0.05em] font-sans">Courses</p>
@@ -25,7 +25,7 @@ export function Stats() {
                     </div>
 
                     {/* Card 3: Success Rate - Graph Background */}
-                    <div className="w-full h-auto md:h-[129px] bg-white rounded-2xl md:rounded-[30px] p-2.5 md:p-8 border border-[#FFE7E7] flex flex-row items-center justify-between relative overflow-hidden group hover:border-[#FF0031] transition-colors duration-300">
+                    <div className="w-full h-auto md:h-[129px] bg-white rounded-2xl md:rounded-[30px] p-4 md:p-8 border border-[#FF0031] md:border-[#FFE7E7] flex flex-row items-center justify-between relative overflow-hidden group hover:border-[#FF0031] transition-colors duration-300">
                         <div className="relative z-10">
                             <h3 className="text-lg md:text-[38.04px] font-bold text-[#444444] leading-tight tracking-[-0.05em] font-sans mb-0 md:mb-1">95%</h3>
                             <p className="text-[10px] md:text-[16.31px] font-normal text-[#727272] leading-tight tracking-[-0.05em] font-sans">Success Rate</p>
@@ -34,7 +34,7 @@ export function Stats() {
                     </div>
 
                     {/* Card 4: UGC - Badge */}
-                    <div className="w-full h-auto md:h-[129px] bg-white rounded-2xl md:rounded-[30px] p-2.5 md:p-8 border border-[#FFE7E7] flex flex-row items-center justify-between relative overflow-hidden group hover:border-[#FF0031] transition-colors duration-300">
+                    <div className="w-full h-auto md:h-[129px] bg-white rounded-2xl md:rounded-[30px] p-4 md:p-8 border border-[#FF0031] md:border-[#FFE7E7] flex flex-row items-center justify-between relative overflow-hidden group hover:border-[#FF0031] transition-colors duration-300">
                         <div>
                             <h3 className="text-lg md:text-[38.04px] font-bold text-[#444444] leading-tight tracking-[-0.05em] font-sans mb-0">UGC</h3>
                             <p className="text-[10px] md:text-[16.31px] font-normal text-[#727272] leading-tight tracking-[-0.05em] font-sans">Entitled Body</p>
