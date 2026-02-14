@@ -303,8 +303,8 @@ export function MentorsCarousel() {
                 onMouseLeave={() => setIsPaused(false)}
             >
                 {/* Gradient Masks for Premium Feel */}
-                <div className="absolute top-0 left-0 h-full w-24 bg-gradient-to-r from-gray-50 to-transparent z-10 pointer-events-none" />
-                <div className="absolute top-0 right-0 h-full w-24 bg-gradient-to-l from-gray-50 to-transparent z-10 pointer-events-none" />
+                <div className="hidden md:block absolute top-0 left-0 h-full w-24 bg-gradient-to-r from-gray-50 to-transparent z-10 pointer-events-none" />
+                <div className="hidden md:block absolute top-0 right-0 h-full w-24 bg-gradient-to-l from-gray-50 to-transparent z-10 pointer-events-none" />
 
                 {/* The Marquee */}
                 <ParallaxText baseVelocity={velocity} isPaused={isPaused}>

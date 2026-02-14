@@ -63,8 +63,7 @@ const Card: React.FC<CardProps> = ({ i, leader, progress, range, targetScale }) 
                             <img
                                 src={leader.image}
                                 alt={leader.name}
-                                className="w-[80%] h-auto object-cover filter grayscale"
-                                style={{ maskImage: 'linear-gradient(to bottom, black 80%, transparent 100%)' }}
+                                className="w-[80%] h-auto object-cover"
                             />
                         </div>
                     </div>
