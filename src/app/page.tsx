@@ -15,7 +15,9 @@ import { Footer } from "@/components/Footer";
 export default function Home() {
   return (
     <main className="min-h-screen font-sans bg-white">
-      <Navbar />
+      <div className="sticky top-0 z-[1000]">
+        <Navbar />
+      </div>
       <Hero />
       <Stats />
       <Programs />
