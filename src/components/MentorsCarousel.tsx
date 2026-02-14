@@ -130,7 +130,7 @@ const ProfileCard = ({ profile }: { profile: Profile }) => {
 
     return (
         <motion.div
-            className="relative w-[280px] md:w-[320px] h-[420px] rounded-2xl overflow-hidden cursor-pointer bg-white shadow-lg mx-4 flex-shrink-0 border border-gray-100 group"
+            className="relative w-[260px] md:w-[320px] h-[350px] md:h-[420px] rounded-2xl overflow-hidden cursor-pointer bg-white shadow-lg mx-4 flex-shrink-0 border border-gray-100 group"
             onHoverStart={() => setIsHovered(true)}
             onHoverEnd={() => setIsHovered(false)}
             initial={{ y: 0 }}
@@ -270,7 +270,7 @@ export function MentorsCarousel() {
 
     return (
         <section id="mentors" className="py-24 bg-gray-50 overflow-hidden relative">
-            <div className="max-w-7xl mx-auto px-8 md:px-12 mb-12 flex items-end justify-between">
+            <div className="max-w-7xl mx-auto px-4 md:px-12 mb-12 flex items-end justify-between">
                 <div>
                     <h2 className="text-3xl md:text-5xl font-extrabold text-gray-900 mb-4">
                         Mentors from Top <span className="text-[#FF0031]">AI Companies</span>

@@ -15,14 +15,14 @@ export function Capstone() {
     }
 
     return (
-        <section className="pb-24 pt-4 px-4 flex justify-center bg-white perspective-[1000px]">
+        <section className="pb-12 md:pb-24 pt-4 px-2 md:px-4 flex justify-center bg-white perspective-[1000px]">
             <motion.div
                 onMouseMove={handleMouseMove}
                 initial={{ opacity: 0, y: 40, scale: 0.95 }}
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                className="group relative w-[95%] max-w-[1800px] h-[500px] md:h-[600px] rounded-[48px] overflow-hidden bg-black border border-white/5 shadow-2xl hover:scale-[1.01] transition-transform duration-700 ease-out"
+                className="group relative w-[98%] md:w-[95%] max-w-[1800px] h-[400px] md:h-[600px] rounded-[32px] md:rounded-[48px] overflow-hidden bg-black border border-white/5 shadow-2xl hover:scale-[1.01] transition-transform duration-700 ease-out"
             >
                 {/* --- LAYER 1: Deep Base Gradient --- */}
                 <div className="absolute inset-0 bg-gradient-to-b from-black via-[#050001] to-[#1a0003]" />

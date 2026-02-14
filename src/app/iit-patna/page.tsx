@@ -323,7 +323,7 @@ export default function IITPatnaPage() {
             </div>
 
             {/* Hero Section */}
-            <section id="overview" className="relative min-h-[75vh] flex items-center pt-32 pb-24 px-4 md:px-12 bg-[#0a0a0a] text-white overflow-hidden">
+            <section id="overview" className="relative min-h-[75vh] flex items-center pt-32 pb-24 px-2 md:px-12 bg-[#0a0a0a] text-white overflow-hidden">
                 <div className="absolute inset-0 z-0">
                     <img
                         src="/iitpatnacampus.png"
@@ -334,7 +334,7 @@ export default function IITPatnaPage() {
                 </div>
 
 
-                <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center -mt-20">
+                <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-center -mt-20">
                     <div className="space-y-8 md:pl-12">
                         <div className="flex items-center justify-start w-full gap-4 md:gap-8">
                             <div className="w-24 h-24 md:w-32 md:h-32 bg-white rounded-full flex items-center justify-center p-2 shadow-lg shadow-white/10">
@@ -370,7 +370,7 @@ export default function IITPatnaPage() {
                     </div>
 
                     {/* Program Snapshot Card */}
-                    <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 shadow-2xl relative group hover:border-[#FF0031]/30 transition-colors duration-500">
+                    <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-4 md:p-8 shadow-2xl relative group hover:border-[#FF0031]/30 transition-colors duration-500">
                         <div className="absolute top-4 right-4 bg-yellow-300 text-black text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
                             Enrollment Open
                         </div>
@@ -425,7 +425,7 @@ export default function IITPatnaPage() {
 
             {/* Stats Strip */}
             <div className="bg-[#FF0031] text-white py-8">
-                <div className="max-w-7xl mx-auto px-4 md:px-12 flex flex-wrap justify-between items-center gap-8">
+                <div className="max-w-7xl mx-auto px-2 md:px-12 flex flex-wrap justify-between items-center gap-8">
                     <div className="text-center md:text-left">
                         <p className="text-3xl font-extrabold">100%</p>
                         <p className="text-sm font-medium opacity-80 uppercase tracking-wider">Hands-on Projects</p>
@@ -456,7 +456,7 @@ export default function IITPatnaPage() {
 
 
             {/* Comparison Section */}
-            <section id="comparison" className="py-24 px-4 md:px-12 bg-gray-50/50">
+            <section id="comparison" className="py-24 px-2 md:px-12 bg-gray-50/50">
                 <div className="max-w-6xl mx-auto">
                     <div className="text-center mb-16">
                         <span className="text-[#FF0031] font-bold tracking-wider uppercase text-sm mb-2 block">Why This Program?</span>
@@ -486,7 +486,7 @@ export default function IITPatnaPage() {
                                 <p className="text-white/80 text-sm mt-1">For Builders & Engineers</p>
                             </div>
 
-                            <div className="p-8 space-y-6">
+                            <div className="p-4 md:p-8 space-y-4 md:space-y-6">
                                 {[
                                     { label: "Core Philosophy", text: "Building Autonomous Agents & Systems", active: true },
                                     { label: "Curriculum Depth", text: "Agentic Workflows, MCP, Multi-Agent Orchestration", active: true },
@@ -510,7 +510,7 @@ export default function IITPatnaPage() {
                         </div>
 
                         {/* Traditional Column (Loser) */}
-                        <div className="bg-white rounded-3xl border border-gray-200  lg:  p-8 pt-20 lg:pt-8 opacity-80 hover:opacity-100 transition-opacity">
+                        <div className="bg-white rounded-3xl border border-gray-200  lg:  p-4 pt-16 md:p-8 md:pt-20 lg:pt-8 opacity-80 hover:opacity-100 transition-opacity">
                             <div className="text-center mb-8 border-b border-gray-100 pb-2">
                                 <div className="inline-flex justify-center items-center w-12 h-12 bg-gray-100 rounded-full mb-3">
                                     <BookOpen className="w-6 h-6 text-gray-500" />
@@ -546,7 +546,7 @@ export default function IITPatnaPage() {
             </section>
 
             {/* Detailed Curriculum Section - Accordion */}
-            <section id="curriculum" className="py-24 px-4 md:px-12 bg-white">
+            <section id="curriculum" className="py-24 px-2 md:px-12 bg-white">
                 <div className="max-w-5xl mx-auto">
                     <div className="text-center mb-16">
                         <span className="text-[#FF0031] font-bold tracking-wider uppercase text-sm mb-2 block">Syllabus</span>
@@ -572,7 +572,7 @@ export default function IITPatnaPage() {
                                 >
                                     <button
                                         onClick={() => !isLocked && setActiveModule(activeModule === idx ? null : idx)}
-                                        className={`w-full flex items-center justify-between p-6 md:p-8 text-left focus:outline-none ${isLocked ? 'cursor-default' : ''}`}
+                                        className={`w-full flex items-center justify-between p-4 md:p-8 text-left focus:outline-none ${isLocked ? 'cursor-default' : ''}`}
                                         disabled={isLocked}
                                     >
                                         <div className="flex items-center gap-6 flex-1">
@@ -610,7 +610,7 @@ export default function IITPatnaPage() {
 
                                     {!isLocked && (
                                         <div className={`overflow-hidden transition-all duration-500 ease-in-out ${activeModule === idx ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"}`}>
-                                            <div className="p-8 pt-0 border-t border-gray-100/50">
+                                            <div className="p-4 md:p-8 pt-0 border-t border-gray-100/50">
                                                 <p className="text-gray-600 mb-6 italic border-l-4 border-red-100 pl-4 py-1">{mod.desc}</p>
                                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3">
                                                     {mod.topics.map((topic, i) => (
@@ -661,7 +661,7 @@ export default function IITPatnaPage() {
             <Capstone />
 
             {/* Certification Section */}
-            <section id="certificate" className="py-24 px-4 md:px-12 bg-gray-50">
+            <section id="certificate" className="py-24 px-2 md:px-12 bg-gray-50">
                 <div className="max-w-4xl mx-auto text-center">
                     <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-12">
                         Official <span className="text-[#FF0031]">IIT Patna</span> certification <br className="hidden md:block" />
@@ -678,13 +678,13 @@ export default function IITPatnaPage() {
             </section>
 
             {/* Final CTA / Fees */}
-            <section id="fees" className="py-24 px-4 md:px-12 bg-gradient-to-br from-gray-900 to-black text-white overflow-hidden relative">
+            <section id="fees" className="py-24 px-2 md:px-12 bg-gradient-to-br from-gray-900 to-black text-white overflow-hidden relative">
                 <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#FF0031] rounded-full blur-[150px] opacity-20 -translate-y-1/2 translate-x-1/2"></div>
                 <div className="relative z-10 max-w-5xl mx-auto text-center">
                     <h2 className="text-4xl md:text-6xl font-extrabold mb-8">Secure Your Spot</h2>
 
                     <div className="flex flex-col md:flex-row justify-center items-stretch gap-8 mb-12">
-                        <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/10 flex-1 relative overflow-hidden">
+                        <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 md:p-8 border border-white/10 flex-1 relative overflow-hidden">
                             <div className="absolute top-0 left-0 w-full h-1 bg-[#FF0031]"></div>
                             <p className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-4">Current Batch</p>
                             <p className="text-5xl font-extrabold text-white mb-2">₹ 99,999</p>
@@ -693,7 +693,7 @@ export default function IITPatnaPage() {
                                 Apply Now
                             </button>
                         </div>
-                        <div className="bg-transparent rounded-2xl p-8 border border-white/10 flex-1 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+                        <div className="bg-transparent rounded-2xl p-4 md:p-8 border border-white/10 flex-1 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
                             <p className="text-sm font-bold text-gray-500 uppercase tracking-widest mb-4">Next Batch</p>
                             <p className="text-4xl font-extrabold text-gray-400 mb-2">₹ 1,34,999</p>
                             <p className="text-sm text-gray-500 mb-8">Starting soon</p>
@@ -714,7 +714,7 @@ export default function IITPatnaPage() {
 
 
             {/* FAQ Section */}
-            <section id="faq" className="py-24 px-4 md:px-12 bg-gray-50">
+            <section id="faq" className="py-24 px-2 md:px-12 bg-gray-50">
                 <div className="max-w-4xl mx-auto">
                     <div className="text-center mb-16">
                         <span className="text-[#FF0031] font-bold tracking-wider uppercase text-sm mb-2 block">FAQ</span>
@@ -758,13 +758,13 @@ export default function IITPatnaPage() {
                         ].map((faq, i) => (
                             <div key={i} className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:border-[#FF0031]/50 transition-colors">
                                 <details className="group">
-                                    <summary className="flex justify-between items-center font-bold cursor-pointer list-none p-6 text-lg text-gray-900">
+                                    <summary className="flex justify-between items-center font-bold cursor-pointer list-none p-4 md:p-6 text-lg text-gray-900">
                                         <span>{faq.q}</span>
                                         <span className="transition group-open:rotate-180">
                                             <ChevronDown className="w-5 h-5 text-[#FF0031]" />
                                         </span>
                                     </summary>
-                                    <div className="text-gray-600 px-6 pb-6 leading-relaxed animate-in slide-in-from-top-2">
+                                    <div className="text-gray-600 px-4 md:px-6 pb-4 md:pb-6 leading-relaxed animate-in slide-in-from-top-2">
                                         {faq.a}
                                     </div>
                                 </details>
