@@ -349,7 +349,7 @@ export default function IITPatnaPage() {
             </div>
 
             {/* Hero Section */}
-            <section id="overview" className="relative min-h-[60vh] md:min-h-[75vh] flex items-center pt-24 pb-8 md:pt-32 md:pb-24 px-2 md:px-12 bg-[#0a0a0a] text-white overflow-hidden">
+            <section id="overview" className="relative min-h-[60vh] md:min-h-[75vh] flex items-center pt-12 pb-8 md:pt-32 md:pb-24 px-2 md:px-12 bg-[#0a0a0a] text-white overflow-hidden">
                 <div className="absolute inset-0 z-0">
                     <img
                         src="/iitpatnacampus.png"
@@ -392,7 +392,7 @@ export default function IITPatnaPage() {
 
                         {/* Buttons in single row for mobile */}
                         <div className="flex flex-row items-center gap-4 pt-4">
-                            <button className="flex-1 px-4 py-3 md:px-8 md:py-4 rounded-full bg-white/5 border border-white/10 text-white font-bold text-sm md:text-lg hover:bg-white/10 transition-colors backdrop-blur-sm flex items-center justify-center gap-2">
+                            <button className="flex-1 px-4 py-3 md:px-8 md:py-4 rounded-full bg-white border border-white text-black font-bold text-sm md:text-lg hover:bg-gray-200 transition-colors backdrop-blur-sm flex items-center justify-center gap-2">
                                 <Download className="w-4 h-4 md:w-5 md:h-5" /> Brochure
                             </button>
                             <button className="flex-1 px-4 py-3 md:px-8 md:py-4 rounded-full bg-[#FF0031] text-white font-bold text-sm md:text-lg hover:bg-[#D9002A] transition-all shadow-[0_0_30px_rgba(255,0,49,0.3)] hover:shadow-[0_0_50px_rgba(255,0,49,0.5)] flex items-center justify-center gap-2">
