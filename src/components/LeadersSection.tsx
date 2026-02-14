@@ -23,41 +23,50 @@ const Card: React.FC<CardProps> = ({ i, leader, progress, range, targetScale }) 
     const scale = useTransform(progress, range, [1, targetScale]);
 
     return (
-        <div ref={container} className="h-[75vh] flex items-start justify-center sticky top-0 pt-16 sm:pt-24">
+        <div ref={container} className="h-auto md:h-[75vh] flex items-start justify-center sticky top-0 pt-4 md:pt-16 sm:pt-24 mb-6 md:mb-0">
             <motion.div
                 style={{
-                    scale,
-                    backgroundColor: i % 2 === 0 ? "#ffffff" : "#fdfdfd", // Slight variation
-                    top: `calc(-5vh + ${i * 25}px)`
+                    scale, // Always pass scale, control effect via layout or separate mobile logic if needed
+                    backgroundColor: "#ffffff",
+                    top: `calc(-5vh + ${i * 25}px)` // Keep the top calculation, on mobile sticky might be different so we need to validte
                 }}
-                className="flex flex-col relative h-[450px] w-full md:w-[1000px] rounded-3xl p-10 border border-gray-200 shadow-xl transform origin-top hover:shadow-2xl hover:border-[#FF0031]/20 transition-all duration-500 group"
+                className="flex flex-col relative h-[500px] md:h-[450px] w-full md:w-[1000px] rounded-3xl border border-gray-200 shadow-xl overflow-hidden transform origin-top hover:shadow-2xl transition-all duration-500 group md:top-[calc(-5vh+var(--offset))] top-0"
             >
-                <div className="flex h-full gap-10 flex-col md:flex-row">
-                    {/* Left Content */}
-                    <div className="md:w-[60%] flex flex-col justify-center relative z-10">
-                        <svg className="w-12 h-12 text-[#FF0031] opacity-20 mb-6" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V11C14.017 11.5523 13.5693 12 13.017 12H12.017V5H22.017V15C22.017 18.3137 19.3307 21 16.017 21H14.017ZM5.0166 21L5.0166 18C5.0166 16.8954 5.91203 16 7.0166 16H10.0166C10.5689 16 11.0166 15.5523 11.0166 15V9C11.0166 8.44772 10.5689 8 10.0166 8H6.0166C5.46432 8 5.0166 8.44772 5.0166 9V11C5.0166 11.5523 4.56889 12 4.0166 12H3.0166V5H13.0166V15C13.0166 18.3137 10.3303 21 7.0166 21H5.0166Z" />
-                        </svg>
-                        <h3 className="text-2xl md:text-3xl font-medium text-gray-800 leading-snug mb-8">
+                <div className="flex h-full gap-6 md:gap-10 flex-col md:flex-row p-8 md:p-10 pb-0 md:pb-10">
+                    {/* Content Section */}
+                    <div className="md:w-[60%] flex flex-col relative z-10">
+                        {/* Quote - Mobile: Top */}
+                        <h3 className="text-xl md:text-3xl font-medium text-gray-800 leading-snug mb-6 md:mb-8 font-serif italic md:not-italic md:font-sans">
                             "{leader.quote}"
                         </h3>
 
-                        <div className="flex flex-col">
-                            <span className="text-xl font-bold text-gray-900">{leader.name}</span>
+                        {/* Name & Role - Mobile: Below Quote */}
+                        <div className="flex flex-col mb-6 md:mb-0">
+                            <span className="text-2xl md:text-xl font-bold text-gray-900">{leader.name}</span>
                             <span className="text-sm text-gray-500 font-medium uppercase tracking-wider mt-1">{leader.role}</span>
                         </div>
                     </div>
 
-                    {/* Right Image */}
-                    <div className="md:w-[40%] h-full relative rounded-2xl overflow-hidden bg-gray-100 group-hover:scale-[1.02] transition-transform duration-500">
-                        <motion.div style={{ scale: imageScale }} className="w-full h-full">
-                            {/* Using img tag directly as requested for simplicity with provided paths, though Next/Image is better generally - sticking to standard img for these specific paths to avoid configuration overhead if verify fails */}
+                    {/* Image Section - Mobile: Bottom, Cutoff */}
+                    <div className="md:w-[40%] h-full relative rounded-2xl md:bg-gray-100 overflow-hidden mt-auto md:mt-0">
+                        {/* Desktop Image View */}
+                        <motion.div style={{ scale: imageScale }} className="hidden md:block w-full h-full">
                             <img
                                 src={leader.image}
                                 alt={leader.name}
                                 className="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500"
                             />
                         </motion.div>
+
+                        {/* Mobile Image View - Bottom Aligned, Cutoff */}
+                        <div className="md:hidden w-full h-full flex items-end justify-center">
+                            <img
+                                src={leader.image}
+                                alt={leader.name}
+                                className="w-[80%] h-auto object-cover filter grayscale"
+                                style={{ maskImage: 'linear-gradient(to bottom, black 80%, transparent 100%)' }}
+                            />
+                        </div>
                     </div>
                 </div>
             </motion.div>

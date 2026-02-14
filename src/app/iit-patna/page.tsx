@@ -323,7 +323,7 @@ export default function IITPatnaPage() {
             </div>
 
             {/* Hero Section */}
-            <section id="overview" className="relative min-h-[75vh] flex items-center pt-16 pb-24 px-8 md:px-12 bg-[#0a0a0a] text-white overflow-hidden">
+            <section id="overview" className="relative min-h-[75vh] flex items-center pt-32 pb-24 px-4 md:px-12 bg-[#0a0a0a] text-white overflow-hidden">
                 <div className="absolute inset-0 z-0">
                     <img
                         src="/iitpatnacampus.png"
@@ -425,7 +425,7 @@ export default function IITPatnaPage() {
 
             {/* Stats Strip */}
             <div className="bg-[#FF0031] text-white py-8">
-                <div className="max-w-7xl mx-auto px-8 md:px-12 flex flex-wrap justify-between items-center gap-8">
+                <div className="max-w-7xl mx-auto px-4 md:px-12 flex flex-wrap justify-between items-center gap-8">
                     <div className="text-center md:text-left">
                         <p className="text-3xl font-extrabold">100%</p>
                         <p className="text-sm font-medium opacity-80 uppercase tracking-wider">Hands-on Projects</p>
@@ -456,7 +456,7 @@ export default function IITPatnaPage() {
 
 
             {/* Comparison Section */}
-            <section id="comparison" className="py-24 px-8 md:px-12 bg-gray-50/50">
+            <section id="comparison" className="py-24 px-4 md:px-12 bg-gray-50/50">
                 <div className="max-w-6xl mx-auto">
                     <div className="text-center mb-16">
                         <span className="text-[#FF0031] font-bold tracking-wider uppercase text-sm mb-2 block">Why This Program?</span>
@@ -546,7 +546,7 @@ export default function IITPatnaPage() {
             </section>
 
             {/* Detailed Curriculum Section - Accordion */}
-            <section id="curriculum" className="py-24 px-8 md:px-12 bg-white">
+            <section id="curriculum" className="py-24 px-4 md:px-12 bg-white">
                 <div className="max-w-5xl mx-auto">
                     <div className="text-center mb-16">
                         <span className="text-[#FF0031] font-bold tracking-wider uppercase text-sm mb-2 block">Syllabus</span>
@@ -564,10 +564,10 @@ export default function IITPatnaPage() {
                                 <div
                                     key={idx}
                                     className={`border rounded-2xl transition-all duration-300 overflow-hidden ${isLocked
-                                            ? "border-gray-200 bg-white"
-                                            : activeModule === idx
-                                                ? "border-[#FF0031] shadow-xl shadow-red-500/10 bg-white"
-                                                : "border-gray-100 bg-gray-50 hover:border-gray-300"
+                                        ? "border-gray-200 bg-white"
+                                        : activeModule === idx
+                                            ? "border-[#FF0031] shadow-xl shadow-red-500/10 bg-white"
+                                            : "border-gray-100 bg-gray-50 hover:border-gray-300"
                                         }`}
                                 >
                                     <button
@@ -577,19 +577,19 @@ export default function IITPatnaPage() {
                                     >
                                         <div className="flex items-center gap-6 flex-1">
                                             <div className={`w-12 h-12 rounded-xl flex items-center justify-center text-xl font-bold shrink-0 transition-colors ${isLocked
-                                                    ? "bg-gray-100 border border-gray-200 text-gray-300"
-                                                    : activeModule === idx
-                                                        ? "bg-[#FF0031] text-white"
-                                                        : "bg-white border border-gray-200 text-gray-500"
+                                                ? "bg-gray-100 border border-gray-200 text-gray-300"
+                                                : activeModule === idx
+                                                    ? "bg-[#FF0031] text-white"
+                                                    : "bg-white border border-gray-200 text-gray-500"
                                                 }`}>
                                                 {idx + 1}
                                             </div>
                                             <div className="flex-1">
                                                 <h3 className={`text-xl font-bold ${isLocked
-                                                        ? "text-gray-300"
-                                                        : activeModule === idx
-                                                            ? "text-gray-900"
-                                                            : "text-gray-600"
+                                                    ? "text-gray-300"
+                                                    : activeModule === idx
+                                                        ? "text-gray-900"
+                                                        : "text-gray-600"
                                                     }`}>
                                                     {mod.title}
                                                 </h3>
@@ -661,7 +661,7 @@ export default function IITPatnaPage() {
             <Capstone />
 
             {/* Certification Section */}
-            <section id="certificate" className="py-24 px-8 md:px-12 bg-gray-50">
+            <section id="certificate" className="py-24 px-4 md:px-12 bg-gray-50">
                 <div className="max-w-4xl mx-auto text-center">
                     <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-12">
                         Official <span className="text-[#FF0031]">IIT Patna</span> certification <br className="hidden md:block" />
@@ -678,7 +678,7 @@ export default function IITPatnaPage() {
             </section>
 
             {/* Final CTA / Fees */}
-            <section id="fees" className="py-24 px-8 md:px-12 bg-gradient-to-br from-gray-900 to-black text-white overflow-hidden relative">
+            <section id="fees" className="py-24 px-4 md:px-12 bg-gradient-to-br from-gray-900 to-black text-white overflow-hidden relative">
                 <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#FF0031] rounded-full blur-[150px] opacity-20 -translate-y-1/2 translate-x-1/2"></div>
                 <div className="relative z-10 max-w-5xl mx-auto text-center">
                     <h2 className="text-4xl md:text-6xl font-extrabold mb-8">Secure Your Spot</h2>
@@ -714,7 +714,7 @@ export default function IITPatnaPage() {
 
 
             {/* FAQ Section */}
-            <section id="faq" className="py-24 px-8 md:px-12 bg-gray-50">
+            <section id="faq" className="py-24 px-4 md:px-12 bg-gray-50">
                 <div className="max-w-4xl mx-auto">
                     <div className="text-center mb-16">
                         <span className="text-[#FF0031] font-bold tracking-wider uppercase text-sm mb-2 block">FAQ</span>

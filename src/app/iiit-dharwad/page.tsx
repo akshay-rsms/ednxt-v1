@@ -155,7 +155,7 @@ export default function IIITDharwadPage() {
             </div>
 
             {/* Hero Section */}
-            <section id="overview" className="relative min-h-[75vh] flex items-center pt-16 pb-24 px-8 md:px-12 bg-[#0a0a0a] text-white overflow-hidden">
+            <section id="overview" className="relative min-h-[75vh] flex items-center pt-32 pb-24 px-4 md:px-12 bg-[#0a0a0a] text-white overflow-hidden">
                 <div className="absolute inset-0 z-0">
                     <img
                         src="/iiit-dharwad-campus.png"
@@ -251,7 +251,7 @@ export default function IIITDharwadPage() {
 
             {/* Stats Strip */}
             <div className="bg-[#FF0031] text-white py-8">
-                <div className="max-w-7xl mx-auto px-8 md:px-12 flex flex-wrap justify-between items-center gap-8">
+                <div className="max-w-7xl mx-auto px-4 md:px-12 flex flex-wrap justify-between items-center gap-8">
                     <div className="text-center md:text-left">
                         <p className="text-3xl font-extrabold">Institute</p>
                         <p className="text-sm font-medium opacity-80 uppercase tracking-wider">of National Importance</p>
@@ -278,7 +278,7 @@ export default function IIITDharwadPage() {
             <InstituteInfoIIITDharwad />
 
             {/* Comparison Section */}
-            <section id="comparison" className="py-24 px-8 md:px-12 bg-gray-50/50">
+            <section id="comparison" className="py-24 px-4 md:px-12 bg-gray-50/50">
                 <div className="max-w-6xl mx-auto">
                     <div className="text-center mb-16">
                         <span className="text-[#FF0031] font-bold tracking-wider uppercase text-sm mb-2 block">Why This Program?</span>
@@ -364,7 +364,7 @@ export default function IIITDharwadPage() {
             </section>
 
             {/* Detailed Curriculum Section - Accordion */}
-            <section id="curriculum" className="py-24 px-8 md:px-12 bg-white">
+            <section id="curriculum" className="py-24 px-4 md:px-12 bg-white">
                 <div className="max-w-5xl mx-auto">
                     <div className="text-center mb-16">
                         <span className="text-[#FF0031] font-bold tracking-wider uppercase text-sm mb-2 block">Syllabus</span>
@@ -429,7 +429,7 @@ export default function IIITDharwadPage() {
             </section>
 
             {/* Faculty Section - Grid Layout */}
-            <section id="faculty" className="py-24 px-8 md:px-12 bg-gray-50">
+            <section id="faculty" className="py-24 px-4 md:px-12 bg-gray-50">
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-16">
                         <span className="text-[#FF0031] font-bold tracking-wider uppercase text-sm mb-2 block">Mentors</span>
@@ -455,7 +455,7 @@ export default function IIITDharwadPage() {
             </section>
 
             {/* Certification Section */}
-            <section id="certificate" className="py-24 px-8 md:px-12 bg-white">
+            <section id="certificate" className="py-24 px-4 md:px-12 bg-white">
                 <div className="max-w-4xl mx-auto text-center">
                     <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6">
                         Official <span className="text-[#FF0031]">IIIT Dharwad</span> M.Tech Degree
@@ -475,7 +475,7 @@ export default function IIITDharwadPage() {
             </section>
 
             {/* Final CTA / Fees */}
-            <section id="fees" className="py-24 px-8 md:px-12 bg-gradient-to-br from-gray-900 to-black text-white overflow-hidden relative">
+            <section id="fees" className="py-24 px-4 md:px-12 bg-gradient-to-br from-gray-900 to-black text-white overflow-hidden relative">
                 <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#FF0031] rounded-full blur-[150px] opacity-20 -translate-y-1/2 translate-x-1/2"></div>
                 <div className="relative z-10 max-w-5xl mx-auto text-center">
                     <h2 className="text-4xl md:text-6xl font-extrabold mb-8">Secure Your Spot</h2>
@@ -502,7 +502,7 @@ export default function IIITDharwadPage() {
             </section>
 
             {/* FAQ Section */}
-            <section id="faq" className="py-24 px-8 md:px-12 bg-gray-50">
+            <section id="faq" className="py-24 px-4 md:px-12 bg-gray-50">
                 <div className="max-w-4xl mx-auto">
                     <div className="text-center mb-16">
                         <span className="text-[#FF0031] font-bold tracking-wider uppercase text-sm mb-2 block">FAQ</span>
