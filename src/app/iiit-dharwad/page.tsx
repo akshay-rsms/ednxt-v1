@@ -135,7 +135,11 @@ export default function IIITDharwadPage() {
             <div className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isSticky ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"}`}>
                 <div className="bg-white/90 backdrop-blur-md border-b border-gray-200 shadow-lg px-8 md:px-12 py-4">
                     <div className="max-w-7xl mx-auto flex items-center justify-between">
-                        <div className="flex items-center gap-2">
+                        <div className="flex items-center gap-4">
+                            <a href="/" className="flex items-center">
+                                <img src="/logo.svg" alt="EdNxt.ai" className="h-6 w-auto" />
+                            </a>
+                            <div className="h-4 w-px bg-gray-300 hidden md:block"></div>
                             <span className="font-bold text-gray-900 text-sm md:text-base">IIIT Dharwad</span>
                         </div>
                         <div className="hidden md:flex gap-8 text-sm font-medium text-gray-600">

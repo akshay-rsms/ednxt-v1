@@ -289,7 +289,9 @@ export default function IITPatnaPage() {
                 <div className="bg-white/90 backdrop-blur-md border-b border-gray-200 shadow-lg px-8 md:px-12 py-4">
                     <div className="max-w-7xl mx-auto flex items-center justify-between">
                         <div className="flex items-center gap-2">
-                            <span className="font-bold text-gray-900 text-sm md:text-base"></span>
+                            <a href="/" className="flex items-center">
+                                <img src="/logo.svg" alt="EdNxt.ai" className="h-6 w-auto" />
+                            </a>
                         </div>
                         <div className="hidden md:flex gap-8 text-sm font-medium text-gray-600">
                             <button
