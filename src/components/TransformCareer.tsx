@@ -17,7 +17,7 @@ export function TransformCareer() {
 
                     {/* Left Content */}
                     <div className="w-full px-0 lg:w-1/2 lg:px-32 relative z-10">
-                        <h2 className="text-[32px] leading-[1.2] lg:text-6xl lg:leading-tight font-bold mb-0 tracking-tight text-left">
+                        <h2 className="text-5xl leading-[1.1] lg:text-6xl lg:leading-tight font-bold mb-0 tracking-tight text-left">
                             Ready to <br />
                             <span className="relative inline-block">
                                 Transform
@@ -34,11 +34,11 @@ export function TransformCareer() {
                             counselors are here to guide you through every step of your journey.
                         </p>
 
-                        <div className="flex flex-col w-full gap-3 lg:flex-row lg:w-auto lg:gap-4 lg:justify-start lg:mt-6">
-                            <button className="bg-[#FF0031] text-white w-full lg:w-auto px-5 py-3.5 rounded-full font-bold text-sm tracking-wide hover:bg-[#D9002A] transition-colors shadow-lg shadow-red-900/20 whitespace-nowrap">
+                        <div className="flex flex-row w-full gap-2 items-center lg:w-auto lg:gap-4 lg:justify-start lg:mt-6">
+                            <button className="bg-[#FF0031] text-white flex-1 lg:flex-none lg:w-auto px-1 py-4 rounded-full font-bold text-sm tracking-wide hover:bg-[#D9002A] transition-colors shadow-lg shadow-red-900/20 whitespace-nowrap text-center">
                                 View All Programs
                             </button>
-                            <button className="bg-transparent border border-white/40 text-white w-full lg:w-auto px-5 py-3.5 rounded-full font-bold text-sm tracking-wide hover:bg-white hover:text-black transition-all whitespace-nowrap">
+                            <button className="bg-transparent border border-white/40 text-white flex-1 lg:flex-none lg:w-auto px-1 py-4 rounded-full font-bold text-sm tracking-wide hover:bg-white hover:text-black transition-all whitespace-nowrap text-center">
                                 Talk to Counsellor
                             </button>
                         </div>
