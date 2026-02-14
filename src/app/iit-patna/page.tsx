@@ -254,6 +254,16 @@ export default function IITPatnaPage() {
         }
     ];
 
+    const comparisonData = [
+        { label: "Core Philosophy", winner: "Building Autonomous Agents & Systems", loser: "Theory-heavy Machine Learning & Deep Learning" },
+        { label: "Curriculum Depth", winner: "Agentic Workflows, MCP, Multi-Agent Orchestration", loser: "Basic Chatbots & Intro to APIs" },
+        { label: "Tech Stack", winner: "LangGraph, CrewAI, n8n, OpenAI, Anthropic", loser: "Jupyter Notebooks, Scikit-learn, Basic Python" },
+        { label: "Project Approach", winner: "Live, Production-Grade Full Stack Apps", loser: "Isolated Notebooks & Toy Examples" },
+        { label: "RAG Sophistication", winner: "Advanced (Hybrid, GraphRAG, Re-ranking)", loser: "Basic Vector Search" },
+        { label: "Developer Experience", winner: "AI-First (Cursor, Windsurf, Claude Code)", loser: "Traditional IDEs & Manual Coding" },
+        { label: "Career Outcome", winner: "GenAI Product Engineer / Agentic Architect", loser: "Junior ML Engineer / Data Analyst" },
+    ];
+
     return (
         <main className="min-h-screen bg-white font-sans text-gray-900 scroll-smooth">
             <Navbar />
@@ -467,17 +477,66 @@ export default function IITPatnaPage() {
                     </div>
 
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-0 lg:gap-8 items-start">
+                        {/* Mobile Comparison Layout */}
+                        <div className="lg:hidden col-span-1 space-y-8">
+                            {/* Header Row */}
+                            <div className="grid grid-cols-2 gap-4">
+                                <div className="bg-[#FF0031]/5 border border-[#FF0031] rounded-2xl p-4 flex flex-col items-center text-center h-full justify-center">
+                                    <div className="w-10 h-10 rounded-full bg-[#FF0031] flex items-center justify-center mb-3 shadow-lg shadow-red-200">
+                                        <BrainCircuit className="w-5 h-5 text-white" />
+                                    </div>
+                                    <h3 className="text-sm font-bold text-gray-900 leading-tight">IIT Patna:<br />GenAI & Agentic AI</h3>
+                                </div>
+                                <div className="bg-white border border-gray-200 rounded-2xl p-4 flex flex-col items-center text-center h-full justify-center opacity-80">
+                                    <div className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center mb-3">
+                                        <BookOpen className="w-5 h-5 text-gray-500" />
+                                    </div>
+                                    <h3 className="text-sm font-bold text-gray-600 leading-tight">Traditional<br />AI Courses</h3>
+                                </div>
+                            </div>
+
+                            {/* Comparison Rows */}
+                            <div className="space-y-6">
+                                {comparisonData.map((item, idx) => (
+                                    <div key={idx} className="space-y-3">
+                                        <h4 className="text-xs font-bold uppercase tracking-widest text-gray-400 pl-1">{item.label}</h4>
+                                        <div className="grid grid-cols-2 gap-4">
+                                            {/* Winner Cell */}
+                                            <div className="bg-[#FF0031]/5 border border-[#FF0031] rounded-2xl p-4 relative group hover:shadow-md transition-all">
+                                                <div className="absolute top-3 left-3">
+                                                    <CheckCircle className="w-5 h-5 text-green-600" />
+                                                </div>
+                                                <p className="text-xs md:text-sm font-bold text-gray-900 mt-6 leading-relaxed">
+                                                    {item.winner}
+                                                </p>
+                                            </div>
+
+                                            {/* Loser Cell */}
+                                            <div className="bg-white border border-gray-200 rounded-2xl p-4 relative opacity-80">
+                                                <div className="absolute top-3 left-3">
+                                                    <XCircle className="w-5 h-5 text-red-500" />
+                                                </div>
+                                                <p className="text-xs md:text-sm font-medium text-gray-500 mt-6 leading-relaxed">
+                                                    {item.loser}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+
                         {/* Labels Column (Hidden on mobile, visible on lg) */}
                         <div className="hidden lg:flex flex-col gap-7 pt-40">
-                            {["Core Philosophy", "Curriculum Depth", "Tech Stack", "Project Approach", "RAG Sophistication", "Developer Experience", "Career Outcome"].map((label, i) => (
+                            {comparisonData.map((item, i) => (
                                 <div key={i} className="h-20 flex items-center text-lg font-bold text-gray-500">
-                                    {label}
+                                    {item.label}
                                 </div>
                             ))}
                         </div>
 
-                        {/* IIT Patna Column (Winner) */}
-                        <div className="relative bg-white rounded-3xl shadow-2xl border-2 border-[#FF0031] overflow-hidden z-10 transform lg:-translate-y-4">
+                        {/* IIT Patna Column (Winner - Desktop) */}
+                        <div className="hidden lg:block relative bg-white rounded-3xl shadow-2xl border-2 border-[#FF0031] overflow-hidden z-10 transform lg:-translate-y-4">
                             <div className="bg-[#FF0031] text-white p-6 text-center">
                                 <div className="inline-flex justify-center items-center w-12 h-12 bg-white/20 rounded-full mb-3">
                                     <BrainCircuit className="w-6 h-6 text-white" />
@@ -487,30 +546,21 @@ export default function IITPatnaPage() {
                             </div>
 
                             <div className="p-4 md:p-8 space-y-4 md:space-y-6">
-                                {[
-                                    { label: "Core Philosophy", text: "Building Autonomous Agents & Systems", active: true },
-                                    { label: "Curriculum Depth", text: "Agentic Workflows, MCP, Multi-Agent Orchestration", active: true },
-                                    { label: "Tech Stack", text: "LangGraph, CrewAI, n8n, OpenAI, Anthropic", active: true },
-                                    { label: "Project Approach", text: "Live, Production-Grade Full Stack Apps", active: true },
-                                    { label: "RAG Sophistication", text: "Advanced (Hybrid, GraphRAG, Re-ranking)", active: true },
-                                    { label: "Developer Experience", text: "AI-First (Cursor, Windsurf, Claude Code)", active: true },
-                                    { label: "Career Outcome", text: "GenAI Product Engineer / Agentic Architect", active: true },
-                                ].map((item, i) => (
+                                {comparisonData.map((item, i) => (
                                     <div key={i} className="h-auto lg:h-20 flex flex-col justify-center border-b border-gray-100 last:border-0 py-4 lg:py-0">
-                                        <span className="lg:hidden text-xs font-bold text-gray-400 uppercase tracking-widest mb-1">{item.label}</span>
                                         <div className="flex items-start gap-4">
                                             <div className="mt-1 w-6 h-6 rounded-full bg-green-100 flex items-center justify-center shrink-0">
                                                 <CheckCircle className="w-4 h-4 text-green-600" />
                                             </div>
-                                            <p className="text-gray-900 font-bold text-md leading-tight">{item.text}</p>
+                                            <p className="text-gray-900 font-bold text-md leading-tight">{item.winner}</p>
                                         </div>
                                     </div>
                                 ))}
                             </div>
                         </div>
 
-                        {/* Traditional Column (Loser) */}
-                        <div className="bg-white rounded-3xl border border-gray-200  lg:  p-4 pt-16 md:p-8 md:pt-20 lg:pt-8 opacity-80 hover:opacity-100 transition-opacity">
+                        {/* Traditional Column (Loser - Desktop) */}
+                        <div className="hidden lg:block bg-white rounded-3xl border border-gray-200  lg:  p-4 pt-16 md:p-8 md:pt-20 lg:pt-8 opacity-80 hover:opacity-100 transition-opacity">
                             <div className="text-center mb-8 border-b border-gray-100 pb-2">
                                 <div className="inline-flex justify-center items-center w-12 h-12 bg-gray-100 rounded-full mb-3">
                                     <BookOpen className="w-6 h-6 text-gray-500" />
@@ -520,22 +570,13 @@ export default function IITPatnaPage() {
                             </div>
 
                             <div className="space-y-6">
-                                {[
-                                    { label: "Core Philosophy", text: "Theory-heavy Machine Learning & Deep Learning" },
-                                    { label: "Curriculum Depth", text: "Basic Chatbots & Intro to APIs" },
-                                    { label: "Tech Stack", text: "Jupyter Notebooks, Scikit-learn, Basic Python" },
-                                    { label: "Project Approach", text: "Isolated Notebooks & Toy Examples" },
-                                    { label: "RAG Sophistication", text: "Basic Vector Search" },
-                                    { label: "Developer Experience", text: "Traditional IDEs & Manual Coding" },
-                                    { label: "Career Outcome", text: "Junior ML Engineer / Data Analyst" },
-                                ].map((item, i) => (
+                                {comparisonData.map((item, i) => (
                                     <div key={i} className="h-auto lg:h-20 flex flex-col justify-center border-b border-gray-100 last:border-0 py-4 lg:py-0">
-                                        <span className="lg:hidden text-xs font-bold text-gray-400 uppercase tracking-widest mb-1">{item.label}</span>
                                         <div className="flex items-start gap-4">
                                             <div className="mt-1 w-6 h-6 rounded-full bg-red-50 flex items-center justify-center shrink-0">
                                                 <XCircle className="w-4 h-4 text-red-400" />
                                             </div>
-                                            <p className="text-gray-500 font-medium text-md leading-tight">{item.text}</p>
+                                            <p className="text-gray-500 font-medium text-md leading-tight">{item.loser}</p>
                                         </div>
                                     </div>
                                 ))}
