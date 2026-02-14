@@ -365,8 +365,8 @@ export default function IITPatnaPage() {
                 </div>
 
 
-                <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-center mt-0 md:-mt-20">
-                    <div className="space-y-6 md:space-y-8 md:pl-12">
+                <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-16 items-center mt-0 md:-mt-20">
+                    <div className="space-y-3 md:space-y-8 md:pl-12">
                         <div className="flex items-center justify-start w-full gap-4 md:gap-8">
                             <div className="w-24 h-24 md:w-32 md:h-32 bg-white rounded-full flex items-center justify-center p-2 shadow-lg shadow-white/10">
                                 <img src="/iit-patna-logo.png" alt="IIT Patna" className="w-full h-full object-contain" />
@@ -391,7 +391,7 @@ export default function IITPatnaPage() {
                         </p>
 
                         {/* Buttons in single row for mobile */}
-                        <div className="flex flex-row items-center gap-4 pt-4">
+                        <div className="flex flex-row items-center gap-4 pt-2">
                             <button className="flex-1 px-4 py-3 md:px-8 md:py-4 rounded-full bg-white border border-white text-black font-bold text-sm md:text-lg hover:bg-gray-200 transition-colors backdrop-blur-sm flex items-center justify-center gap-2">
                                 <Download className="w-4 h-4 md:w-5 md:h-5" /> Brochure
                             </button>
@@ -456,8 +456,8 @@ export default function IITPatnaPage() {
 
 
             {/* Stats Strip */}
-            <div className="bg-[#FF0031] text-white py-8">
-                <div className="max-w-7xl mx-auto px-2 md:px-12 flex flex-wrap justify-between items-center gap-8">
+            <div className="bg-[#FF0031] text-white py-4 md:py-8">
+                <div className="max-w-7xl mx-auto px-2 md:px-12 flex flex-wrap justify-between items-center gap-4 md:gap-8">
                     <div className="text-center md:text-left">
                         <p className="text-3xl font-extrabold">100%</p>
                         <p className="text-sm font-medium opacity-80 uppercase tracking-wider">Hands-on Projects</p>
