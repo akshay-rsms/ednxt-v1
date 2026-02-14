@@ -32,11 +32,11 @@ const Card: React.FC<CardProps> = ({ i, leader, progress, range, targetScale }) 
                 }}
                 className="flex flex-col relative h-[500px] md:h-[450px] w-full md:w-[1000px] rounded-3xl border border-gray-200 shadow-xl overflow-hidden transform origin-top hover:shadow-2xl transition-all duration-500 group md:top-[calc(-5vh+var(--offset))] top-0"
             >
-                <div className="flex h-full gap-6 md:gap-10 flex-col md:flex-row p-8 md:p-10 pb-0 md:pb-10">
+                <div className="flex h-full gap-4 md:gap-10 flex-col md:flex-row p-6 md:p-10 pb-0 md:pb-10">
                     {/* Content Section */}
                     <div className="md:w-[60%] flex flex-col relative z-10">
                         {/* Quote - Mobile: Top */}
-                        <h3 className="text-xl md:text-3xl font-medium text-gray-800 leading-snug mb-6 md:mb-8 font-serif italic md:not-italic md:font-sans">
+                        <h3 className="text-xl md:text-3xl font-medium text-gray-800 leading-snug mb-4 md:mb-8 font-serif italic md:not-italic md:font-sans">
                             "{leader.quote}"
                         </h3>
 

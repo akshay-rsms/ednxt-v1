@@ -26,13 +26,13 @@ export function InstituteInfo() {
     };
 
     return (
-        <section className="py-16 md:py-24 px-4 md:px-8 bg-white font-sans">
+        <section className="py-12 md:py-24 px-2 md:px-8 bg-white font-sans">
             <div className="max-w-6xl mx-auto">
                 {/* Main Card Container */}
-                <div className="bg-white rounded-2xl md:rounded-3xl p-6 md:p-12 border border-[#FF0031] overflow-hidden relative">
+                <div className="bg-white rounded-2xl md:rounded-3xl p-4 md:p-12 border border-[#FF0031] overflow-hidden relative">
 
                     {/* Top Navigation */}
-                    <div className="flex items-center justify-between mb-8 md:mb-12 relative z-10">
+                    <div className="flex items-center justify-between mb-6 md:mb-12 relative z-10">
                         <button
                             onClick={handlePrev}
                             className="p-2 rounded-full hover:bg-white/50 text-gray-600 hover:text-[#FF0031] transition-all"

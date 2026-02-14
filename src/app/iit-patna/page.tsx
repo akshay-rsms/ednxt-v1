@@ -323,7 +323,7 @@ export default function IITPatnaPage() {
             </div>
 
             {/* Hero Section */}
-            <section id="overview" className="relative min-h-[75vh] flex items-center pt-32 pb-24 px-2 md:px-12 bg-[#0a0a0a] text-white overflow-hidden">
+            <section id="overview" className="relative min-h-[60vh] md:min-h-[75vh] flex items-center pt-16 pb-8 md:pt-32 md:pb-24 px-2 md:px-12 bg-[#0a0a0a] text-white overflow-hidden">
                 <div className="absolute inset-0 z-0">
                     <img
                         src="/iitpatnacampus.png"
@@ -334,8 +334,8 @@ export default function IITPatnaPage() {
                 </div>
 
 
-                <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-center -mt-20">
-                    <div className="space-y-8 md:pl-12">
+                <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-center mt-0 md:-mt-20">
+                    <div className="space-y-6 md:space-y-8 md:pl-12">
                         <div className="flex items-center justify-start w-full gap-4 md:gap-8">
                             <div className="w-24 h-24 md:w-32 md:h-32 bg-white rounded-full flex items-center justify-center p-2 shadow-lg shadow-white/10">
                                 <img src="/iit-patna-logo.png" alt="IIT Patna" className="w-full h-full object-contain" />
@@ -456,9 +456,9 @@ export default function IITPatnaPage() {
 
 
             {/* Comparison Section */}
-            <section id="comparison" className="py-24 px-2 md:px-12 bg-gray-50/50">
+            <section id="comparison" className="py-12 md:py-24 px-2 md:px-12 bg-gray-50/50">
                 <div className="max-w-6xl mx-auto">
-                    <div className="text-center mb-16">
+                    <div className="text-center mb-8 md:mb-16">
                         <span className="text-[#FF0031] font-bold tracking-wider uppercase text-sm mb-2 block">Why This Program?</span>
                         <h2 className="text-3xl md:text-5xl font-extrabold text-gray-900 mb-6">
                             Traditional AI Courses vs. <br className="hidden md:block" />
@@ -546,9 +546,9 @@ export default function IITPatnaPage() {
             </section>
 
             {/* Detailed Curriculum Section - Accordion */}
-            <section id="curriculum" className="py-24 px-2 md:px-12 bg-white">
+            <section id="curriculum" className="py-12 md:py-24 px-2 md:px-12 bg-white">
                 <div className="max-w-5xl mx-auto">
-                    <div className="text-center mb-16">
+                    <div className="text-center mb-8 md:mb-16">
                         <span className="text-[#FF0031] font-bold tracking-wider uppercase text-sm mb-2 block">Syllabus</span>
                         <h2 className="text-3xl md:text-5xl font-extrabold text-gray-900 mb-6">Comprehensive Curriculum</h2>
                         <p className="text-gray-600 text-lg max-w-2xl mx-auto">
@@ -661,9 +661,9 @@ export default function IITPatnaPage() {
             <Capstone />
 
             {/* Certification Section */}
-            <section id="certificate" className="py-24 px-2 md:px-12 bg-gray-50">
+            <section id="certificate" className="py-12 md:py-24 px-2 md:px-12 bg-gray-50">
                 <div className="max-w-4xl mx-auto text-center">
-                    <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-12">
+                    <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6 md:mb-12">
                         Official <span className="text-[#FF0031]">IIT Patna</span> certification <br className="hidden md:block" />
                         on completion of your program
                     </h2>
@@ -678,12 +678,12 @@ export default function IITPatnaPage() {
             </section>
 
             {/* Final CTA / Fees */}
-            <section id="fees" className="py-24 px-2 md:px-12 bg-gradient-to-br from-gray-900 to-black text-white overflow-hidden relative">
+            <section id="fees" className="py-12 md:py-24 px-2 md:px-12 bg-gradient-to-br from-gray-900 to-black text-white overflow-hidden relative">
                 <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#FF0031] rounded-full blur-[150px] opacity-20 -translate-y-1/2 translate-x-1/2"></div>
                 <div className="relative z-10 max-w-5xl mx-auto text-center">
-                    <h2 className="text-4xl md:text-6xl font-extrabold mb-8">Secure Your Spot</h2>
+                    <h2 className="text-4xl md:text-6xl font-extrabold mb-6 md:mb-8">Secure Your Spot</h2>
 
-                    <div className="flex flex-col md:flex-row justify-center items-stretch gap-8 mb-12">
+                    <div className="flex flex-col md:flex-row justify-center items-stretch gap-6 md:gap-8 mb-8 md:mb-12">
                         <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 md:p-8 border border-white/10 flex-1 relative overflow-hidden">
                             <div className="absolute top-0 left-0 w-full h-1 bg-[#FF0031]"></div>
                             <p className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-4">Current Batch</p>
@@ -714,9 +714,9 @@ export default function IITPatnaPage() {
 
 
             {/* FAQ Section */}
-            <section id="faq" className="py-24 px-2 md:px-12 bg-gray-50">
+            <section id="faq" className="py-12 md:py-24 px-2 md:px-12 bg-gray-50">
                 <div className="max-w-4xl mx-auto">
-                    <div className="text-center mb-16">
+                    <div className="text-center mb-8 md:mb-16">
                         <span className="text-[#FF0031] font-bold tracking-wider uppercase text-sm mb-2 block">FAQ</span>
                         <h2 className="text-3xl md:text-5xl font-extrabold text-gray-900 mb-6">Frequently Asked Questions</h2>
                     </div>
