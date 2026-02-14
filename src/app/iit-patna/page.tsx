@@ -21,14 +21,23 @@ export default function IITPatnaPage() {
     const [activeSection, setActiveSection] = useState("overview");
     const [isModulesUnlocked, setIsModulesUnlocked] = useState(false);
 
-    // Initialize first module as open only on desktop
+    // Initialize first module as open only on desktop and handle resize
     useEffect(() => {
-        if (typeof window !== 'undefined' && window.innerWidth >= 768) {
-            setActiveModule(0);
-        }
+        const mediaQuery = window.matchMedia('(min-width: 768px)');
+
+        const handleChange = (e: MediaQueryListEvent | MediaQueryList) => {
+            if (e.matches) {
+                setActiveModule((prev) => (prev === null ? 0 : prev));
+            } else {
+                setActiveModule(null);
+            }
+        };
+
+        handleChange(mediaQuery);
+        mediaQuery.addEventListener('change', handleChange);
+        return () => mediaQuery.removeEventListener('change', handleChange);
     }, []);
 
-    // Sticky Navbar Handler & Scroll Spy
     // Sticky Navbar Handler & Scroll Spy
     useEffect(() => {
         const handleScroll = () => {
@@ -340,12 +349,17 @@ export default function IITPatnaPage() {
             </div>
 
             {/* Hero Section */}
-            <section id="overview" className="relative min-h-[60vh] md:min-h-[75vh] flex items-center pt-16 pb-8 md:pt-32 md:pb-24 px-2 md:px-12 bg-[#0a0a0a] text-white overflow-hidden">
+            <section id="overview" className="relative min-h-[60vh] md:min-h-[75vh] flex items-center pt-24 pb-8 md:pt-32 md:pb-24 px-2 md:px-12 bg-[#0a0a0a] text-white overflow-hidden">
                 <div className="absolute inset-0 z-0">
                     <img
                         src="/iitpatnacampus.png"
                         alt="IIT Patna Campus"
-                        className="w-full h-full object-cover"
+                        className="hidden md:block w-full h-full object-cover"
+                    />
+                    <img
+                        src="/iitpatnaherosec.png"
+                        alt="IIT Patna Campus"
+                        className="block md:hidden w-full h-full object-cover"
                     />
                     <div className="absolute inset-0 bg-black/60"></div>
                 </div>
@@ -376,12 +390,13 @@ export default function IITPatnaPage() {
                             Get a complete roadmap to become an <span className="text-white font-semibold">AI Engineer</span> from real-world experts & get a certificate from an <span className="text-white font-semibold">IIT</span>.
                         </p>
 
-                        <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                            <button className="px-8 py-4 rounded-full bg-[#FF0031] text-white font-bold text-lg hover:bg-[#D9002A] transition-all shadow-[0_0_30px_rgba(255,0,49,0.3)] hover:shadow-[0_0_50px_rgba(255,0,49,0.5)] flex items-center justify-center gap-2">
-                                Apply Now <ArrowRight className="w-5 h-5" />
+                        {/* Buttons in single row for mobile */}
+                        <div className="flex flex-row items-center gap-4 pt-4">
+                            <button className="flex-1 px-4 py-3 md:px-8 md:py-4 rounded-full bg-white/5 border border-white/10 text-white font-bold text-sm md:text-lg hover:bg-white/10 transition-colors backdrop-blur-sm flex items-center justify-center gap-2">
+                                <Download className="w-4 h-4 md:w-5 md:h-5" /> Brochure
                             </button>
-                            <button className="px-8 py-4 rounded-full bg-white/5 border border-white/10 text-white font-bold text-lg hover:bg-white/10 transition-colors backdrop-blur-sm flex items-center justify-center gap-2">
-                                <Download className="w-5 h-5" /> Brochure
+                            <button className="flex-1 px-4 py-3 md:px-8 md:py-4 rounded-full bg-[#FF0031] text-white font-bold text-sm md:text-lg hover:bg-[#D9002A] transition-all shadow-[0_0_30px_rgba(255,0,49,0.3)] hover:shadow-[0_0_50px_rgba(255,0,49,0.5)] flex items-center justify-center gap-2">
+                                Apply Now <ArrowRight className="w-4 h-4 md:w-5 md:h-5" />
                             </button>
                         </div>
                     </div>
