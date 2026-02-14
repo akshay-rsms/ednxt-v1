@@ -77,10 +77,10 @@ export function AIProjects() {
                             <motion.div
                                 key={idx}
                                 variants={cardVariants}
-                                className="group relative bg-[#0a0c14] rounded-xl md:rounded-3xl overflow-hidden flex flex-col h-[220px] md:h-[500px]"
+                                className="group relative bg-[#0a0c14] rounded-xl md:rounded-3xl overflow-hidden flex flex-col h-[260px] md:h-[500px]"
                             >
                                 {/* Top Image Area */}
-                                <div className="h-[90px] md:h-[300px] w-full overflow-hidden relative shrink-0">
+                                <div className="h-[140px] md:h-[300px] w-full overflow-hidden relative shrink-0">
                                     <img
                                         src={project.image}
                                         alt={project.title}
@@ -90,12 +90,12 @@ export function AIProjects() {
                                 </div>
 
                                 {/* Content */}
-                                <div className="p-3 md:p-8 flex-grow flex flex-col justify-between md:justify-end bg-[#0a0c14]">
-                                    <h3 className="text-xs md:text-2xl font-bold text-white mb-1 md:mb-4 leading-tight line-clamp-3 md:line-clamp-none">
+                                <div className="p-3 md:p-8 flex-grow flex flex-col justify-end bg-[#0a0c14]">
+                                    <h3 className="text-sm md:text-2xl font-bold text-white mb-2 md:mb-4 leading-tight line-clamp-3 md:line-clamp-none">
                                         {project.title}
                                     </h3>
                                     <div className="inline-flex">
-                                        <span className="bg-[#ccff00] text-black text-[9px] md:text-xs font-bold px-2 py-1 md:px-3 md:py-1.5 rounded-full flex items-center gap-1 whitespace-nowrap">
+                                        <span className="bg-[#ccff00] text-black text-[10px] md:text-xs font-bold px-2 py-1 md:px-3 md:py-1.5 rounded-full flex items-center gap-1 whitespace-nowrap">
                                             No coding required ⚡
                                         </span>
                                     </div>
