@@ -35,10 +35,10 @@ export function TransformCareer() {
                         </p>
 
                         <div className="flex flex-row w-full gap-2 items-center lg:w-auto lg:gap-4 lg:justify-start lg:mt-6">
-                            <button className="bg-[#FF0031] text-white flex-1 lg:flex-none lg:w-auto px-1 py-4 rounded-full font-bold text-sm tracking-wide hover:bg-[#D9002A] transition-colors shadow-lg shadow-red-900/20 whitespace-nowrap text-center">
+                            <button className="bg-[#FF0031] text-white flex-1 lg:flex-none lg:w-auto px-1 py-4 md:px-5 md:py-3 lg:px-8 lg:py-3.5 rounded-full font-bold text-sm tracking-wide hover:bg-[#D9002A] transition-colors shadow-lg shadow-red-900/20 whitespace-nowrap text-center">
                                 View All Programs
                             </button>
-                            <button className="bg-transparent border border-white/40 text-white flex-1 lg:flex-none lg:w-auto px-1 py-4 rounded-full font-bold text-sm tracking-wide hover:bg-white hover:text-black transition-all whitespace-nowrap text-center">
+                            <button className="bg-transparent border border-white/40 text-white flex-1 lg:flex-none lg:w-auto px-1 py-4 md:px-5 md:py-3 lg:px-8 lg:py-3.5 rounded-full font-bold text-sm tracking-wide hover:bg-white hover:text-black transition-all whitespace-nowrap text-center">
                                 Talk to Counsellor
                             </button>
                         </div>
