@@ -16,10 +16,17 @@ import { AIProjects } from "@/components/AIProjects";
 import { Capstone } from "@/components/Capstone";
 
 export default function IITPatnaPage() {
-    const [activeModule, setActiveModule] = useState<number | null>(0);
+    const [activeModule, setActiveModule] = useState<number | null>(null);
     const [isSticky, setIsSticky] = useState(false);
     const [activeSection, setActiveSection] = useState("overview");
     const [isModulesUnlocked, setIsModulesUnlocked] = useState(false);
+
+    // Initialize first module as open only on desktop
+    useEffect(() => {
+        if (typeof window !== 'undefined' && window.innerWidth >= 768) {
+            setActiveModule(0);
+        }
+    }, []);
 
     // Sticky Navbar Handler & Scroll Spy
     // Sticky Navbar Handler & Scroll Spy
