@@ -361,7 +361,7 @@ export default function IITPatnaPage() {
                         alt="IIT Patna Campus"
                         className="block md:hidden w-full h-full object-cover"
                     />
-                    <div className="absolute inset-0 bg-black/60"></div>
+                    <div className="absolute inset-0 bg-black/80 md:bg-black/60"></div>
                 </div>
 
 
@@ -403,15 +403,8 @@ export default function IITPatnaPage() {
 
                     {/* Program Snapshot Card */}
                     <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-4 md:p-8 shadow-2xl relative group hover:border-[#FF0031]/30 transition-colors duration-500">
-                        <div className="absolute top-4 right-4 bg-yellow-300 text-black text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
-                            Enrollment Open
-                        </div>
-                        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm text-white text-sm font-bold mb-6">
-                            <Award className="w-4 h-4 text-[#FF0031]" />
-                            <span className="tracking-wide">PG CERTIFICATION</span>
-                        </div>
                         <h3 className="text-2xl font-bold mb-6">Program Highlights</h3>
-                        <div className="grid grid-cols-1 gap-6">
+                        <div className="grid grid-cols-2 gap-6">
                             <div className="flex items-center gap-4">
                                 <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center shrink-0">
                                     <Clock className="w-5 h-5 text-[#FF0031]" />
